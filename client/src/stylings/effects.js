@@ -18,6 +18,7 @@ const Static = styled.div`
 
 const Bgimage = styled.section`
   background: url(${props => props.img});
+  height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
