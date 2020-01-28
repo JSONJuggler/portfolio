@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+const Screenheight = styled.div`
+  height: 100vh;
+`;
+
+const Innerparallax = styled.div`
+  background: white;
+  padding: 20;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 const Innerlanding = styled.div`
   color: black;
   height: 250vh;
@@ -12,4 +25,4 @@ const Innerlanding = styled.div`
   text-align: center;
 `;
 
-export default Innerlanding;
+export { Screenheight, Innerparallax };

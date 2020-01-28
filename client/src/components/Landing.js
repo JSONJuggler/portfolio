@@ -1,43 +1,49 @@
 import React, { Fragment } from "react";
-import Button from "../stylings/button";
+import Button from "../stylings/buttons";
 // import Innerlanding from "../stylings/innerlanding";
 import img from "../img/bk.jpeg";
 import img2 from "../img/background.jpeg";
-import { Bgimage } from "../stylings/effects";
-import { Parallax, ParallaxBanner } from "react-scroll-parallax";
+import { Innerparallax, Screenheight } from "../stylings/divs";
+import { Parallax, Background } from "react-parallax";
+
+const styles = {
+  fontFamily: "sans-serif",
+  textAlign: "center"
+};
 
 const Landing = () => {
   return (
     <Fragment>
-      {/* <ParallaxBanner
-        layers={[
-          {
-            image:
-              "https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg"
-          }
-        ]}
-        style={{ height: "100px" }}
-      >
-        <h1>Hello</h1>
-      </ParallaxBanner> */}
-      <Parallax y={[20, -20]}>
-        <Bgimage img={img} />
-      </Parallax>
-      <Parallax y={[0, 50]}>
-        <h1>Deleon Reescano</h1>
-        <p>Welcome to my website!</p>
-        <div>
-          <form>
-            First name: <input type="text" />
-            <button>Create</button>
-            <Button kind="prim">Create</Button>
-            <Button kind="secon">Create</Button>
-            <Button>Create</Button>
-          </form>
-        </div>
-      </Parallax>
-      <Parallax y={[0, 0]}>
-        <Bgimage img={img2}></Bgimage>
+      <Parallax style={styles}>
+        <Parallax bgImage={img} strength={500}>
+          <Screenheight>
+            <Innerparallax>Hello </Innerparallax>
+          </Screenheight>
+        </Parallax>
+        <h1>| | |</h1>
+        <Parallax bgImage={img2} strength={500}>
+          <Screenheight>
+            <Innerparallax>
+              <h1>Deleon Reescano</h1>
+              <p>Welcome to my website!</p>
+              <div>
+                <form>
+                  First name: <input type="text" />
+                  <button>Create</button>
+                  <Button kind="prim">Create</Button>
+                  <Button kind="secon">Create</Button>
+                  <Button>Create</Button>
+                </form>
+              </div>
+            </Innerparallax>
+          </Screenheight>
+        </Parallax>
+        <h1>| | |</h1>
+        <Parallax bgImage={img} strength={500}>
+          <Screenheight>
+            <Innerparallax>Goodbye!</Innerparallax>
+          </Screenheight>
+        </Parallax>
       </Parallax>
     </Fragment>
   );
