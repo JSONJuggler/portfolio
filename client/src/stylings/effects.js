@@ -17,7 +17,11 @@ const Static = styled.div`
 // `;
 
 const Bgimage = styled.section`
-  background: url(${props => props.img}) no-repeat center center/cover;
+  background: url(${props => props.img});
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const Parawrapper = styled.section`
@@ -32,18 +36,32 @@ const Parawrapper = styled.section`
   perspective: 2px;
 `;
 
+// const Parasection = styled.section`
+//   /* Needed for children to be absolutely positioned relative to the parent. */
+//   position: relative;
+//   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+//   height: 100vh;
+
+//   /* For text formatting. */
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   text-shadow: 0 0 5px #000;
+// `;
+
 const Parasection = styled.section`
   /* Needed for children to be absolutely positioned relative to the parent. */
-  position: relative;
+  /* position: relative; */
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 100vh;
+  height: ${props => props.height};
 
   /* For text formatting. */
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  text-shadow: 0 0 5px #000;
+  text-shadow: 0 0 5px #000; */
 `;
 
 const Parallax = styled.section`
