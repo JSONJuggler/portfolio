@@ -19,7 +19,7 @@ const Landing = () => {
         <Page bg={img}>
           <Home />
         </Page>
-        <Secpage position={"center"} bg={img}>
+        <Secpage position={"start"} bg={img}>
           <Work />
         </Secpage>
         <Page position={"center"}>

@@ -23,12 +23,16 @@ const Innerparallax = styled.div`
   align-items: center;
   color: #5e9bc9;
   padding: 20px;
-  /* background: white; */
-  /* padding: 20; */
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
+`;
+
+const Secpagemain = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: ${props => props.position};
+  align-items: center;
+  color: #5e9bc9;
+  padding: 20px;
 `;
 
 // const Innerlanding = styled.div`
@@ -43,4 +47,4 @@ const Innerparallax = styled.div`
 //   text-align: center;
 // `;
 
-export { Screenheight, Innerparallax, Pageseperator, Blackbg };
+export { Screenheight, Innerparallax, Pageseperator, Blackbg, Secpagemain };
