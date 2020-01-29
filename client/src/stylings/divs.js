@@ -4,6 +4,18 @@ const Screenheight = styled.div`
   height: 100vh;
 `;
 
+const Pageseperator = styled.div`
+  height: ${props => props.height};
+  background-color: #050505;
+  margin-top: -4vh;
+  margin-bottom: -8vh;
+`;
+
+const Blackbg = styled.div`
+  height: 100vh;
+  background-color: #050505;
+`;
+
 const Innerparallax = styled.div`
   background: white;
   padding: 20;
@@ -25,4 +37,4 @@ const Innerlanding = styled.div`
   text-align: center;
 `;
 
-export { Screenheight, Innerparallax };
+export { Screenheight, Innerparallax, Pageseperator, Blackbg };
