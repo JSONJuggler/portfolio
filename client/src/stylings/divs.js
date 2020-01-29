@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useState } from "react";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const Screenheight = styled.div`
   height: 100vh;
@@ -25,6 +27,33 @@ const Innerparallax = styled.div`
   padding: 20px;
 `;
 
+const Fadeonscroll = styled.div`
+  /* uses scroll position to get scrollposition and adjust opacity */
+  ${props => {
+    const [pos, setPos] = useState({});
+
+    useScrollPosition(
+      ({ prevPos, currPos }) => {
+        setPos(currPos);
+      },
+      [pos]
+    );
+    // BASED ON TOTAL NUMBER OF PAGES SINCE EACH PAGE IS 100VH. FOR
+    // FOR 4 PAGES, DIVIDE BY 650 TO GET % OF SECOND PAGE
+    // console.log(Math.abs(pos.y) / 650);
+    const percentage = Math.abs(pos.y) / 650;
+    props.percentage = percentage;
+  }};
+  opacity: ${props => {
+    if (props.percentage < 0.38) {
+      //   return "0";
+      return "0";
+    } else {
+      return `${(props.percentage - 0.38) * 4}`;
+    }
+  }};
+`;
+
 const Secpagemain = styled.div`
   height: 100vh;
   display: flex;
@@ -47,4 +76,11 @@ const Secpagemain = styled.div`
 //   text-align: center;
 // `;
 
-export { Screenheight, Innerparallax, Pageseperator, Blackbg, Secpagemain };
+export {
+  Screenheight,
+  Innerparallax,
+  Pageseperator,
+  Blackbg,
+  Secpagemain,
+  Fadeonscroll
+};

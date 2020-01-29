@@ -1,8 +1,7 @@
 import React, { Fragment } from "react";
 import img from "../img/bg.jpg";
-import img2 from "../img/bg2.png";
 import Page from "./Page";
-import Secpage from "./Secpage";
+import Secondpage from "./Secondpage";
 import Home from "./Home";
 import Work from "./Work";
 import Contact from "./Contact";
@@ -19,9 +18,9 @@ const Landing = () => {
         <Page bg={img}>
           <Home />
         </Page>
-        <Secpage position={"start"} bg={img}>
+        <Secondpage position={"start"}>
           <Work />
-        </Secpage>
+        </Secondpage>
         <Page position={"center"}>
           <Work />
         </Page>

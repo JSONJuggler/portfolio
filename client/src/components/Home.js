@@ -7,9 +7,9 @@ const H1 = styled.h1`
   font-weight: bold;
 `;
 
-const P = styled.p`
-  font-size: 25px;
-`;
+// const P = styled.p`
+//   font-size: 25px;
+// `;
 
 const Home = () => {
   return (
@@ -19,7 +19,6 @@ const Home = () => {
           My name is Deleon Reescano and I am a MERN stack developer. I use
           Javascript to build interesting things.
         </H1>
-        <P>Welcome to my website!</P>
       </div>
 
       {/* <div>
