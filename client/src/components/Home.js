@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Button from "../stylings/buttons";
 
-const Content1 = () => {
+const Home = () => {
   return (
     <Fragment>
       <h1>Deleon Reescano</h1>
@@ -19,4 +19,4 @@ const Content1 = () => {
   );
 };
 
-export default Content1;
+export default Home;
