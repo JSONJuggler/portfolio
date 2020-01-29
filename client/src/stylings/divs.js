@@ -17,24 +17,30 @@ const Blackbg = styled.div`
 `;
 
 const Innerparallax = styled.div`
-  background: white;
-  padding: 20;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  display: flex;
+  justify-content: ${props => props.position};
+  align-items: center;
+  color: #5e9bc9;
+  padding: 20px;
+  /* background: white; */
+  /* padding: 20; */
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
 `;
 
-const Innerlanding = styled.div`
-  color: black;
-  height: 250vh;
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-`;
+// const Innerlanding = styled.div`
+//   color: black;
+//   height: 250vh;
+//   width: 80%;
+//   margin: auto;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+// `;
 
 export { Screenheight, Innerparallax, Pageseperator, Blackbg };

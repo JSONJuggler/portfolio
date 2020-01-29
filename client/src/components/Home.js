@@ -1,12 +1,28 @@
 import React, { Fragment } from "react";
-import Button from "../stylings/buttons";
+import styled from "styled-components";
+
+const H1 = styled.h1`
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+`;
+
+const P = styled.p`
+  font-size: 25px;
+`;
 
 const Home = () => {
   return (
     <Fragment>
-      <h1>Deleon Reescano</h1>
-      <p>Welcome to my website!</p>
       <div>
+        <H1>
+          My name is Deleon Reescano and I am a MERN stack developer. I use
+          Javascript to build interesting things.
+        </H1>
+        <P>Welcome to my website!</P>
+      </div>
+
+      {/* <div>
         <form>
           First name: <input type="text" />
           <button>Create</button>
@@ -14,7 +30,7 @@ const Home = () => {
           <Button kind="secon">Create</Button>
           <Button>Create</Button>
         </form>
-      </div>
+      </div> */}
     </Fragment>
   );
 };

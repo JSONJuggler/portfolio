@@ -16,7 +16,9 @@ const Page = props => {
           <Parallax bgImage={props.bg} strength={1000}>
             <Darkenbg>
               <Screenheight>
-                <Innerparallax>{props.children}</Innerparallax>
+                <Innerparallax position={props.position}>
+                  {props.children}
+                </Innerparallax>
               </Screenheight>
             </Darkenbg>
           </Parallax>

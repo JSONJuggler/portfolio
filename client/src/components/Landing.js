@@ -1,13 +1,15 @@
 import React, { Fragment } from "react";
 import img from "../img/bg.jpg";
+import img2 from "../img/bg2.png";
 import Page from "./Page";
+import Secpage from "./Secpage";
 import Home from "./Home";
 import Work from "./Work";
 import Contact from "./Contact";
 
 const styles = {
   fontFamily: "sans-serif",
-  textAlign: "center"
+  textAlign: "left"
 };
 
 const Landing = () => {
@@ -17,13 +19,13 @@ const Landing = () => {
         <Page bg={img}>
           <Home />
         </Page>
-        <Page>
+        <Secpage position={"center"} bg={img}>
+          <Work />
+        </Secpage>
+        <Page position={"center"}>
           <Work />
         </Page>
-        <Page>
-          <Work />
-        </Page>
-        <Page>
+        <Page position={"center"}>
           <Contact />
         </Page>
       </div>
