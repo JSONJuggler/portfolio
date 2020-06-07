@@ -1,1 +1,3 @@
 # portfolio
+
+npm run dev
