@@ -4,8 +4,8 @@ const Home = () => {
   return (
     <Fragment>
       <div>
-        My name is Deleon Reescano and I love to build interesting things for
-        the web.
+        My name is Beau Reescano and I love to build interesting things for the
+        web.
       </div>
     </Fragment>
   );
