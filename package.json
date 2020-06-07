@@ -39,5 +39,8 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "heroku-postbuild": "npm run build"
-  }
+  },
+  "cacheDirectories": [
+    ".next/cache"
+  ]
 }
