@@ -1,12 +1,17 @@
 import { Fragment } from "react";
 
+import Landing from "../components/Landing";
+import Qualifications from "../components/Qualifications";
+import Projects from "../components/Projects";
+import ContactMe from "../components/ContactMe";
+
 const Home = () => {
   return (
     <Fragment>
-      <div>
-        My name is Beau Reescano and I love to build interesting things for the
-        web.
-      </div>
+      <Landing />
+      <Qualifications />
+      <Projects />
+      <ContactMe />
     </Fragment>
   );
 };

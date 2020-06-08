@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Button from "@material-ui/core/Button";
 
-function ButtonLink({ children, href, as, ...props }) {
+const ButtonLink = ({ children, href, as, ...props }) => {
   const router = useRouter();
 
   const handleClick = e => {
@@ -14,6 +14,6 @@ function ButtonLink({ children, href, as, ...props }) {
       {children}
     </Button>
   );
-}
+};
 
 export default ButtonLink;
