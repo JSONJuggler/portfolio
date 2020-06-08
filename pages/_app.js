@@ -5,6 +5,9 @@ import { ThemeProvider, makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { withRedux } from "../lib/redux";
 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 import theme from "../themes/theme";
 
 const useStyles = makeStyles(theme => ({
@@ -12,16 +15,12 @@ const useStyles = makeStyles(theme => ({
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column"
-  },
-  wrapper: {
-    display: "flex",
-    flexDirection: "column",
-    position: "relative",
-    flexGrow: 1
   }
 }));
 
 function MyApp({ Component, pageProps }) {
+  const classes = useStyles();
+
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
@@ -31,7 +30,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <React.Fragment>
+    <div className={classes.root}>
       <Head>
         <title>Beau Reescano | JSON connoisseur</title>
         <meta
@@ -42,9 +41,11 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
+        <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
-    </React.Fragment>
+    </div>
   );
 }
 
