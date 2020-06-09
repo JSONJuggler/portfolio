@@ -65,7 +65,7 @@ const Qualifications = () => {
           <Grid item>
             <div className={classes.entry}>
               <Typography align="center">NextJS</Typography>
-              <SvgNextjs className={classes.icon} height="55px" width="55px" />
+              <SvgNextjs className={classes.icon} height="50px" width="80px" />
             </div>
           </Grid>
           <Grid item>
@@ -83,7 +83,7 @@ const Qualifications = () => {
           <Grid item>
             <div className={classes.entry}>
               <Typography align="center">MongoDB</Typography>
-              <SvgMongodb className={classes.icon} height="55px" width="55px" />
+              <SvgMongodb className={classes.icon} height="40px" width="80px" />
             </div>
           </Grid>
           <Grid item>
@@ -154,7 +154,7 @@ const Qualifications = () => {
           <Grid item>
             <div className={classes.entry}>
               <Typography align="center">NextJS</Typography>
-              <SvgNextjs className={classes.icon} height="23px" width="23px" />
+              <SvgNextjs className={classes.icon} height="25px" width="40px" />
             </div>
           </Grid>
           <Grid item>
@@ -172,7 +172,7 @@ const Qualifications = () => {
           <Grid item>
             <div className={classes.entry}>
               <Typography align="center">MongoDB</Typography>
-              <SvgMongodb className={classes.icon} height="23px" width="23px" />
+              <SvgMongodb className={classes.icon} height="20px" width="60px" />
             </div>
           </Grid>
           <Grid item>
