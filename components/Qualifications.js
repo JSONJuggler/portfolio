@@ -32,6 +32,15 @@ const Qualifications = () => {
       <SvgRedux height="55px" width="55px" />
       <SvgMongodb height="55px" width="55px" />
       <SvgMaterialui height="55px" width="55px" />
+      <SvgHtml5 size="2x" />
+      <SvgCss size="2x" />
+      <SvgJavascript height="23px" width="23px" />
+      <SvgNodeJs size="2x" />
+      <SvgNextjs height="23px" width="23px" />
+      <SvgReact size="2x" />
+      <SvgRedux height="23px" width="23px" />
+      <SvgMongodb height="23px" width="23px" />
+      <SvgMaterialui height="23px" width="23px" />
     </Fragment>
   );
 };
