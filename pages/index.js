@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import Container from "@material-ui/core/Container";
 
 import Landing from "../components/Landing";
 import Qualifications from "../components/Qualifications";
@@ -9,12 +8,10 @@ import ContactMe from "../components/ContactMe";
 const Home = () => {
   return (
     <Fragment>
-      <Container maxWidth="lg">
-        <Landing />
-        <Qualifications />
-        <Projects />
-        <ContactMe />
-      </Container>
+      <Landing />
+      <Qualifications />
+      <Projects />
+      <ContactMe />
     </Fragment>
   );
 };
