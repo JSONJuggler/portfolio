@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Hidden from "@material-ui/core/Hidden";
 import {
   SvgJavascript,
   SvgNextjs,
@@ -16,6 +18,13 @@ import {
 const useStyles = makeStyles(theme => ({
   root: {
     background: "black"
+  },
+  entry: {
+    display: "flex",
+    flexDirection: "column"
+  },
+  icon: {
+    margin: "auto"
   }
 }));
 
@@ -23,34 +32,185 @@ const Qualifications = () => {
   const classes = useStyles();
 
   return (
-    <Fragment className={classes.root}>
-      <div>Tools of choice:</div>
-      <div>
-        Javascript, HTML5, CSS, NodeJS, NextJS, React, Redux, MongoDB,
-        Material-UI,
-      </div>
-      <div>Other Technologies:</div>
-      <div>
-        FireBase, PostgreSQL, Command Line, C#, Unity, Socket.IO, Rollbar
-      </div>
-      <SvgHtml5 size="5x" />
-      <SvgCss size="5x" />
-      <SvgJavascript size="5x" />
-      <SvgNodeJs size="5x" />
-      <SvgNextjs height="55px" width="55px" />
-      <SvgReact size="5x" />
-      <SvgRedux height="55px" width="55px" />
-      <SvgMongodb height="55px" width="55px" />
-      <SvgMaterialui height="55px" width="55px" />
-      <SvgHtml5 size="2x" />
-      <SvgCss size="2x" />
-      <SvgJavascript size="2x" />
-      <SvgNodeJs size="2x" />
-      <SvgNextjs height="23px" width="23px" />
-      <SvgReact size="2x" />
-      <SvgRedux height="23px" width="23px" />
-      <SvgMongodb height="23px" width="23px" />
-      <SvgMaterialui height="23px" width="23px" />
+    <Fragment>
+      <Hidden xsDown>
+        <Grid container spacing={2} justify="center" alignItems="center">
+          <Grid item xs={12}>
+            <Typography align="center">Tools of Choice</Typography>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">Javascript</Typography>
+              <SvgJavascript className={classes.icon} size="5x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">HTML5</Typography>
+              <SvgHtml5 className={classes.icon} size="5x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">CSS</Typography>
+              <SvgCss className={classes.icon} size="5x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">NodeJS</Typography>
+              <SvgNodeJs className={classes.icon} size="5x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">NextJS</Typography>
+              <SvgNextjs className={classes.icon} height="55px" width="55px" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">React</Typography>
+              <SvgReact className={classes.icon} size="5x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">Redux</Typography>
+              <SvgRedux className={classes.icon} height="55px" width="55px" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">MongoDB</Typography>
+              <SvgMongodb className={classes.icon} height="55px" width="55px" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">Material-UI</Typography>
+              <SvgMaterialui
+                className={classes.icon}
+                height="55px"
+                width="55px"
+              />
+            </div>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography align="center">Other Technologies</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">FireBase</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">PostgreSQL</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">Command Line</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">C#</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">Unity</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">Socket.IO</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">Rollbar</Typography>
+          </Grid>
+        </Grid>
+      </Hidden>
+      <Hidden smUp>
+        <Grid container spacing={2} justify="center" alignItems="center">
+          <Grid item xs={12}>
+            <Typography align="center">Tools of Choice</Typography>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">Javascript</Typography>
+              <SvgJavascript className={classes.icon} size="2x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">HTML5</Typography>
+              <SvgHtml5 className={classes.icon} size="2x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">CSS</Typography>
+              <SvgCss className={classes.icon} size="2x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">NodeJS</Typography>
+              <SvgNodeJs className={classes.icon} size="2x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">NextJS</Typography>
+              <SvgNextjs className={classes.icon} height="23px" width="23px" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">React</Typography>
+              <SvgReact className={classes.icon} size="2x" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">Redux</Typography>
+              <SvgRedux className={classes.icon} height="23px" width="23px" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">MongoDB</Typography>
+              <SvgMongodb className={classes.icon} height="23px" width="23px" />
+            </div>
+          </Grid>
+          <Grid item>
+            <div className={classes.entry}>
+              <Typography align="center">Material-UI</Typography>
+              <SvgMaterialui
+                className={classes.icon}
+                height="23px"
+                width="23px"
+              />
+            </div>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography align="center">Other Technologies</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">FireBase</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">PostgreSQL</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">Command Line</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">C#</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">Unity</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">Socket.IO</Typography>
+          </Grid>
+          <Grid item>
+            <Typography align="center">Rollbar</Typography>
+          </Grid>
+        </Grid>
+      </Hidden>
     </Fragment>
   );
 };
