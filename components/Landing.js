@@ -11,8 +11,8 @@ const Landing = () => {
 
   return (
     <div className={classes.root}>
-      My name is Beau Reescano and I love building interesting things for the
-      web and beyond!
+      My name is Beau and I love building interesting things for the web and
+      beyond!
     </div>
   );
 };
