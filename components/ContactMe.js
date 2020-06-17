@@ -1,5 +1,5 @@
 const ContactMe = () => {
-  return <div>Contact Me! deleon.reescano@ricealumni.net</div>;
+  return <div>Contact Me! email@here.com</div>;
 };
 
 export default ContactMe;
