@@ -12,20 +12,20 @@ import {
   SvgHtml5,
   SvgCss,
   SvgNodeJs,
-  SvgReact
+  SvgReact,
 } from "../icons/icons";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    background: "#FFFFFF"
+    background: "#FFFFFF",
   },
   entry: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
   },
   icon: {
-    margin: "auto"
-  }
+    margin: "auto",
+  },
 }));
 
 const Qualifications = () => {
@@ -125,46 +125,6 @@ const Qualifications = () => {
                 />
               </div>
             </Grid>
-            <Grid item xs={12}>
-              <Typography variant="h5" align="center">
-                Other Technologies
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                FireBase
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                PostgreSQL
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                Command Line
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                C#
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                Unity
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                Socket.IO
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                Rollbar
-              </Typography>
-            </Grid>
           </Grid>
         </Container>
       </Hidden>
@@ -260,49 +220,61 @@ const Qualifications = () => {
                 />
               </div>
             </Grid>
-            <Grid item xs={12}>
-              <Typography variant="h5" align="center">
-                Other Technologies
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                FireBase
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                PostgreSQL
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                Command Line
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                C#
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                Unity
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                Socket.IO
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body2" align="center">
-                Rollbar
-              </Typography>
-            </Grid>
           </Grid>
         </Container>
       </Hidden>
+      <Grid container spacing={2} justify="center" alignItems="center">
+        <Grid item xs={12}>
+          <Typography variant="h5" align="center">
+            Other Technologies
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
+            Express
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
+            Heroku
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
+            FireBase
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
+            PostgreSQL
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
+            Command Line
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
+            Socket.IO
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
+            Rollbar
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
+            C#
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
+            Unity
+          </Typography>
+        </Grid>
+      </Grid>
     </div>
   );
 };
