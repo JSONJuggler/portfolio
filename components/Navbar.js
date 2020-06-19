@@ -6,27 +6,42 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import HomeIcon from "@material-ui/icons/Home";
+import ImportantDevicesIcon from "@material-ui/icons/ImportantDevices";
+import HelpIcon from "@material-ui/icons/Help";
+import SpeakerNotesIcon from "@material-ui/icons/SpeakerNotes";
 import IconButton from "@material-ui/core/IconButton";
 import { useRouter } from "next/router";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Slide from "@material-ui/core/Slide";
 import Tooltip from "@material-ui/core/Tooltip";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   hidden: {
-    visibility: "hidden"
+    visibility: "hidden",
   },
   titleDesktop: {
     display: "none",
     [theme.breakpoints.up("sm")]: {
-      display: "flex"
-    }
+      display: "flex",
+    },
   },
   titleMobile: {
     display: "flex",
     [theme.breakpoints.up("sm")]: {
-      display: "none"
-    }
-  }
+      display: "none",
+    },
+  },
 }));
+
+function HideOnScroll(props) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
 
 const Navbar = () => {
   const classes = useStyles();
@@ -36,17 +51,17 @@ const Navbar = () => {
   const [routing, setRouting] = useState({
     url: "",
     starting: true,
-    complete: false
+    complete: false,
   });
 
-  const handleRouteChangeStart = url => {
+  const handleRouteChangeStart = (url) => {
     console.log("starting nav");
-    setRouting(prev => ({ ...prev, starting: true, complete: false, url }));
+    setRouting((prev) => ({ ...prev, starting: true, complete: false, url }));
   };
 
-  const handleRouteChangeComplete = url => {
+  const handleRouteChangeComplete = (url) => {
     console.log("ending nav");
-    setRouting(prev => ({ ...prev, starting: false, complete: true }));
+    setRouting((prev) => ({ ...prev, starting: false, complete: true }));
   };
 
   useEffect(() => {
@@ -60,36 +75,106 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <AppBar position="fixed">
-        <Container maxWidth="lg" disableGutters={true}>
-          <Toolbar>
-            <Grid container spacing={2} alignItems="center">
-              <Grid item className={classes.titleDesktop}>
-                <Tooltip title="Home">
-                  <IconButton
-                    aria-label="home"
-                    color="inherit"
-                    onClick={e => console.log("click")}
-                  >
-                    <Typography variant="h6">Home</Typography>
-                  </IconButton>
-                </Tooltip>
+      <HideOnScroll>
+        <AppBar color="transparent" elevation={0} position="fixed">
+          <Container maxWidth="lg" disableGutters={true}>
+            <Toolbar>
+              <Grid container spacing={2} alignItems="center">
+                <Grid item className={classes.titleDesktop}>
+                  <Tooltip title="Home">
+                    <IconButton
+                      aria-label="home"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <Typography variant="h6">Home</Typography>
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item className={classes.titleMobile}>
+                  <Tooltip title="Home">
+                    <IconButton
+                      aria-label="home"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <HomeIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
               </Grid>
-              <Grid item className={classes.titleMobile}>
-                <Tooltip title="Home">
-                  <IconButton
-                    aria-label="home"
-                    color="inherit"
-                    onClick={e => console.log("click")}
-                  >
-                    <HomeIcon />
-                  </IconButton>
-                </Tooltip>
+              <Grid container spacing={2} justify="flex-end">
+                <Grid item className={classes.titleDesktop}>
+                  <Tooltip title="Projects">
+                    <IconButton
+                      aria-label="projects"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <Typography variant="h6">Projects</Typography>
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item className={classes.titleMobile}>
+                  <Tooltip title="Projects">
+                    <IconButton
+                      aria-label="projects"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <ImportantDevicesIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item className={classes.titleDesktop}>
+                  <Tooltip title="About">
+                    <IconButton
+                      aria-label="about"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <Typography variant="h6">About</Typography>
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item className={classes.titleMobile}>
+                  <Tooltip title="About">
+                    <IconButton
+                      aria-label="about"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <HelpIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item className={classes.titleDesktop}>
+                  <Tooltip title="Blog">
+                    <IconButton
+                      aria-label="blog"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <Typography variant="h6">Blog</Typography>
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item className={classes.titleMobile}>
+                  <Tooltip title="Blog">
+                    <IconButton
+                      aria-label="blog"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <SpeakerNotesIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
               </Grid>
-            </Grid>
-          </Toolbar>
-        </Container>
-      </AppBar>
+            </Toolbar>
+          </Container>
+        </AppBar>
+      </HideOnScroll>
       <Toolbar className={classes.hidden}></Toolbar>
     </Fragment>
   );

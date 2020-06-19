@@ -258,6 +258,11 @@ const Qualifications = () => {
         </Grid>
         <Grid item>
           <Typography variant="body2" align="center">
+            VIM
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="body2" align="center">
             Socket.IO
           </Typography>
         </Grid>
