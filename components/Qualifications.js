@@ -18,6 +18,8 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     background: "#FFFFFF",
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
   },
   entry: {
     display: "flex",
