@@ -80,7 +80,7 @@ const Navbar = () => {
           <Container maxWidth="lg" disableGutters={true}>
             <Toolbar>
               <Grid container spacing={2} alignItems="center">
-                <Grid item className={classes.titleDesktop}>
+                <Grid item xs={true} className={classes.titleDesktop}>
                   <Tooltip title="Home">
                     <IconButton
                       aria-label="home"
@@ -90,8 +90,48 @@ const Navbar = () => {
                       <Typography variant="h6">Home</Typography>
                     </IconButton>
                   </Tooltip>
+                  <Grid
+                    container
+                    spacing={2}
+                    justify="flex-end"
+                    alignItems="center"
+                  >
+                    <Grid item className={classes.titleDesktop}>
+                      <Tooltip title="Projects">
+                        <IconButton
+                          aria-label="projects"
+                          color="inherit"
+                          onClick={(e) => console.log("click")}
+                        >
+                          <Typography variant="h6">Projects</Typography>
+                        </IconButton>
+                      </Tooltip>
+                    </Grid>
+                    <Grid item className={classes.titleDesktop}>
+                      <Tooltip title="About">
+                        <IconButton
+                          aria-label="about"
+                          color="inherit"
+                          onClick={(e) => console.log("click")}
+                        >
+                          <Typography variant="h6">About</Typography>
+                        </IconButton>
+                      </Tooltip>
+                    </Grid>
+                    <Grid item className={classes.titleDesktop}>
+                      <Tooltip title="Blog">
+                        <IconButton
+                          aria-label="blog"
+                          color="inherit"
+                          onClick={(e) => console.log("click")}
+                        >
+                          <Typography variant="h6">Blog</Typography>
+                        </IconButton>
+                      </Tooltip>
+                    </Grid>
+                  </Grid>
                 </Grid>
-                <Grid item className={classes.titleMobile}>
+                <Grid item xs={true} className={classes.titleMobile}>
                   <Tooltip title="Home">
                     <IconButton
                       aria-label="home"
@@ -101,74 +141,46 @@ const Navbar = () => {
                       <HomeIcon />
                     </IconButton>
                   </Tooltip>
-                </Grid>
-              </Grid>
-              <Grid container spacing={2} justify="flex-end">
-                <Grid item className={classes.titleDesktop}>
-                  <Tooltip title="Projects">
-                    <IconButton
-                      aria-label="projects"
-                      color="inherit"
-                      onClick={(e) => console.log("click")}
-                    >
-                      <Typography variant="h6">Projects</Typography>
-                    </IconButton>
-                  </Tooltip>
-                </Grid>
-                <Grid item className={classes.titleMobile}>
-                  <Tooltip title="Projects">
-                    <IconButton
-                      aria-label="projects"
-                      color="inherit"
-                      onClick={(e) => console.log("click")}
-                    >
-                      <ImportantDevicesIcon />
-                    </IconButton>
-                  </Tooltip>
-                </Grid>
-                <Grid item className={classes.titleDesktop}>
-                  <Tooltip title="About">
-                    <IconButton
-                      aria-label="about"
-                      color="inherit"
-                      onClick={(e) => console.log("click")}
-                    >
-                      <Typography variant="h6">About</Typography>
-                    </IconButton>
-                  </Tooltip>
-                </Grid>
-                <Grid item className={classes.titleMobile}>
-                  <Tooltip title="About">
-                    <IconButton
-                      aria-label="about"
-                      color="inherit"
-                      onClick={(e) => console.log("click")}
-                    >
-                      <HelpIcon />
-                    </IconButton>
-                  </Tooltip>
-                </Grid>
-                <Grid item className={classes.titleDesktop}>
-                  <Tooltip title="Blog">
-                    <IconButton
-                      aria-label="blog"
-                      color="inherit"
-                      onClick={(e) => console.log("click")}
-                    >
-                      <Typography variant="h6">Blog</Typography>
-                    </IconButton>
-                  </Tooltip>
-                </Grid>
-                <Grid item className={classes.titleMobile}>
-                  <Tooltip title="Blog">
-                    <IconButton
-                      aria-label="blog"
-                      color="inherit"
-                      onClick={(e) => console.log("click")}
-                    >
-                      <SpeakerNotesIcon />
-                    </IconButton>
-                  </Tooltip>
+                  <Grid
+                    container
+                    spacing={2}
+                    justify="flex-end"
+                    alignItems="center"
+                  >
+                    <Grid item className={classes.titleMobile}>
+                      <Tooltip title="Projects">
+                        <IconButton
+                          aria-label="projects"
+                          color="inherit"
+                          onClick={(e) => console.log("click")}
+                        >
+                          <ImportantDevicesIcon />
+                        </IconButton>
+                      </Tooltip>
+                    </Grid>
+                    <Grid item className={classes.titleMobile}>
+                      <Tooltip title="About">
+                        <IconButton
+                          aria-label="about"
+                          color="inherit"
+                          onClick={(e) => console.log("click")}
+                        >
+                          <HelpIcon />
+                        </IconButton>
+                      </Tooltip>
+                    </Grid>
+                    <Grid item className={classes.titleMobile}>
+                      <Tooltip title="Blog">
+                        <IconButton
+                          aria-label="blog"
+                          color="inherit"
+                          onClick={(e) => console.log("click")}
+                        >
+                          <SpeakerNotesIcon />
+                        </IconButton>
+                      </Tooltip>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
             </Toolbar>
