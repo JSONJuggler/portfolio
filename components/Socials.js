@@ -4,7 +4,18 @@ import { makeStyles } from "@material-ui/core";
 import { Fragment } from "react";
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  socialDesktop: {
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "flex",
+    },
+  },
+  socialMobile: {
+    display: "flex",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
+  },
 }));
 
 const Socials = () => {
@@ -12,14 +23,23 @@ const Socials = () => {
 
   return (
     <Fragment>
-      <Grid item>
+      <Grid item className={classes.socialDesktop}>
         <SvgGithub size="2x" />
       </Grid>
-      <Grid item>
+      <Grid item className={classes.socialDesktop}>
         <SvgYoutube size="2x" />
       </Grid>
-      <Grid item>
+      <Grid item className={classes.socialDesktop}>
         <SvgTwitter size="2x" />
+      </Grid>
+      <Grid item className={classes.socialMobile}>
+        <SvgGithub size="1x" />
+      </Grid>
+      <Grid item className={classes.socialMobile}>
+        <SvgYoutube size="1x" />
+      </Grid>
+      <Grid item className={classes.socialMobile}>
+        <SvgTwitter size="1x" />
       </Grid>
     </Fragment>
   );
