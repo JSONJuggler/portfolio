@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "50px",
     paddingBottom: "50px",
   },
+  gridItem: {
+    padding: theme.spacing(2),
+  },
   gridList: {
     flexWrap: "nowrap",
     height: "450px",
@@ -63,40 +66,8 @@ const Projects = () => {
       <Grid item className={classes.headerTitleContainer} xs={12}>
         <div className={classes.headerTitle}>Projects</div>
       </Grid>
-      <Grid item className={classes.text} xs={6}>
-        text go here
-      </Grid>
-      <Grid item className={classes.gridListRoot} xs={6}>
-        <GridList className={classes.gridList} cols={1} cellHeight="auto">
-          {translatorData.map((data) => (
-            <GridListTile key={data.img}>
-              <img src={data.img} alt={data.title} height="100%" width="100%" />
-              <GridListTileBar
-                title={data.title}
-                classes={{
-                  root: classes.titleBar,
-                  title: classes.title,
-                }}
-              />
-            </GridListTile>
-          ))}
-        </GridList>
-      </Grid>
-      <Grid item className={classes.gridListRoot} xs={6}>
-        <GridList className={classes.gridList} cols={1} cellHeight="auto">
-          {translatorData.map((data) => (
-            <GridListTile key={data.img}>
-              <img src={data.img} alt={data.title} height="100%" width="100%" />
-              <GridListTileBar
-                title={data.title}
-                classes={{
-                  root: classes.titleBar,
-                  title: classes.title,
-                }}
-              />
-            </GridListTile>
-          ))}
-        </GridList>
+      <Grid item className={classes.gridItem} xs={6}>
+        <img src={translator} height="100%" width="100%" />
       </Grid>
     </Grid>
   );
