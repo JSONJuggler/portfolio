@@ -39,7 +39,7 @@ const Qualifications = () => {
         <Container maxWidth="sm">
           <Grid container spacing={2} justify="center" alignItems="center">
             <Grid item xs={12}>
-              <Typography className={classes.title} variant="h4" align="center">
+              <Typography variant="h4" align="center">
                 Tools of Choice
               </Typography>
             </Grid>
@@ -227,7 +227,7 @@ const Qualifications = () => {
       </Hidden>
       <Grid container spacing={2} justify="center" alignItems="center">
         <Grid item xs={12}>
-          <Typography variant="h5" align="center">
+          <Typography className={classes.root} variant="h5" align="center">
             Other Technologies
           </Typography>
         </Grid>
