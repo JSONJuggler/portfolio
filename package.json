@@ -27,6 +27,7 @@
     "mongoose": "^5.9.9",
     "next": "^9.3.4",
     "next-connect": "^0.6.3",
+    "next-images": "^1.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^5.5.3",
