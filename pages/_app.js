@@ -10,12 +10,12 @@ import Footer from "../components/Footer";
 
 import theme from "../themes/theme";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
     display: "flex",
-    flexDirection: "column"
-  }
+    flexDirection: "column",
+  },
 }));
 
 function MyApp({ Component, pageProps }) {
@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
 }
 
 MyApp.propTypes = {
-  Component: PropTypes.elementType.isRequired
+  Component: PropTypes.elementType.isRequired,
 };
 
 export default withRedux(MyApp);

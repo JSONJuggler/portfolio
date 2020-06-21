@@ -7,8 +7,8 @@ import Copyright from "./Copyright";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(2),
   },
   gridContainer: {},
 }));
@@ -25,6 +25,7 @@ const Footer = () => {
           justify="center"
           alignItems="center"
           direction="column"
+          spacing={2}
         >
           <Grid container justify="center" spacing={4}>
             <Socials />
