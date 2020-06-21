@@ -9,6 +9,7 @@ import {
   faJs,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export const SvgNextjs = (props) => {
   return (
@@ -72,4 +73,8 @@ export const SvgNodeJs = (props) => {
 
 export const SvgReact = (props) => {
   return <FontAwesomeIcon icon={faReact} {...props} />;
+};
+
+export const SvgDownArrow = (props) => {
+  return <FontAwesomeIcon icon={faArrowDown} {...props} />;
 };
