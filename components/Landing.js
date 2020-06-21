@@ -1,5 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { SvgDownArrow } from "../icons/icons";
+import throttle from "lodash/throttle";
+import { useEffect, useCallback } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,6 +31,17 @@ const useStyles = makeStyles((theme) => ({
 
 const Landing = () => {
   const classes = useStyles();
+
+  const handleScroll = () => {
+    console.log("about to log");
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", throttle(handleScroll, 800));
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className={classes.root}>
