@@ -18,8 +18,8 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     background: "#FFFFFF",
-    paddingTop: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   entry: {
     display: "flex",
@@ -39,7 +39,7 @@ const Qualifications = () => {
         <Container maxWidth="sm">
           <Grid container spacing={2} justify="center" alignItems="center">
             <Grid item xs={12}>
-              <Typography variant="h4" align="center">
+              <Typography className={classes.title} variant="h4" align="center">
                 Tools of Choice
               </Typography>
             </Grid>

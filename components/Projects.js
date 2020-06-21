@@ -6,70 +6,43 @@ import Grid from "@material-ui/core/Grid";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
+import Container from "@material-ui/core/Container";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  gridListRoot: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    overflow: "hidden",
-    paddingLeft: "50px",
-    paddingRight: "50px",
-    paddingTop: "50px",
-    paddingBottom: "50px",
-  },
   gridItem: {
     padding: theme.spacing(2),
   },
-  gridList: {
-    flexWrap: "nowrap",
-    height: "450px",
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: "translateZ(0)",
-  },
-  media: {
-    padding: theme.spacing(8),
-  },
-  text: {
-    padding: theme.spacing(8),
-    background: "yellow",
-  },
-  headerTitleContainer: {
-    display: "flex",
-  },
-  headerTitle: {
-    marginLeft: "auto",
-    marginRight: "auto",
+  root: {
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
 }));
-
-const translatorData = [
-  {
-    img: translator,
-    title: "Gif",
-  },
-  {
-    img: translator1,
-    title: "Pic1",
-  },
-  {
-    img: translator2,
-    title: "Pic2",
-  },
-];
 
 const Projects = () => {
   const classes = useStyles();
 
   return (
-    <Grid container>
-      <Grid item className={classes.headerTitleContainer} xs={12}>
-        <div className={classes.headerTitle}>Projects</div>
-      </Grid>
-      <Grid item className={classes.gridItem} xs={6}>
-        <img src={translator} height="100%" width="100%" />
-      </Grid>
-    </Grid>
+    <div className={classes.root}>
+      <Container maxWidth="lg">
+        <Grid container spacing={4} justify="center">
+          <Grid item xs={12}>
+            <Typography className={classes.title} variant="h4" align="center">
+              Projects
+            </Typography>
+          </Grid>
+          <Grid item className={classes.gridItem} xs={12} md={6}>
+            <img src={translator} height="100%" width="100%" />
+          </Grid>
+          <Grid item className={classes.gridItem} xs={12} md={6}>
+            <img src={translator} height="100%" width="100%" />
+          </Grid>
+          <Grid item className={classes.gridItem} xs={12} md={6}>
+            <img src={translator} height="100%" width="100%" />
+          </Grid>
+        </Grid>
+      </Container>
+    </div>
   );
 };
 
