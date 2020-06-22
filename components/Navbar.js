@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
   hidden: {
     visibility: "hidden",
   },
+  //titleText: {
+  //WebkitTextStrokeWidth: "1px",
+  //WebkitTextStrokeColor: "white",
+  //},
   titleDesktop: {
     display: "none",
     [theme.breakpoints.up("sm")]: {
@@ -87,7 +91,9 @@ const Navbar = () => {
                       color="inherit"
                       onClick={(e) => console.log("click")}
                     >
-                      <Typography variant="h6">Home</Typography>
+                      <Typography className={classes.titleText} variant="h6">
+                        Home
+                      </Typography>
                     </IconButton>
                   </Tooltip>
                   <Grid
@@ -103,7 +109,12 @@ const Navbar = () => {
                           color="inherit"
                           onClick={(e) => console.log("click")}
                         >
-                          <Typography variant="h6">Projects</Typography>
+                          <Typography
+                            className={classes.titleText}
+                            variant="h6"
+                          >
+                            Projects
+                          </Typography>
                         </IconButton>
                       </Tooltip>
                     </Grid>
@@ -114,7 +125,12 @@ const Navbar = () => {
                           color="inherit"
                           onClick={(e) => console.log("click")}
                         >
-                          <Typography variant="h6">About</Typography>
+                          <Typography
+                            className={classes.titleText}
+                            variant="h6"
+                          >
+                            About
+                          </Typography>
                         </IconButton>
                       </Tooltip>
                     </Grid>
@@ -125,7 +141,12 @@ const Navbar = () => {
                           color="inherit"
                           onClick={(e) => console.log("click")}
                         >
-                          <Typography variant="h6">Blog</Typography>
+                          <Typography
+                            className={classes.titleText}
+                            variant="h6"
+                          >
+                            Blog
+                          </Typography>
                         </IconButton>
                       </Tooltip>
                     </Grid>
@@ -187,7 +208,6 @@ const Navbar = () => {
           </Container>
         </AppBar>
       </HideOnScroll>
-      <Toolbar className={classes.hidden}></Toolbar>
     </Fragment>
   );
 };

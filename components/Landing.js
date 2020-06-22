@@ -1,12 +1,12 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { SvgDownArrow } from "../icons/icons";
 import throttle from "lodash/throttle";
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: "95vh",
-    minHeight: "calc(var(--vh, 1vh)*95)",
+    minHeight: "100vh",
+    minHeight: "calc(var(--vh, 1vh)*100)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -33,30 +33,53 @@ const useStyles = makeStyles((theme) => ({
 const Landing = () => {
   const classes = useStyles();
 
-  //const handleResize = () => {
-  //let vh = window.innerHeight * 0.01;
-  //document.documentElement.style.setProperty("--vh", `${vh}px`);
-  //};
+  const [vh, setVh] = useState(0);
+  const [initialMobileVh, setInitialMobileVh] = useState(0);
+  const [vhThreshhold, setVhThreshhold] = useState(0.3);
 
-  //useEffect(() => {
-  //window.addEventListener("resize", throttle(handleResize, 800));
-  //return () => {
-  //window.removeEventListener("resize", handleResize);
-  //};
-  //}, []);
+  const handleResize = () => {
+    setVh((prev) => window.innerHeight);
+  };
 
   useEffect(() => {
-    //if (typeof window !== "undefined") {
-    if (
-      navigator.userAgent.indexOf("Safari") != -1 &&
-      navigator.userAgent.indexOf("Chrome") == -1 &&
-      /iPad|iPhone|iPod/.test(navigator.userAgent) &&
-      !window.MSStream
-    ) {
-      let vh = (window.innerHeight - 10) * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
-      //}
+    if (vh !== 0) {
+      //alert(Math.abs(window.innerHeight - initialMobileVh) / initialMobileVh);
+      if (
+        navigator.userAgent.indexOf("Safari") != -1 &&
+        navigator.userAgent.indexOf("Chrome") == -1 &&
+        /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+        !window.MSStream
+      ) {
+        if (
+          Math.abs(window.innerHeight - initialMobileVh) / initialMobileVh >
+          vhThreshhold
+        ) {
+          document.documentElement.style.setProperty(
+            "--vh",
+            `${window.innerHeight * 0.01}px`
+          );
+        } else {
+          document.documentElement.style.setProperty(
+            "--vh",
+            `${initialMobileVh * 0.01}px`
+          );
+        }
+      } else {
+        document.documentElement.style.setProperty(
+          "--vh",
+          `${window.innerHeight * 0.01}px`
+        );
+      }
     }
+  }, [vh]);
+
+  useEffect(() => {
+    setVh((prev) => window.outerHeight);
+    setInitialMobileVh((prev) => window.innerHeight);
+    window.addEventListener("resize", throttle(handleResize, 800));
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
