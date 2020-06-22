@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     animation: `$bounce 2s infinite`,
     marginTop: "auto",
-    paddingBottom: theme.spacing(10),
+    paddingBottom: theme.spacing(6),
   },
   "@keyframes bounce": {
     "0%, 20%, 50%, 80%, 100%": {
@@ -74,7 +74,7 @@ const Landing = () => {
   }, [vh]);
 
   useEffect(() => {
-    setVh((prev) => window.outerHeight);
+    setVh((prev) => window.innerHeight);
     setInitialMobileVh((prev) => window.innerHeight);
     window.addEventListener("resize", throttle(handleResize, 800));
     return () => {
