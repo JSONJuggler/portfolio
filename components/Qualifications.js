@@ -17,7 +17,6 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: "#FFFFFF",
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
     width: "100%",

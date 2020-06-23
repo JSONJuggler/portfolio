@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 
 import { makeStyles } from "@material-ui/core";
+import Container from "@material-ui/core/Container";
 import Landing from "../components/Landing";
 import Qualifications from "../components/Qualifications";
 import Projects from "../components/Projects";
@@ -23,8 +24,10 @@ const Home = () => {
     <div className={classes.root}>
       <Landing />
       <Qualifications />
-      <Projects />
-      <ContactMe />
+      <Container maxWidth="lg">
+        <Projects />
+        <ContactMe />
+      </Container>
     </div>
   );
 };

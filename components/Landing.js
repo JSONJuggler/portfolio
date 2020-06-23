@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { SvgDownArrow } from "../icons/icons";
 import throttle from "lodash/throttle";
 import { useEffect, useCallback, useState } from "react";
-import { Typography } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,6 +14,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(2),
   },
+  title: {
+    marginTop: "auto",
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
+  },
   bounceAnimation: {
     display: "flex",
     animation: `$bounce 2s infinite`,
@@ -21,14 +26,17 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(4),
   },
   "@keyframes bounce": {
-    "0%, 20%, 50%, 80%, 100%": {
+    "0%": {
       transform: "translateY(0)",
+      opacity: "1",
     },
-    "40%": {
-      transform: "translateY(-30%)",
+    "50%": {
+      transform: "translateY(30%)",
+      opacity: "0",
     },
-    "60%": {
-      transform: "translateY(-15%)",
+    "100%": {
+      transform: "translateY(0)",
+      opacity: "1",
     },
   },
 }));
@@ -48,7 +56,7 @@ const Landing = () => {
     if (vh !== 0) {
       //alert(Math.abs(window.innerHeight - initialMobileVh) / initialMobileVh);
       if (
-        navigator.userAgent.indexOf("Safari") != -1 &&
+        //navigator.userAgent.indexOf("Safari") != -1 &&
         navigator.userAgent.indexOf("Chrome") == -1 &&
         /iPad|iPhone|iPod/.test(navigator.userAgent) &&
         !window.MSStream
@@ -87,8 +95,12 @@ const Landing = () => {
 
   return (
     <div className={classes.root}>
-      My name is Beau and I love building interesting things for the web and
-      beyond!
+      <div className={classes.title}>
+        <Typography variant="h1" align="center">
+          Hi, I'm Beau. I'm a <b>web developer</b> with a passion for creating
+          delightful user experiences.
+        </Typography>
+      </div>
       <div className={classes.bounceAnimation}>
         <SvgDownArrow />
       </div>
