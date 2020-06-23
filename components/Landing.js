@@ -76,7 +76,7 @@ const Landing = () => {
   }, [vh]);
 
   useEffect(() => {
-    setVh((prev) => window.innerHeight);
+    setVh((prev) => window.outerHeight);
     setInitialMobileVh((prev) => window.innerHeight);
     window.addEventListener("resize", throttle(handleResize, 800));
     return () => {
