@@ -11,6 +11,8 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
+    //width: "100%",
   },
 }));
 

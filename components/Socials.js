@@ -8,10 +8,14 @@ const useStyles = makeStyles((theme) => ({
     display: "none",
     [theme.breakpoints.up("sm")]: {
       display: "flex",
+      marginLeft: theme.spacing(2),
+      marginRight: theme.spacing(2),
     },
   },
   socialMobile: {
     display: "flex",
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
     [theme.breakpoints.up("sm")]: {
       display: "none",
     },
@@ -33,13 +37,13 @@ const Socials = () => {
         <SvgTwitter size="2x" />
       </Grid>
       <Grid item className={classes.socialMobile}>
-        <SvgGithub size="1x" />
+        <SvgGithub size="2x" />
       </Grid>
       <Grid item className={classes.socialMobile}>
-        <SvgYoutube size="1x" />
+        <SvgYoutube size="2x" />
       </Grid>
       <Grid item className={classes.socialMobile}>
-        <SvgTwitter size="1x" />
+        <SvgTwitter size="2x" />
       </Grid>
     </Fragment>
   );

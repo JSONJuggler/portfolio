@@ -10,12 +10,10 @@ import Container from "@material-ui/core/Container";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  gridItem: {
-    padding: theme.spacing(2),
-  },
+  gridItem: {},
   root: {
     paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(4),
+    paddingBottom: theme.spacing(2),
   },
 }));
 
@@ -25,9 +23,9 @@ const Projects = () => {
   return (
     <div className={classes.root}>
       <Container maxWidth="lg">
-        <Grid container spacing={4} justify="center">
+        <Grid container spacing={2} justify="center">
           <Grid item xs={12}>
-            <Typography className={classes.title} variant="h4" align="center">
+            <Typography className={classes.title} variant="h2" align="center">
               Projects
             </Typography>
           </Grid>

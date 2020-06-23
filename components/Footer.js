@@ -6,36 +6,33 @@ import Socials from "./Socials";
 import Copyright from "./Copyright";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    paddingTop: theme.spacing(4),
+  gridRoot: {
+    paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(2),
   },
-  gridContainer: {},
+  socials: {
+    paddingBottom: theme.spacing(1),
+  },
 }));
 
 const Footer = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Container maxWidth="lg">
-        <Grid
-          container
-          className={classes.gridContainer}
-          justify="center"
-          alignItems="center"
-          direction="column"
-          spacing={2}
-        >
-          <Grid container justify="center" spacing={4}>
-            <Socials />
-          </Grid>
-          <Grid item>
-            <Copyright />
-          </Grid>
-        </Grid>
-      </Container>
-    </div>
+    <Grid
+      container
+      className={classes.gridRoot}
+      justify="center"
+      alignItems="center"
+      direction="column"
+    >
+      <Grid container className={classes.socials} justify="center">
+        <Socials />
+      </Grid>
+      <Grid item>
+        <Copyright />
+      </Grid>
+    </Grid>
   );
 };
 

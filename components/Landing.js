@@ -10,12 +10,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    paddingTop: theme.spacing(5),
+    paddingBottom: theme.spacing(2),
   },
   bounceAnimation: {
     display: "flex",
     animation: `$bounce 2s infinite`,
     marginTop: "auto",
-    paddingBottom: theme.spacing(6),
+    paddingBottom: theme.spacing(4),
   },
   "@keyframes bounce": {
     "0%, 20%, 50%, 80%, 100%": {

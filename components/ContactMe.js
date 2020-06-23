@@ -5,13 +5,14 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(10),
-    paddingBottom: theme.spacing(10),
-    marginTop: theme.spacing(0.5),
-    marginBottom: theme.spacing(0.5),
-    paddingLeft: theme.spacing(1),
-    paddingRight: theme.spacing(1),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     background: "#FFFFFF",
+    width: "100%",
+  },
+  gridRoot: {
+    paddingTop: theme.spacing(5),
+    paddingBottom: theme.spacing(5),
   },
 }));
 
@@ -19,18 +20,20 @@ const ContactMe = () => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root} spacing={4} alignItems="center">
-      <Grid item xs={6}>
-        <Typography variant="h4" align="center">
-          Need an interactive website or web application?
-        </Typography>
+    <div className={classes.root}>
+      <Grid container className={classes.gridRoot} alignItems="center">
+        <Grid item xs={6}>
+          <Typography variant="h4" align="center">
+            Need an interactive website or web application?
+          </Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <Typography variant="h4" align="center">
+            Contact Me!
+          </Typography>
+        </Grid>
       </Grid>
-      <Grid item xs={6}>
-        <Typography variant="h4" align="center">
-          Contact Me!
-        </Typography>
-      </Grid>
-    </Grid>
+    </div>
   );
 };
 

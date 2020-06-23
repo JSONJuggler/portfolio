@@ -12,7 +12,7 @@ import SpeakerNotesIcon from "@material-ui/icons/SpeakerNotes";
 import IconButton from "@material-ui/core/IconButton";
 import { useRouter } from "next/router";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Slide from "@material-ui/core/Slide";
+import Fade from "@material-ui/core/Fade";
 import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles((theme) => ({
@@ -41,9 +41,9 @@ function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
   return (
-    <Slide appear={false} direction="down" in={!trigger}>
+    <Fade timeout={{ enter: 1000, exit: 500 }} in={!trigger}>
       {children}
-    </Slide>
+    </Fade>
   );
 }
 
