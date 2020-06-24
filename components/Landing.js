@@ -3,6 +3,7 @@ import { SvgDownArrow } from "../icons/icons";
 import throttle from "lodash/throttle";
 import { useEffect, useCallback, useState } from "react";
 import Typography from "@material-ui/core/Typography";
+import Fade from "@material-ui/core/Fade";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -96,10 +97,12 @@ const Landing = () => {
   return (
     <div className={classes.root}>
       <div className={classes.title}>
-        <Typography variant="h1" align="center">
-          Hi, I'm Beau. I'm a <b>web developer</b> with a passion for creating
-          delightful user experiences.
-        </Typography>
+        <Fade timeout={1000} in={true}>
+          <Typography variant="h1" align="center">
+            Hi, I'm Beau. I'm a <b>web developer</b> with a passion for creating
+            delightful user experiences.
+          </Typography>
+        </Fade>
       </div>
       <div className={classes.bounceAnimation}>
         <SvgDownArrow />
