@@ -4,6 +4,8 @@ import throttle from "lodash/throttle";
 import { useEffect, useCallback, useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import Fade from "@material-ui/core/Fade";
+import Tooltip from "@material-ui/core/Tooltip";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,9 +18,19 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
   },
   title: {
+    //display: "flex",
+    //flexDirection: "column",
     marginTop: "auto",
     paddingLeft: theme.spacing(1),
     paddingRight: theme.spacing(1),
+  },
+  contact: {
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "flex",
+      justifyContent: "center",
+      paddingTop: theme.spacing(6),
+    },
   },
   bounceAnimation: {
     display: "flex",
@@ -96,14 +108,25 @@ const Landing = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.title}>
-        <Fade timeout={1000} in={true}>
+      <Fade timeout={1000} in={true}>
+        <div className={classes.title}>
           <Typography variant="h1" align="center">
             Hi, I'm Beau. I'm a <b>web developer</b> with a passion for creating
             delightful user experiences.
           </Typography>
-        </Fade>
-      </div>
+          <div className={classes.contact}>
+            <Tooltip title="About">
+              <IconButton
+                aria-label="contact"
+                color="inherit"
+                onClick={(e) => console.log("click")}
+              >
+                <Typography variant="h6">contact</Typography>
+              </IconButton>
+            </Tooltip>
+          </div>
+        </div>
+      </Fade>
       <div className={classes.bounceAnimation}>
         <SvgDownArrow />
       </div>

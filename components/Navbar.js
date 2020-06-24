@@ -182,6 +182,19 @@ const Navbar = () => {
                     </IconButton>
                   </Tooltip>
                 </Grid>
+                <Grid item xs="auto" className={classes.titleMobile}>
+                  <Tooltip title="Contact">
+                    <IconButton
+                      aria-label="contact"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <Typography className={classes.titleText} variant="h6">
+                        contact
+                      </Typography>
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
                 <Grid item className={classes.titleMobile}>
                   <Tooltip title="Blog">
                     <IconButton
@@ -249,6 +262,23 @@ const Navbar = () => {
                   </Tooltip>
                 </Grid>
                 <Grid item className={classes.titleDesktop}>
+                  <Tooltip title="Contact">
+                    <IconButton
+                      aria-label="contact"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <Typography
+                        className={classes.titleText}
+                        color="primary"
+                        variant="h6"
+                      >
+                        contact
+                      </Typography>
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item className={classes.titleDesktop}>
                   <Tooltip title="Blog">
                     <IconButton
                       aria-label="blog"
@@ -295,6 +325,23 @@ const Navbar = () => {
                         variant="h6"
                       >
                         about
+                      </Typography>
+                    </IconButton>
+                  </Tooltip>
+                </Grid>
+                <Grid item xs="auto" className={classes.titleMobile}>
+                  <Tooltip title="Contact">
+                    <IconButton
+                      aria-label="contact"
+                      color="inherit"
+                      onClick={(e) => console.log("click")}
+                    >
+                      <Typography
+                        className={classes.titleText}
+                        variant="h6"
+                        color="primary"
+                      >
+                        contact
                       </Typography>
                     </IconButton>
                   </Tooltip>
