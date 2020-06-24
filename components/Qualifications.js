@@ -223,63 +223,6 @@ const Qualifications = () => {
             </Grid>
           </Grid>
         </Hidden>
-        <Grid container justify="space-around" alignItems="center">
-          <Grid item xs={12}>
-            <Typography className={classes.root} variant="h5" align="center">
-              Other Technologies
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              Express
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              Heroku
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              FireBase
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              PostgreSQL
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              Command Line
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              VIM
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              Socket.IO
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              Rollbar
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              C#
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="body2" align="center">
-              Unity
-            </Typography>
-          </Grid>
-        </Grid>
       </Container>
     </div>
   );
