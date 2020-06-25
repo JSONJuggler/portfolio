@@ -77,9 +77,10 @@ const about = () => {
               </Typography>
               <Typography className={classes.bodyDetails} variant="h5">
                 As a developer, I am in my element. I have the ultimate freedom
-                to craft solutions to an absurd number of unique problems! If
-                you have a problem you'd like me to solve or if you're just
-                interested in chatting about my skills and tools listed below,{" "}
+                to craft solutions to an absurd number of unique problems by
+                developing delightful user experiences! If you have a problem
+                you'd like me to solve or if you're just interested in chatting
+                about my skills and tools listed below,{" "}
                 <Contact size="small">
                   <Typography
                     className={classes.bodyDetailsContact}
