@@ -115,7 +115,7 @@ const Landing = () => {
             delightful user experiences.
           </Typography>
           <div className={classes.contact}>
-            <Tooltip title="About">
+            <Tooltip title="Contact">
               <IconButton
                 aria-label="contact"
                 color="inherit"
