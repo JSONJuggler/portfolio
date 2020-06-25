@@ -5,6 +5,8 @@ import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 
+import Contact from "../components/Contact";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(2),
@@ -38,18 +40,11 @@ const ContactMe = () => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <div className={classes.contactContainer}>
-            <Tooltip title="Contact">
-              <IconButton
-                aria-label="contact"
-                color="inherit"
-                className={classes.contact}
-                onClick={(e) => console.log("click")}
-              >
-                <Typography variant="h3">
-                  <b>Contact Me!</b>
-                </Typography>
-              </IconButton>
-            </Tooltip>
+            <Contact className={classes.contact}>
+              <Typography variant="h3">
+                <b>Contact Me!</b>
+              </Typography>
+            </Contact>
           </div>
         </Grid>
       </Grid>

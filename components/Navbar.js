@@ -12,6 +12,8 @@ import Fade from "@material-ui/core/Fade";
 import Tooltip from "@material-ui/core/Tooltip";
 import Paper from "@material-ui/core/Paper";
 
+import Contact from "../components/Contact";
+
 const useStyles = makeStyles((theme) => ({
   hidden: {
     visibility: "hidden",
@@ -200,20 +202,11 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
-                      <Tooltip title="Contact">
-                        <IconButton
-                          aria-label="contact"
-                          color="inherit"
-                          onClick={(e) => console.log("click")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            variant="h6"
-                          >
-                            contact
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <Contact>
+                        <Typography className={classes.titleText} variant="h6">
+                          contact
+                        </Typography>
+                      </Contact>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
                       <Tooltip title="Blog">
@@ -288,21 +281,15 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="Contact">
-                        <IconButton
-                          aria-label="contact"
-                          color="inherit"
-                          onClick={(e) => console.log("click")}
+                      <Contact>
+                        <Typography
+                          className={classes.titleText}
+                          color="primary"
+                          variant="h6"
                         >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            contact
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                          contact
+                        </Typography>
+                      </Contact>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
                       <Tooltip title="Blog">
@@ -356,21 +343,15 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
-                      <Tooltip title="Contact">
-                        <IconButton
-                          aria-label="contact"
-                          color="inherit"
-                          onClick={(e) => console.log("click")}
+                      <Contact>
+                        <Typography
+                          className={classes.titleText}
+                          variant="h6"
+                          color="primary"
                         >
-                          <Typography
-                            className={classes.titleText}
-                            variant="h6"
-                            color="primary"
-                          >
-                            contact
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                          contact
+                        </Typography>
+                      </Contact>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
                       <Tooltip title="Blog">
@@ -447,21 +428,15 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="Contact">
-                        <IconButton
-                          aria-label="contact"
-                          color="inherit"
-                          onClick={(e) => console.log("click")}
+                      <Contact>
+                        <Typography
+                          className={classes.titleText}
+                          color="primary"
+                          variant="h6"
                         >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            contact
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                          contact
+                        </Typography>
+                      </Contact>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
                       <Tooltip title="Blog">
@@ -515,21 +490,15 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
-                      <Tooltip title="Contact">
-                        <IconButton
-                          aria-label="contact"
-                          color="inherit"
-                          onClick={(e) => console.log("click")}
+                      <Contact>
+                        <Typography
+                          className={classes.titleText}
+                          variant="h6"
+                          color="primary"
                         >
-                          <Typography
-                            className={classes.titleText}
-                            variant="h6"
-                            color="primary"
-                          >
-                            contact
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                          contact
+                        </Typography>
+                      </Contact>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
                       <Tooltip title="Blog">

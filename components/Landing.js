@@ -7,6 +7,8 @@ import Fade from "@material-ui/core/Fade";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 
+import Contact from "../components/Contact";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
@@ -115,15 +117,9 @@ const Landing = () => {
             delightful user experiences.
           </Typography>
           <div className={classes.contact}>
-            <Tooltip title="Contact">
-              <IconButton
-                aria-label="contact"
-                color="inherit"
-                onClick={(e) => console.log("click")}
-              >
-                <Typography variant="h6">contact</Typography>
-              </IconButton>
-            </Tooltip>
+            <Contact>
+              <Typography variant="h6">contact</Typography>
+            </Contact>
           </div>
         </div>
       </Fade>

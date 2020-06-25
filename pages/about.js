@@ -9,6 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 
 import ContactMe from "../components/ContactMe";
 import Skills from "../components/Socials";
+import Contact from "../components/Contact";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,21 +80,14 @@ const about = () => {
                 to craft solutions to an absurd number of unique problems! If
                 you have a problem you'd like me to solve or if you're just
                 interested in chatting about my skills and tools listed below,{" "}
-                <Tooltip title="Contact">
-                  <IconButton
-                    aria-label="contact"
-                    color="inherit"
-                    size="small"
-                    onClick={(e) => console.log("click")}
+                <Contact size="small">
+                  <Typography
+                    className={classes.bodyDetailsContact}
+                    variant="h5"
                   >
-                    <Typography
-                      className={classes.bodyDetailsContact}
-                      variant="h5"
-                    >
-                      <b>contact me!</b>
-                    </Typography>
-                  </IconButton>
-                </Tooltip>
+                    <b>contact me!</b>
+                  </Typography>
+                </Contact>
               </Typography>
             </div>
             <Grid container className={classes.gridContainer}>

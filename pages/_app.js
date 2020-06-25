@@ -5,6 +5,7 @@ import { ThemeProvider, makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { withRedux } from "../lib/redux";
 
+import ContactBackdrop from "../components/ContactBackdrop";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -42,6 +43,7 @@ function MyApp({ Component, pageProps }) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Navbar />
+        <ContactBackdrop />
         <Component {...pageProps} />
         <Footer />
       </ThemeProvider>
