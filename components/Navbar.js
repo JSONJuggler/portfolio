@@ -56,6 +56,7 @@ const Navbar = () => {
   const handleRouteChangeStart = (url) => {
     console.log("starting nav");
     setRouting((prev) => ({ ...prev, starting: true, complete: false, url }));
+    window.scroll(0, 0);
   };
 
   const handleRouteChangeComplete = (url) => {
