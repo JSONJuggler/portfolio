@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
   },
   about: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(2),
+    paddingTop: theme.spacing(6),
+    paddingBottom: theme.spacing(4),
   },
   bodyText: {
     width: "100%",
@@ -47,6 +47,18 @@ const about = () => {
         <div className={classes.bodyText}>
           <div className={classes.about}>
             <Typography variant="h4">Hello again, I'm Beau</Typography>
+            <Typography variant="body1">
+              By now, I’m sure you’ve already discovered that I am a web
+              developer. Well that wasn’t always the case! I started out my
+              life’s journey as a physicist and I was pretty happy. I was free
+              to apply my critical thinking and learning abilities to come up
+              with solutions for some pretty tough problems! The further along I
+              went though, the less intimate my solutions felt, almost as if
+              they weren’t my own. For me, this was another problem to solve.
+              Fast forward a bit and here I am today! As a developer, I am in my
+              element. I have the ultimate freedom to craft solutions to an
+              absurd number of unique problems!
+            </Typography>
           </div>
           <Grid container className={classes.gridContainer}>
             <Grid item xs={4} md={3}>
@@ -81,7 +93,7 @@ const about = () => {
                 <Typography variant="body1">Remote work</Typography>
               </Grid>
               <Grid item className={classes.gridEntry} xs={6} md={4}>
-                <Typography variant="body1">Teamwork</Typography>
+                <Typography variant="body1">Team work</Typography>
               </Grid>
               <Grid item className={classes.gridEntry} xs={6} md={4}>
                 <Typography variant="body1">Customer service</Typography>
