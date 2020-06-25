@@ -124,7 +124,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="home"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -140,7 +140,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="about"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/about")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -156,7 +156,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="blog"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/blog")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -172,7 +172,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="home"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -188,7 +188,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="about"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/about")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -220,7 +220,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="blog"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/blog")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -258,7 +258,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="home"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -275,7 +275,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="about"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/about")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -309,7 +309,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="blog"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/blog")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -326,7 +326,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="home"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -343,7 +343,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="about"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/about")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -377,7 +377,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="blog"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/blog")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -417,7 +417,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="home"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -434,7 +434,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="about"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/about")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -468,7 +468,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="blog"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/blog")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -485,7 +485,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="home"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -502,7 +502,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="about"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/about")}
                         >
                           <Typography
                             className={classes.titleText}
@@ -536,7 +536,7 @@ const Navbar = () => {
                         <IconButton
                           aria-label="blog"
                           color="inherit"
-                          onClick={(e) => console.log("click")}
+                          onClick={() => router.push("/blog")}
                         >
                           <Typography
                             className={classes.titleText}
