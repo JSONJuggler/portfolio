@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { SvgDownArrow } from "../icons/icons";
 import throttle from "lodash/throttle";
 import { useEffect, useCallback, useState } from "react";
 import Typography from "@material-ui/core/Typography";
@@ -24,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     //display: "flex",
     //flexDirection: "column",
     marginTop: "auto",
+    marginBottom: "auto",
     paddingLeft: theme.spacing(1),
     paddingRight: theme.spacing(1),
   },
@@ -33,26 +33,6 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       justifyContent: "center",
       paddingTop: theme.spacing(6),
-    },
-  },
-  bounceAnimation: {
-    display: "flex",
-    animation: `$bounce 2s infinite`,
-    marginTop: "auto",
-    paddingBottom: theme.spacing(4),
-  },
-  "@keyframes bounce": {
-    "0%": {
-      transform: "translateY(0)",
-      opacity: "1",
-    },
-    "50%": {
-      transform: "translateY(30%)",
-      opacity: "0",
-    },
-    "100%": {
-      transform: "translateY(0)",
-      opacity: "1",
     },
   },
 }));
@@ -122,8 +102,8 @@ const Landing = () => {
 
   return (
     <VisibilitySensor minTopValue={100} onChange={onChange}>
-      <div className={classes.root}>
-        <Fade timeout={1000} in={componentIn}>
+      <Fade timeout={1000} in={componentIn}>
+        <div className={classes.root}>
           <div className={classes.title}>
             <Typography variant="h1" align="center">
               Hi, I'm Beau. I'm a <b>web developer</b> with a passion for
@@ -135,11 +115,8 @@ const Landing = () => {
               </Contact>
             </div>
           </div>
-        </Fade>
-        <div className={classes.bounceAnimation}>
-          <SvgDownArrow />
         </div>
-      </div>
+      </Fade>
     </VisibilitySensor>
   );
 };

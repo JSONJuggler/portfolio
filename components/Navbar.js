@@ -11,6 +11,7 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fade from "@material-ui/core/Fade";
 import Tooltip from "@material-ui/core/Tooltip";
 import Paper from "@material-ui/core/Paper";
+import { SvgDownArrow } from "../icons/icons";
 
 import Contact from "../components/Contact";
 
@@ -34,6 +35,29 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  bounceAnimation: {
+    position: "fixed",
+    animation: `$bounce 2s infinite`,
+    top: "auto",
+    bottom: theme.spacing(4),
+    [theme.breakpoints.up("sm")]: {
+      bottom: theme.spacing(6),
+    },
+  },
+  "@keyframes bounce": {
+    "0%": {
+      transform: "translateY(0)",
+      opacity: "1",
+    },
+    "50%": {
+      transform: "translateY(30%)",
+      opacity: "0",
+    },
+    "100%": {
+      transform: "translateY(0)",
+      opacity: "1",
+    },
+  },
 }));
 
 const Navbar = () => {
@@ -44,6 +68,8 @@ const Navbar = () => {
   const router = useRouter();
 
   const [atTop, setAtTop] = useState(undefined);
+
+  const [arrowIn, setArrowIn] = useState(undefined);
 
   const [pastLanding, setPastLanding] = useState(undefined);
 
@@ -67,6 +93,7 @@ const Navbar = () => {
   const handleScroll = () => {
     if (window.pageYOffset === 0) {
       setAtTop((prev) => true);
+      setArrowIn((prev) => true);
     }
     if (window.pageYOffset > 0) {
       setAtTop((prev) => false);
@@ -75,6 +102,12 @@ const Navbar = () => {
       }
       if (window.pageYOffset + 150 < window.innerHeight) {
         setPastLanding((prev) => false);
+      }
+      if (window.pageYOffset > window.innerHeight / 2) {
+        setArrowIn((prev) => false);
+      }
+      if (window.pageYOffset + 150 < window.innerHeight / 2) {
+        setArrowIn((prev) => true);
       }
     }
   };
@@ -82,6 +115,7 @@ const Navbar = () => {
   useEffect(() => {
     if (window.pageYOffset === 0) {
       setAtTop((prev) => true);
+      setArrowIn((prev) => true);
     }
     if (window.pageYOffset > 0) {
       setAtTop((prev) => false);
@@ -91,7 +125,16 @@ const Navbar = () => {
       if (window.pageYOffset + 150 < window.innerHeight) {
         setPastLanding((prev) => false);
       }
+      if (window.pageYOffset > window.innerHeight / 2) {
+        setArrowIn((prev) => false);
+      }
+      if (window.pageYOffset + 150 < window.innerHeight / 2) {
+        setArrowIn((prev) => true);
+      }
     }
+    //if (window.pageYOffset > window.innerHeight* 0) {
+    //setAtTop((prev) => true);
+    //}
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -375,6 +418,11 @@ const Navbar = () => {
                 </Toolbar>
               </Container>
             </AppBar>
+          </Fade>
+          <Fade timeout={1000} in={arrowIn}>
+            <div className={classes.bounceAnimation}>
+              <SvgDownArrow />
+            </div>
           </Fade>
         </Fragment>
       )}
