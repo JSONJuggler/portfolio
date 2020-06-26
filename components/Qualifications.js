@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Hidden from "@material-ui/core/Hidden";
 import Fade from "@material-ui/core/Fade";
+import throttle from "lodash/throttle";
 import VisibilitySensor from "react-visibility-sensor";
 import {
   SvgJavascript,
@@ -20,9 +21,14 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
+    minHeight: "100vh",
+    minHeight: "calc(var(--vh, 1vh)*100)",
+    display: "flex",
+    flexDirection: "column",
     width: "100%",
+  },
+  gridContainer: {
+    margin: "auto",
   },
   entry: {
     display: "flex",
@@ -37,28 +43,76 @@ const useStyles = makeStyles((theme) => ({
 const Qualifications = () => {
   const classes = useStyles();
 
-  const [qual, setQual] = useState(false);
+  const [vh, setVh] = useState(0);
+  const [initialMobileVh, setInitialMobileVh] = useState(0);
+  const [vhThreshhold, setVhThreshhold] = useState(0.3);
+
+  const handleResize = () => {
+    setVh((prev) => window.innerHeight);
+  };
+
+  useEffect(() => {
+    if (vh !== 0) {
+      //alert(Math.abs(window.innerHeight - initialMobileVh) / initialMobileVh);
+      if (
+        //navigator.userAgent.indexOf("Safari") != -1 &&
+        navigator.userAgent.indexOf("Chrome") == -1 &&
+        /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+        !window.MSStream
+      ) {
+        if (
+          Math.abs(window.innerHeight - initialMobileVh) / initialMobileVh >
+          vhThreshhold
+        ) {
+          document.documentElement.style.setProperty(
+            "--vh",
+            `${window.innerHeight * 0.01}px`
+          );
+        } else {
+          document.documentElement.style.setProperty(
+            "--vh",
+            `${initialMobileVh * 0.01}px`
+          );
+        }
+      } else {
+        document.documentElement.style.setProperty(
+          "--vh",
+          `${window.innerHeight * 0.01}px`
+        );
+      }
+    }
+  }, [vh]);
+
+  useEffect(() => {
+    setVh((prev) => window.outerHeight);
+    setInitialMobileVh((prev) => window.innerHeight);
+    window.addEventListener("resize", throttle(handleResize, 800));
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const [componentIn, setComponentIn] = useState(false);
 
   function onChange(isVisible) {
-    console.log("Element is now %s", isVisible ? "visible" : "hidden");
     if (isVisible) {
-      setQual((prev) => true);
+      setComponentIn((prev) => true);
     }
     if (!isVisible) {
-      setQual((prev) => false);
+      setComponentIn((prev) => false);
     }
   }
-  console.log(qual);
+
   return (
     <VisibilitySensor
-      offset={{ top: 400 }}
+      offset={{ bottom: 200 }}
       minTopValue={300}
       partialVisibility
       onChange={onChange}
     >
-      <Fade timeout={1000} in={qual}>
+      <Fade timeout={1000} in={componentIn}>
         <div className={classes.root}>
-          <Container maxWidth="sm">
+          <Container className={classes.gridContainer} maxWidth="sm">
             <Grid container spacing={2} justify="center" alignItems="center">
               <Grid item xs={12}>
                 <Typography variant="h2" align="center">
