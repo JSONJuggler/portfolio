@@ -14,7 +14,7 @@ let theme = createMuiTheme({
       main: red.A400,
     },
     background: {
-      default: "#B0E2FF",
+      default: "#F7F7F8",
     },
   },
 });
