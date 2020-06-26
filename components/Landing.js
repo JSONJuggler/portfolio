@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Fade from "@material-ui/core/Fade";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
+import VisibilitySensor from "react-visibility-sensor";
 
 import Contact from "../components/Contact";
 
@@ -108,25 +109,38 @@ const Landing = () => {
     };
   }, []);
 
+  const [componentIn, setComponentIn] = useState(false);
+
+  function onChange(isVisible) {
+    if (isVisible) {
+      setComponentIn((prev) => true);
+    }
+    if (!isVisible) {
+      setComponentIn((prev) => false);
+    }
+  }
+
   return (
-    <div className={classes.root}>
-      <Fade timeout={1000} in={true}>
-        <div className={classes.title}>
-          <Typography variant="h1" align="center">
-            Hi, I'm Beau. I'm a <b>web developer</b> with a passion for creating
-            delightful user experiences.
-          </Typography>
-          <div className={classes.contact}>
-            <Contact>
-              <Typography variant="h6">contact</Typography>
-            </Contact>
+    <VisibilitySensor minTopValue={100} onChange={onChange}>
+      <div className={classes.root}>
+        <Fade timeout={1000} in={componentIn}>
+          <div className={classes.title}>
+            <Typography variant="h1" align="center">
+              Hi, I'm Beau. I'm a <b>web developer</b> with a passion for
+              creating delightful user experiences.
+            </Typography>
+            <div className={classes.contact}>
+              <Contact>
+                <Typography variant="h6">contact</Typography>
+              </Contact>
+            </div>
           </div>
+        </Fade>
+        <div className={classes.bounceAnimation}>
+          <SvgDownArrow />
         </div>
-      </Fade>
-      <div className={classes.bounceAnimation}>
-        <SvgDownArrow />
       </div>
-    </div>
+    </VisibilitySensor>
   );
 };
 
