@@ -118,6 +118,13 @@ const Qualifications = () => {
                 <Typography variant="h2" align="center">
                   Tools of Choice
                 </Typography>
+                <Typography variant="body1" align="center">
+                  Although the following set of tools are my goto for front-end
+                  and back-end developement, I'm always experimenting and
+                  challenging myself to try emerging tools and technologies to
+                  ensure that I can create engaging and most importantly,{" "}
+                  <em>delightful</em> experiences for the end user!
+                </Typography>
               </Grid>
               <Grid item xs={4}>
                 <div className={classes.entry}>

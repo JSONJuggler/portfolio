@@ -28,6 +28,12 @@ const Projects = () => {
             <Typography className={classes.title} variant="h2" align="center">
               Projects
             </Typography>
+            <Typography variant="body1" align="center">
+              The following projects have been key in facilitating my growth as
+              a web developer. Each project utilizes a combination of research,
+              experimentation and applied techniques or concepts that are
+              critical for developing any successful experience.
+            </Typography>
           </Grid>
           <Grid item className={classes.gridItem} xs={12} md={6}>
             <img src={translator} height="100%" width="100%" />
