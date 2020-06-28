@@ -56,41 +56,44 @@ const about = () => {
       <Container maxWidth="lg">
         <div className={classes.root}>
           <div className={classes.bodyText}>
-            <div className={classes.about}>
-              <Typography variant="h4" gutterBottom>
-                <b>Hello again, I'm Beau</b>
-              </Typography>
-              <Typography
-                className={classes.bodyDetails}
-                variant="h5"
-                paragraph
-                gutterBottom
-              >
-                By now, I’m sure you’ve already discovered that I am a web
-                developer. Well that wasn’t always the case! I started out my
-                life’s journey as a physicist and I was pretty happy. I was free
-                to apply my critical thinking and learning abilities to come up
-                with solutions for some pretty tough problems! The further along
-                I went though, the less intimate my solutions felt, almost as if
-                they weren’t my own. For me, this was another problem to solve.
-                Fast forward a bit and here I am today!
-              </Typography>
-              <Typography className={classes.bodyDetails} variant="h5">
-                As a developer, I am in my element. I have the ultimate freedom
-                to craft solutions to an absurd number of unique problems by
-                developing delightful user experiences! If you have a problem
-                you'd like me to solve or if you're just interested in chatting
-                about my skills and tools listed below,{" "}
-                <Contact size="small">
-                  <Typography
-                    className={classes.bodyDetailsContact}
-                    variant="h5"
-                  >
-                    <b>contact me!</b>
-                  </Typography>
-                </Contact>
-              </Typography>
-            </div>
+            <Container maxWidth="md">
+              <div className={classes.about}>
+                <Typography variant="h4" gutterBottom>
+                  <b>Hello again, I'm Beau</b>
+                </Typography>
+                <Typography
+                  className={classes.bodyDetails}
+                  variant="h5"
+                  paragraph
+                  gutterBottom
+                >
+                  I’m sure you’ve already discovered that I am a web developer
+                  but that wasn’t always the case. I started out as a physicist,
+                  completing my Bachelor's of Science at Rice University in
+                  2016. I was happy and excited being free to apply my critical
+                  thinking and learning abilities to come up with solutions for
+                  some tough problems during and after my studies. The further
+                  along I went though, the less intimate my solutions felt,
+                  almost as if they weren’t my own. For me, this was another
+                  problem to solve. Fast forward a bit and here I am today!
+                </Typography>
+                <Typography className={classes.bodyDetails} variant="h5">
+                  As a developer, I am in my element. I have the ultimate
+                  freedom to craft solutions to an absurd number of unique
+                  problems by developing delightful user experiences! If you
+                  have a problem you'd like me to solve or if you're just
+                  interested in chatting about my skills and tools listed below,{" "}
+                  <Contact size="small">
+                    <Typography
+                      className={classes.bodyDetailsContact}
+                      variant="h5"
+                    >
+                      <b>contact me!</b>
+                    </Typography>
+                  </Contact>
+                </Typography>
+              </div>
+            </Container>
             <Grid container className={classes.gridContainer}>
               <Grid item xs={4} md={3}>
                 <Typography variant="body1">
