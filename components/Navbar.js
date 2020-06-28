@@ -166,7 +166,7 @@ const Navbar = () => {
                     alignItems="center"
                   >
                     <Grid item xs={true} className={classes.titleDesktop}>
-                      <Tooltip title="Home">
+                      <Tooltip title="home">
                         <IconButton
                           aria-label="home"
                           color="inherit"
@@ -182,7 +182,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="About">
+                      <Tooltip title="about">
                         <IconButton
                           aria-label="about"
                           color="inherit"
@@ -198,7 +198,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="Blog">
+                      <Tooltip title="blog">
                         <IconButton
                           aria-label="blog"
                           color="inherit"
@@ -214,7 +214,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
-                      <Tooltip title="Home">
+                      <Tooltip title="home">
                         <IconButton
                           aria-label="home"
                           color="inherit"
@@ -230,7 +230,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="About">
+                      <Tooltip title="about">
                         <IconButton
                           aria-label="about"
                           color="inherit"
@@ -253,7 +253,7 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="Blog">
+                      <Tooltip title="blog">
                         <IconButton
                           aria-label="blog"
                           color="inherit"
@@ -291,7 +291,7 @@ const Navbar = () => {
                     alignItems="center"
                   >
                     <Grid item xs={true} className={classes.titleDesktop}>
-                      <Tooltip title="Home">
+                      <Tooltip title="home">
                         <IconButton
                           aria-label="home"
                           color="inherit"
@@ -308,7 +308,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="About">
+                      <Tooltip title="about">
                         <IconButton
                           aria-label="about"
                           color="inherit"
@@ -336,7 +336,7 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="Blog">
+                      <Tooltip title="blog">
                         <IconButton
                           aria-label="blog"
                           color="inherit"
@@ -353,7 +353,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
-                      <Tooltip title="Home">
+                      <Tooltip title="home">
                         <IconButton
                           aria-label="home"
                           color="inherit"
@@ -370,7 +370,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="About">
+                      <Tooltip title="about">
                         <IconButton
                           aria-label="about"
                           color="inherit"
@@ -398,7 +398,7 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="Blog">
+                      <Tooltip title="blog">
                         <IconButton
                           aria-label="blog"
                           color="inherit"
@@ -443,7 +443,7 @@ const Navbar = () => {
                     alignItems="center"
                   >
                     <Grid item xs={true} className={classes.titleDesktop}>
-                      <Tooltip title="Home">
+                      <Tooltip title="home">
                         <IconButton
                           aria-label="home"
                           color="inherit"
@@ -460,7 +460,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="About">
+                      <Tooltip title="about">
                         <IconButton
                           aria-label="about"
                           color="inherit"
@@ -488,7 +488,7 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="Blog">
+                      <Tooltip title="blog">
                         <IconButton
                           aria-label="blog"
                           color="inherit"
@@ -505,7 +505,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
-                      <Tooltip title="Home">
+                      <Tooltip title="home">
                         <IconButton
                           aria-label="home"
                           color="inherit"
@@ -522,7 +522,7 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="About">
+                      <Tooltip title="about">
                         <IconButton
                           aria-label="about"
                           color="inherit"
@@ -550,7 +550,7 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="Blog">
+                      <Tooltip title="blog">
                         <IconButton
                           aria-label="blog"
                           color="inherit"

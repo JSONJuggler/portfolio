@@ -15,7 +15,7 @@ const Contact = ({
   ...props
 }) => {
   return (
-    <Tooltip title="Contact">
+    <Tooltip title="contact">
       <IconButton
         aria-label="contact"
         color="inherit"
