@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, Fragment } from "react";
 import Backdrop from "@material-ui/core/Backdrop";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
@@ -7,6 +7,8 @@ import TextField from "@material-ui/core/TextField";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import IconButton from "@material-ui/core/IconButton";
 
 import {
   openContact,
@@ -14,7 +16,6 @@ import {
   updateContactInfo,
   clearContactInfo,
 } from "../src/actions/contact";
-import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -26,6 +27,15 @@ const useStyles = makeStyles((theme) => ({
   },
   textField: {
     background: "white",
+  },
+  underline: {
+    textDecoration: "underline",
+    color: "white",
+  },
+  hidden: {
+    visibility: "visible",
+    position: "absolute",
+    top: theme.spacing(-100),
   },
 }));
 
@@ -39,6 +49,8 @@ const ContactBackdrop = ({
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
+
+  const email = useRef(null);
 
   const handleSubmit = () => {
     window.location.assign(
@@ -62,6 +74,17 @@ const ContactBackdrop = ({
   const handleClose = () => {
     clearContactInfo();
     closeContact();
+    email.current.type = "hidden";
+  };
+
+  const handleCopy = (e) => {
+    if (email.current.type === "hidden") {
+      email.current.type = "text";
+      handleCopy();
+    } else {
+      email.current.select();
+      document.execCommand("copy");
+    }
   };
 
   return (
@@ -73,6 +96,21 @@ const ContactBackdrop = ({
               <Typography align="center">
                 <b>Please enter your information below to send me an email!</b>
               </Typography>
+              <Fragment>
+                <IconButton onClick={handleCopy}>
+                  <Typography className={classes.underline} align="center">
+                    Or click here to copy my email address:
+                    deleon.reescano@ricealumni.net
+                  </Typography>
+                </IconButton>
+                <input
+                  ref={email}
+                  type="hidden"
+                  readOnly={true}
+                  className={classes.hidden}
+                  value="deleon.reescano@ricealumni.net"
+                />
+              </Fragment>
             </Grid>
             <Grid item className={classes.gridItem} xs={6}>
               <TextField
