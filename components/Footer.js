@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   gridRoot: {
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(2),
+    marginTop: "auto",
   },
   socials: {
     paddingBottom: theme.spacing(1),

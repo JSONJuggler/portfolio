@@ -13,6 +13,7 @@ import theme from "../themes/theme";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
