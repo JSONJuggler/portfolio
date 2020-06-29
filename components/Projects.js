@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import translator from "../imgs/test.png";
+import translator from "../imgs/translator.png";
+import portfolio from "../imgs/portfolio.png";
+import recipemanager from "../imgs/recipemanager.png";
+import anone from "../imgs/anone.png";
+import datastructres from "../imgs/datastructures.jpg";
+import weather from "../imgs/weather.png";
 import Grid from "@material-ui/core/Grid";
 import CardMedia from "@material-ui/core/CardMedia";
 import Card from "@material-ui/core/Card";
@@ -72,11 +77,11 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
   },
   cardTitle: {
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(0),
+    marginTop: "auto",
   },
   description: {
     overflow: "scroll",
+    marginBottom: "auto",
   },
   spacing: {
     marginLeft: theme.spacing(1),
@@ -94,6 +99,16 @@ const Projects = ({ projects }) => {
     switch (imageName) {
       case "translator":
         return translator;
+      case "portfolio":
+        return portfolio;
+      case "recipemanager":
+        return recipemanager;
+      case "anone":
+        return anone;
+      case "datastructures":
+        return datastructres;
+      case "weather":
+        return weather;
       default:
         return;
     }
@@ -238,23 +253,25 @@ const Projects = ({ projects }) => {
                             justify="space-evenly"
                             alignItems="center"
                           >
-                            <Grid item>
-                              <IconButton
-                                size="small"
-                                color="primary"
-                                onClick={() =>
-                                  window.location.assign(project.live)
-                                }
-                              >
-                                <LinkIcon />
-                                <Typography
-                                  className={classes.spacing}
-                                  variant="caption"
+                            {project.live && (
+                              <Grid item>
+                                <IconButton
+                                  size="small"
+                                  color="primary"
+                                  onClick={() =>
+                                    window.location.assign(project.live)
+                                  }
                                 >
-                                  Live
-                                </Typography>
-                              </IconButton>
-                            </Grid>
+                                  <LinkIcon />
+                                  <Typography
+                                    className={classes.spacing}
+                                    variant="caption"
+                                  >
+                                    Live
+                                  </Typography>
+                                </IconButton>
+                              </Grid>
+                            )}
                             <Grid item>
                               <IconButton
                                 size="small"

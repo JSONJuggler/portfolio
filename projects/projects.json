@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "image": "portfolio",
+      "live": "http://jsonj-portfolio.herokuapp.com/",
+      "source": "https://github.com/JSONJuggler/portfolio",
+      "title": "Portfolio",
+      "icons": [
+        "SvgJavascript",
+        "SvgReact",
+        "SvgRedux",
+        "SvgMaterialui",
+        "SvgNextjs"
+      ],
+      "description": "The very website you're browsing now! Rather than use plain HTML5 and CSS, I decided to use some of my favorite tools to build my own poertfolio website from scratch."
+    },
+    {
       "image": "translator",
       "live": "https://jsonj-mytranslator.herokuapp.com/",
       "source": "https://github.com/JSONJuggler/myTranslator",
@@ -10,11 +24,55 @@
         "SvgReact",
         "SvgRedux",
         "SvgMaterialui",
-        "SvgNodeJs",
         "SvgNextjs",
         "SvgMongodb"
       ],
       "description": "Powered by several IBM Cloud services, this translator achieves speedy translations of single words by generating and serving a static HTML page for the requested translation. Several languages are currently supported."
+    },
+    {
+      "image": "recipemanager",
+      "live": "https://jsonj-recipemanager.herokuapp.com/",
+      "source": "https://github.com/JSONJuggler/recipeManager",
+      "title": "RecipeManager",
+      "icons": [
+        "SvgJavascript",
+        "SvgReact",
+        "SvgRedux",
+        "SvgMaterialui",
+        "SvgNodejs",
+        "SvgMongodb"
+      ],
+      "description": "A straight forward recipe manager. A user can create an account and log in to manage their recipes and browse other user recipes."
+    },
+    {
+      "image": "anone",
+      "live": "https://jsonj-anone.herokuapp.com/",
+      "source": "https://github.com/JSONJuggler/aNone",
+      "title": "Anone",
+      "icons": [
+        "SvgJavascript",
+        "SvgReact",
+        "SvgRedux",
+        "SvgMaterialui",
+        "SvgNextjs",
+        "SvgFirebase"
+      ],
+      "description": "Similar to the late Yik Yak, a user can anonymously post a comment that would be visible to nearby users. Posts can also be viewed and sorted by state or simply all posts."
+    },
+    {
+      "image": "weather",
+      "live": "https://jsonj-weather.herokuapp.com/",
+      "source": "https://github.com/JSONJuggler/weather-website",
+      "title": "Weather",
+      "icons": ["SvgJavascript", "SvgHtml5", "SvgCss"],
+      "description": "Everybody's gotta have one of these right? It's my weather app! Stay tuned for its facelift, coming soon."
+    },
+    {
+      "image": "datastructures",
+      "source": "https://github.com/JSONJuggler/dataStructureImplementations",
+      "title": "DataStructures",
+      "icons": ["SvgJavascript"],
+      "description": "More akin to notes, these are datastructures I have implemented using javascript. Includes singly and doubly linked lists, stacks, queues, BSTs, heaps, hash tables, and graphs. Photo credit => https://dev.to/"
     }
   ]
 }
