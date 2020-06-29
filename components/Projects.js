@@ -27,7 +27,12 @@ import {
 } from "../icons/icons";
 
 const useStyles = makeStyles((theme) => ({
-  gridItem: {},
+  gridContainer: {},
+  gridItem: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   root: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
@@ -106,7 +111,12 @@ const Projects = () => {
       <Fade timeout={1000} in={componentIn}>
         <div className={classes.root}>
           <Container disableGutters={true} maxWidth="lg">
-            <Grid container spacing={2} justify="center">
+            <Grid
+              container
+              className={classes.gridContainer}
+              spacing={2}
+              justify="center"
+            >
               <Grid item xs={12}>
                 <Typography
                   className={classes.title}
