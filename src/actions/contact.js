@@ -1,4 +1,30 @@
-import { OPEN_CONTACT, CLOSE_CONTACT } from "./types";
+import {
+  OPEN_CONTACT,
+  CLOSE_CONTACT,
+  UPDATE_CONTACT,
+  CLEAR_CONTACT,
+} from "./types";
+
+export const clearContactInfo = () => (dispatch) => {
+  try {
+    dispatch({
+      type: CLEAR_CONTACT,
+    });
+  } catch (err) {
+    //handle error here
+  }
+};
+
+export const updateContactInfo = (contactData) => (dispatch) => {
+  try {
+    dispatch({
+      type: UPDATE_CONTACT,
+      payload: contactData,
+    });
+  } catch (err) {
+    //handle error here
+  }
+};
 
 export const openContact = () => (dispatch) => {
   try {
