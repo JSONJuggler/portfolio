@@ -56,7 +56,7 @@ const about = () => {
       <Container maxWidth="lg">
         <div className={classes.root}>
           <div className={classes.bodyText}>
-            <Container maxWidth="md">
+            <Container disableGutters={true} maxWidth="md">
               <div className={classes.about}>
                 <Typography variant="h4" gutterBottom>
                   <b>Hello again, I'm Beau</b>
