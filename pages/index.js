@@ -38,7 +38,7 @@ export async function getServerSideProps() {
 
   const baseUrl = dev
     ? "http://localhost:3000"
-    : "https://jsonj-mytranslator.herokuapp.com";
+    : "https://jsonj-portfolio.herokuapp.com";
 
   const res = await axios.get(baseUrl + "/api/projectsStream");
 
