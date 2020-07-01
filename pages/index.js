@@ -33,7 +33,7 @@ const Home = ({ data }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const dev = process.env.NODE_ENV !== "production";
 
   const baseUrl = dev
