@@ -48,9 +48,6 @@
     "start": "next start -p $PORT",
     "heroku-postbuild": "npm run build"
   },
-  "cacheDirectories": [
-    ".next/cache"
-  ],
   "devDependencies": {
     "eslint": "^7.2.0",
     "eslint-plugin-react": "^7.20.0"
