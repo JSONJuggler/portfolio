@@ -2,7 +2,6 @@
   "projects": [
     {
       "image": "portfolio",
-      "live": "http://jsonj-portfolio.herokuapp.com/",
       "source": "https://github.com/JSONJuggler/portfolio",
       "title": "Portfolio",
       "icons": [
@@ -16,7 +15,7 @@
     },
     {
       "image": "translator",
-      "live": "https://jsonj-mytranslator.herokuapp.com/",
+      "live": "https://webdeveloperbeau.com/translator",
       "source": "https://github.com/JSONJuggler/myTranslator",
       "title": "Translator",
       "icons": [
@@ -31,7 +30,7 @@
     },
     {
       "image": "recipemanager",
-      "live": "https://jsonj-recipemanager.herokuapp.com/",
+      "live": "https://webdeveloperbeau.com/recipemanager",
       "source": "https://github.com/JSONJuggler/recipeManager",
       "title": "RecipeManager",
       "icons": [
@@ -46,7 +45,7 @@
     },
     {
       "image": "anone",
-      "live": "https://jsonj-anone.herokuapp.com/",
+      "live": "https://webdeveloperbeau.com/anone",
       "source": "https://github.com/JSONJuggler/aNone",
       "title": "Anone",
       "icons": [
@@ -61,7 +60,7 @@
     },
     {
       "image": "weather",
-      "live": "https://jsonj-weather.herokuapp.com/",
+      "live": "https://webdeveloperbeau.com/weather",
       "source": "https://github.com/JSONJuggler/weather-website",
       "title": "Weather",
       "icons": ["SvgJavascript", "SvgHtml5", "SvgCss"],
