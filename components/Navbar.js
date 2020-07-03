@@ -12,6 +12,7 @@ import Fade from "@material-ui/core/Fade";
 import Tooltip from "@material-ui/core/Tooltip";
 import Paper from "@material-ui/core/Paper";
 import { SvgDownArrow } from "../icons/icons";
+import CustomLink from "../components/CustomLink";
 
 import Contact from "../components/Contact";
 
@@ -182,20 +183,11 @@ const Navbar = () => {
                       </Tooltip>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="about">
-                        <IconButton
-                          aria-label="about"
-                          color="inherit"
-                          onClick={() => router.push("/about")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            variant="h6"
-                          >
-                            about
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/about">
+                        <Typography className={classes.titleText} variant="h6">
+                          about
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
                       <Tooltip title="blog">
