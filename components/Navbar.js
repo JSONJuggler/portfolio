@@ -178,6 +178,17 @@ const Navbar = () => {
                       </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
+                      <Contact>
+                        <Typography
+                          className={classes.titleText}
+                          variant="h6"
+                          color="primary"
+                        >
+                          contact
+                        </Typography>
+                      </Contact>
+                    </Grid>
+                    <Grid item className={classes.titleDesktop}>
                       <CustomLink href="/blog" title="blog">
                         <Typography className={classes.titleText} variant="h6">
                           blog

@@ -7,8 +7,6 @@ import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 import VisibilitySensor from "react-visibility-sensor";
 
-import Contact from "../components/Contact";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
@@ -26,14 +24,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "auto",
     paddingLeft: theme.spacing(1),
     paddingRight: theme.spacing(1),
-  },
-  contact: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "flex",
-      justifyContent: "center",
-      paddingTop: theme.spacing(6),
-    },
   },
 }));
 
@@ -109,11 +99,6 @@ const Landing = () => {
               Hi, I'm Beau. I'm a <b>web developer</b> with a passion for
               creating delightful user experiences.
             </Typography>
-            <div className={classes.contact}>
-              <Contact>
-                <Typography variant="h6">contact</Typography>
-              </Contact>
-            </div>
           </div>
         </div>
       </Fade>
