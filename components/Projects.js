@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "auto",
   },
   description: {
-    overflow: "scroll",
+    overflowY: "auto",
     marginBottom: "auto",
   },
   spacing: {
