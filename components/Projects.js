@@ -31,11 +31,15 @@ import {
 } from "../icons/icons";
 
 const useStyles = makeStyles((theme) => ({
-  gridContainer: {},
+  text: {
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
+  },
   gridItem: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: theme.spacing(4),
   },
   root: {
     paddingTop: theme.spacing(2),
@@ -197,13 +201,17 @@ const Projects = ({ projects }) => {
             >
               <Grid item xs={12}>
                 <Typography
-                  className={classes.title}
+                  className={classes.text}
                   variant="h2"
                   align="center"
                 >
                   Projects
                 </Typography>
-                <Typography variant="body1" align="center">
+                <Typography
+                  className={classes.text}
+                  variant="body1"
+                  align="center"
+                >
                   The following projects have been key in facilitating my growth
                   as a web developer. Each project utilizes a combination of
                   research, experimentation and applied techniques or concepts

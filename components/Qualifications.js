@@ -30,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     margin: "auto",
   },
+  text: {
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
+  },
   entry: {
     display: "flex",
     flexDirection: "column",
@@ -115,10 +119,18 @@ const Qualifications = () => {
           <Container className={classes.gridContainer} maxWidth="sm">
             <Grid container spacing={2} justify="center" alignItems="center">
               <Grid item xs={12}>
-                <Typography variant="h2" align="center">
+                <Typography
+                  className={classes.text}
+                  variant="h2"
+                  align="center"
+                >
                   Tools of Choice
                 </Typography>
-                <Typography variant="body1" align="center">
+                <Typography
+                  className={classes.text}
+                  variant="body1"
+                  align="center"
+                >
                   Although the following set of tools are my goto for front-end
                   and back-end developement, I'm always experimenting and
                   challenging myself to try emerging tools and technologies to
