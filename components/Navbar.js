@@ -5,12 +5,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import IconButton from "@material-ui/core/IconButton";
 import { useRouter } from "next/router";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fade from "@material-ui/core/Fade";
-import Tooltip from "@material-ui/core/Tooltip";
-import Paper from "@material-ui/core/Paper";
 import { SvgDownArrow } from "../icons/icons";
 import CustomLink from "../components/CustomLink";
 
@@ -167,75 +164,39 @@ const Navbar = () => {
                     alignItems="center"
                   >
                     <Grid item xs={true} className={classes.titleDesktop}>
-                      <Tooltip title="home">
-                        <IconButton
-                          aria-label="home"
-                          color="inherit"
-                          onClick={() => router.push("/")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            variant="h6"
-                          >
-                            home
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/" title="home">
+                        <Typography className={classes.titleText} variant="h6">
+                          home
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <CustomLink href="/about">
+                      <CustomLink href="/about" title="about">
                         <Typography className={classes.titleText} variant="h6">
                           about
                         </Typography>
                       </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="blog">
-                        <IconButton
-                          aria-label="blog"
-                          color="inherit"
-                          onClick={() => router.push("/blog")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            variant="h6"
-                          >
-                            blog
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/blog" title="blog">
+                        <Typography className={classes.titleText} variant="h6">
+                          blog
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
-                      <Tooltip title="home">
-                        <IconButton
-                          aria-label="home"
-                          color="inherit"
-                          onClick={() => router.push("/")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            variant="h6"
-                          >
-                            home
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/" title="home">
+                        <Typography className={classes.titleText} variant="h6">
+                          home
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="about">
-                        <IconButton
-                          aria-label="about"
-                          color="inherit"
-                          onClick={() => router.push("/about")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            variant="h6"
-                          >
-                            about
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/about" title="about">
+                        <Typography className={classes.titleText} variant="h6">
+                          about
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
                       <Contact>
@@ -245,20 +206,11 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="blog">
-                        <IconButton
-                          aria-label="blog"
-                          color="inherit"
-                          onClick={() => router.push("/blog")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            variant="h6"
-                          >
-                            blog
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/blog" title="blog">
+                        <Typography className={classes.titleText} variant="h6">
+                          blog
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                   </Grid>
                 </Toolbar>
@@ -283,38 +235,18 @@ const Navbar = () => {
                     alignItems="center"
                   >
                     <Grid item xs={true} className={classes.titleDesktop}>
-                      <Tooltip title="home">
-                        <IconButton
-                          aria-label="home"
-                          color="inherit"
-                          onClick={() => router.push("/")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            home
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/" title="home">
+                        <Typography className={classes.titleText} variant="h6">
+                          home
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="about">
-                        <IconButton
-                          aria-label="about"
-                          color="inherit"
-                          onClick={() => router.push("/about")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            about
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/about" title="about">
+                        <Typography className={classes.titleText} variant="h6">
+                          about
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
                       <Contact>
@@ -328,55 +260,25 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="blog">
-                        <IconButton
-                          aria-label="blog"
-                          color="inherit"
-                          onClick={() => router.push("/blog")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            blog
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/blog" title="blog">
+                        <Typography className={classes.titleText} variant="h6">
+                          blog
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
-                      <Tooltip title="home">
-                        <IconButton
-                          aria-label="home"
-                          color="inherit"
-                          onClick={() => router.push("/")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            home
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/" title="home">
+                        <Typography className={classes.titleText} variant="h6">
+                          home
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="about">
-                        <IconButton
-                          aria-label="about"
-                          color="inherit"
-                          onClick={() => router.push("/about")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            about
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/about" title="about">
+                        <Typography className={classes.titleText} variant="h6">
+                          about
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
                       <Contact>
@@ -390,21 +292,11 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="blog">
-                        <IconButton
-                          aria-label="blog"
-                          color="inherit"
-                          onClick={() => router.push("/blog")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            blog
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/blog" title="blog">
+                        <Typography className={classes.titleText} variant="h6">
+                          blog
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                   </Grid>
                 </Toolbar>
@@ -435,38 +327,18 @@ const Navbar = () => {
                     alignItems="center"
                   >
                     <Grid item xs={true} className={classes.titleDesktop}>
-                      <Tooltip title="home">
-                        <IconButton
-                          aria-label="home"
-                          color="inherit"
-                          onClick={() => router.push("/")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            home
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/" title="home">
+                        <Typography className={classes.titleText} variant="h6">
+                          home
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="about">
-                        <IconButton
-                          aria-label="about"
-                          color="inherit"
-                          onClick={() => router.push("/about")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            about
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/about" title="about">
+                        <Typography className={classes.titleText} variant="h6">
+                          about
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
                       <Contact>
@@ -480,55 +352,25 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleDesktop}>
-                      <Tooltip title="blog">
-                        <IconButton
-                          aria-label="blog"
-                          color="inherit"
-                          onClick={() => router.push("/blog")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            blog
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/blog" title="blog">
+                        <Typography className={classes.titleText} variant="h6">
+                          blog
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
-                      <Tooltip title="home">
-                        <IconButton
-                          aria-label="home"
-                          color="inherit"
-                          onClick={() => router.push("/")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            home
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/" title="home">
+                        <Typography className={classes.titleText} variant="h6">
+                          home
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="about">
-                        <IconButton
-                          aria-label="about"
-                          color="inherit"
-                          onClick={() => router.push("/about")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            about
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/about" title="about">
+                        <Typography className={classes.titleText} variant="h6">
+                          about
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                     <Grid item xs="auto" className={classes.titleMobile}>
                       <Contact>
@@ -542,21 +384,11 @@ const Navbar = () => {
                       </Contact>
                     </Grid>
                     <Grid item className={classes.titleMobile}>
-                      <Tooltip title="blog">
-                        <IconButton
-                          aria-label="blog"
-                          color="inherit"
-                          onClick={() => router.push("/blog")}
-                        >
-                          <Typography
-                            className={classes.titleText}
-                            color="primary"
-                            variant="h6"
-                          >
-                            blog
-                          </Typography>
-                        </IconButton>
-                      </Tooltip>
+                      <CustomLink href="/blog" title="blog">
+                        <Typography className={classes.titleText} variant="h6">
+                          blog
+                        </Typography>
+                      </CustomLink>
                     </Grid>
                   </Grid>
                 </Toolbar>

@@ -1,11 +1,14 @@
+import Tooltip from "@material-ui/core/Tooltip";
 import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   link: {
     color: "black",
+    textDecoration: "none",
     "&:hover": {
-      background: "rgba(255, 0, 0, 0.3)",
+      background: "rgba(0, 0, 0, 0.1)",
+      borderRadius: theme.spacing(1),
     },
   },
   bounceAnimation: {
@@ -33,12 +36,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CustomLink = ({ children, ...props }) => {
+const CustomLink = ({ children, title, ...props }) => {
   const classes = useStyles();
 
   return (
     <Link {...props}>
-      <a className={classes.link}>{children}</a>
+      <a className={classes.link}>
+        <Tooltip title={title}>{children}</Tooltip>
+      </a>
     </Link>
   );
 };

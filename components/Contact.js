@@ -1,11 +1,21 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
-import IconButton from "@material-ui/core/IconButton";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
+const useStyles = makeStyles((theme) => ({
+  button: {
+    color: "black",
+    border: "none",
+    background: "none",
+    "&:hover": {
+      background: "rgba(0, 0, 0, 0.1)",
+      borderRadius: theme.spacing(1),
+    },
+  },
+}));
+
 import { openContact, closeContact } from "../src/actions/contact";
-import { Children } from "react";
 
 const Contact = ({
   children,
@@ -14,17 +24,17 @@ const Contact = ({
   closeContact,
   ...props
 }) => {
+  const classes = useStyles();
+
   return (
-    <Tooltip title="contact">
-      <IconButton
-        aria-label="contact"
-        color="inherit"
-        onClick={openContact}
-        {...props}
-      >
-        {children}
-      </IconButton>
-    </Tooltip>
+    <button
+      className={classes.button}
+      aria-label="contact"
+      onClick={openContact}
+      {...props}
+    >
+      <Tooltip title="contact">{children}</Tooltip>
+    </button>
   );
 };
 

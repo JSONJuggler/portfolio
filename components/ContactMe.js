@@ -23,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
   contact: {
     marginLeft: "auto",
     marginRight: "auto",
+  },
+  underline: {
     textDecoration: "underline",
   },
 }));
@@ -40,11 +42,13 @@ const ContactMe = () => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <div className={classes.contactContainer}>
-            <Contact className={classes.contact}>
-              <Typography variant="h3">
-                <b>Contact Me!</b>
-              </Typography>
-            </Contact>
+            <div className={classes.contact}>
+              <Contact>
+                <Typography className={classes.underline} variant="h3">
+                  <b>Contact Me!</b>
+                </Typography>
+              </Contact>
+            </div>
           </div>
         </Grid>
       </Grid>
