@@ -41,7 +41,9 @@
         "SvgRedux",
         "SvgMaterialui",
         "SvgNodejs",
-        "SvgMongodb"
+        "SvgNextjs",
+        "SvgPostgresql",
+        "SvgStrapi"
       ],
       "description": "A straight forward recipe manager. A user can create an account and log in to manage their recipes and browse other user recipes."
     },
