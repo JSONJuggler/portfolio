@@ -115,6 +115,19 @@ const about = () => {
                   </Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">
+                    Restful API conventions
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">
+                    Form handling and validation
+                  </Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">Content Management</Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">Critical thinking</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
@@ -154,6 +167,9 @@ const about = () => {
                   <Typography variant="body1">React</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">React Hook Form</Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">Redux</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
@@ -186,6 +202,9 @@ const about = () => {
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">PostgreSQL</Typography>
                 </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">Strapi</Typography>
+                </Grid>
               </Grid>
             </Grid>
             <Grid container className={classes.gridContainer}>
@@ -200,6 +219,9 @@ const about = () => {
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">Heroku</Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">NPM</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">VIM</Typography>
