@@ -29,6 +29,8 @@ import {
   SvgGithub,
   SvgCss,
   SvgHtml5,
+  SvgFirebase,
+  SvgPostgresql,
 } from "../icons/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -186,6 +188,24 @@ const Projects = ({ projects }) => {
             className={classes.icon}
             height="20px"
             width="60px"
+          />
+        );
+      case "SvgFirebase":
+        return (
+          <SvgFirebase
+            key={iconName}
+            className={classes.icon}
+            height="25px"
+            width="25px"
+          />
+        );
+      case "SvgPostgresql":
+        return (
+          <SvgPostgresql
+            key={iconName}
+            className={classes.icon}
+            height="25px"
+            width="25px"
           />
         );
       default:
