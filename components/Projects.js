@@ -251,7 +251,11 @@ const Projects = ({ projects }) => {
                   >
                     <Card className={classes.cardRoot}>
                       {project.live && (
-                        <a className={classes.anchorTag} href={project.live}>
+                        <a
+                          className={classes.anchorTag}
+                          href={project.live}
+                          aria-label={project.title}
+                        >
                           <CardMedia
                             className={classes.linkableMedia}
                             image={getImage(project.image)}
@@ -296,6 +300,7 @@ const Projects = ({ projects }) => {
                                 <a
                                   className={classes.projectLink}
                                   href={project.live}
+                                  aria-label="project live link"
                                 >
                                   <LinkIcon />
                                   <Typography
@@ -311,6 +316,7 @@ const Projects = ({ projects }) => {
                               <a
                                 className={classes.projectLink}
                                 href={project.source}
+                                aria-label="project source code link"
                               >
                                 <SvgGithub className={classes.icon} size="2x" />
                                 <Typography
