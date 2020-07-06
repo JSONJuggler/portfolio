@@ -17,6 +17,9 @@ import {
   SvgCss,
   SvgNodeJs,
   SvgReact,
+  SvgNpm,
+  SvgGit,
+  SvgHeroku,
 } from "../icons/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -220,6 +223,34 @@ const Qualifications = () => {
                     MongoDB
                   </Typography>
                   <SvgMongodb
+                    className={classes.icon}
+                    height="40px"
+                    width="80px"
+                  />
+                </div>
+              </Grid>
+              <Grid item xs={4}>
+                <div className={classes.entry}>
+                  <Typography variant="subtitle1" align="center">
+                    NPM
+                  </Typography>
+                  <SvgNpm className={classes.icon} height="40px" width="80px" />
+                </div>
+              </Grid>
+              <Grid item xs={4}>
+                <div className={classes.entry}>
+                  <Typography variant="subtitle1" align="center">
+                    Git
+                  </Typography>
+                  <SvgGit className={classes.icon} height="40px" width="80px" />
+                </div>
+              </Grid>
+              <Grid item xs={4}>
+                <div className={classes.entry}>
+                  <Typography variant="subtitle1" align="center">
+                    Heroku
+                  </Typography>
+                  <SvgHeroku
                     className={classes.icon}
                     height="40px"
                     width="80px"
