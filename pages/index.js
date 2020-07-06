@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Fragment } from "react";
 
 import { makeStyles } from "@material-ui/core";
@@ -23,6 +24,12 @@ const Home = ({ data }) => {
 
   return (
     <div className={classes.root}>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="x0Muns5pK71I3AK6b3XmS8zvBwcMpuSodHaI4MJqr-A"
+        />
+      </Head>
       <Landing />
       <Qualifications />
       <Container maxWidth="lg">

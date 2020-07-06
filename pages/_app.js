@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }) {
     <div className={classes.root}>
       <Head>
         <title>Beau | developer</title>
+        <meta name="author" content="Beau Reescano" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
