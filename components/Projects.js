@@ -31,6 +31,7 @@ import {
   SvgHtml5,
   SvgFirebase,
   SvgPostgresql,
+  SvgStrapi,
 } from "../icons/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -205,6 +206,15 @@ const Projects = ({ projects }) => {
             key={iconName}
             className={classes.icon}
             height="25px"
+            width="25px"
+          />
+        );
+      case "SvgStrapi":
+        return (
+          <SvgStrapi
+            key={iconName}
+            className={classes.icon}
+            height="30px"
             width="25px"
           />
         );

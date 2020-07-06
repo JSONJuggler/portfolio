@@ -11,6 +11,22 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
+export const SvgStrapi = (props) => {
+  return (
+    <svg viewBox="0 0 1024 1033" fill="none" {...props}>
+      <path
+        d="M341.963 0v344.061h341.333v344.06h341.334V0H341.963z"
+        fill="#000000"
+        stroke="#FFFFFF"
+        strokeWidth="20px"
+      />
+      <path d="M681.635 343.725h-340v344.732h340V343.725z" fill="#000000" />
+      <path d="M341.968 344.061H.635L341.968 0v344.061z" fill="#000000" />
+      <path d="M681.002 1032.18V688.457H1023L681.002 1032.18z" fill="#000000" />
+    </svg>
+  );
+};
+
 export const SvgHeroku = (props) => {
   return (
     <svg viewBox="0 0 143 40" width="1em" height="1em" {...props}>
