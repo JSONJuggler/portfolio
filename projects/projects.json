@@ -9,6 +9,7 @@
         "SvgReact",
         "SvgRedux",
         "SvgMaterialui",
+        "SvgNodejs",
         "SvgNextjs"
       ],
       "description": "The very website you're browsing now! Rather than use plain HTML5 and CSS, I decided to use some of my favorite tools to build my own portfolio website from scratch."
@@ -23,6 +24,7 @@
         "SvgReact",
         "SvgRedux",
         "SvgMaterialui",
+        "SvgNodejs",
         "SvgNextjs",
         "SvgMongodb"
       ],
@@ -53,6 +55,7 @@
         "SvgReact",
         "SvgRedux",
         "SvgMaterialui",
+        "SvgNodejs",
         "SvgNextjs",
         "SvgFirebase"
       ],
@@ -63,7 +66,7 @@
       "live": "https://webdeveloperbeau.com/weather",
       "source": "https://github.com/JSONJuggler/weather-website",
       "title": "Weather",
-      "icons": ["SvgJavascript", "SvgHtml5", "SvgCss"],
+      "icons": ["SvgJavascript", "SvgHtml5", "SvgCss", "SvgNodejs"],
       "description": "Everybody's gotta have one of these right? It's my weather app! Stay tuned for its facelift, coming soon."
     },
     {

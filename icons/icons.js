@@ -144,7 +144,7 @@ export const SvgCss = (props) => {
   return <FontAwesomeIcon icon={faCss3Alt} {...props} />;
 };
 
-export const SvgNodeJs = (props) => {
+export const SvgNodejs = (props) => {
   return <FontAwesomeIcon icon={faNode} {...props} />;
 };
 

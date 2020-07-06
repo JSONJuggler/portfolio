@@ -24,7 +24,7 @@ import {
   SvgRedux,
   SvgMaterialui,
   SvgNextjs,
-  SvgNodeJs,
+  SvgNodejs,
   SvgMongodb,
   SvgGithub,
   SvgCss,
@@ -149,8 +149,8 @@ const Projects = ({ projects }) => {
         );
       case "SvgReact":
         return <SvgReact key={iconName} className={classes.icon} size="2x" />;
-      case "SvgNodeJs":
-        return <SvgNodeJs key={iconName} className={classes.icon} size="2x" />;
+      case "SvgNodejs":
+        return <SvgNodejs key={iconName} className={classes.icon} size="2x" />;
       case "SvgHtml5":
         return <SvgHtml5 key={iconName} className={classes.icon} size="2x" />;
       case "SvgCss":

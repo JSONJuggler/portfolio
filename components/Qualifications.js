@@ -15,7 +15,7 @@ import {
   SvgMongodb,
   SvgHtml5,
   SvgCss,
-  SvgNodeJs,
+  SvgNodejs,
   SvgReact,
   SvgNpm,
   SvgGit,
@@ -202,7 +202,7 @@ const Qualifications = () => {
                   <Typography variant="subtitle1" align="center">
                     NodeJS
                   </Typography>
-                  <SvgNodeJs className={classes.icon} size="5x" />
+                  <SvgNodejs className={classes.icon} size="5x" />
                 </div>
               </Grid>
               <Grid item xs={4}>
