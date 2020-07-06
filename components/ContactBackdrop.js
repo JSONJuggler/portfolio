@@ -1,4 +1,4 @@
-import { useState, useRef, Fragment } from "react";
+import { useState, useRef, Fragment, useEffect } from "react";
 import Backdrop from "@material-ui/core/Backdrop";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
@@ -48,8 +48,6 @@ const ContactBackdrop = ({
 }) => {
   const classes = useStyles();
 
-  const [open, setOpen] = useState(false);
-
   const email = useRef(null);
 
   const handleSubmit = () => {
@@ -61,6 +59,7 @@ const ContactBackdrop = ({
         ". %0D%0A%0D%0A " +
         encodeURIComponent(message)
     );
+    clearContactInfo();
     handleClose();
   };
 
@@ -72,12 +71,11 @@ const ContactBackdrop = ({
   };
 
   const handleClose = () => {
-    clearContactInfo();
     closeContact();
     email.current.type = "hidden";
   };
 
-  const handleCopy = (e) => {
+  const handleCopy = () => {
     if (email.current.type === "hidden") {
       email.current.type = "text";
       handleCopy();
@@ -86,6 +84,21 @@ const ContactBackdrop = ({
       document.execCommand("copy");
     }
   };
+
+  const handleKeydown = (e) => {
+    if (e.code === "Escape") {
+      if (contactOpen) {
+        handleClose();
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeydown);
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  });
 
   return (
     <Backdrop className={classes.backdrop} open={contactOpen}>
