@@ -103,18 +103,18 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     flexWrap: "wrap",
   },
-  cardTitle: {
-    marginTop: "auto",
-  },
   description: {
     overflowY: "auto",
     marginBottom: "auto",
+  },
+  title: {
+    marginTop: "auto",
   },
   spacing: {
     marginLeft: theme.spacing(1),
   },
   cardFooter: {
-    marginTop: theme.spacing(-3),
+    marginBottom: theme.spacing(-3),
   },
   footerIcons: {},
 }));
@@ -305,7 +305,7 @@ const Projects = ({ projects }) => {
                               return getIcon(icon);
                             })}
                           </div>
-                          <div className={classes.cardTitle}>
+                          <div className={classes.title}>
                             <Typography variant="h6" align="center">
                               {project.title}
                             </Typography>
@@ -315,50 +315,53 @@ const Projects = ({ projects }) => {
                               {project.description}
                             </Typography>
                           </div>
-                        </CardContent>
-                        <CardActions
-                          className={classes.cardFooter}
-                          disableSpacing={true}
-                        >
-                          <Grid
-                            container
-                            justify="space-evenly"
-                            alignItems="center"
+                          <CardActions
+                            className={classes.cardFooter}
+                            disableSpacing={true}
                           >
-                            {project.live && (
+                            <Grid
+                              container
+                              justify="space-evenly"
+                              alignItems="center"
+                            >
+                              {project.live && (
+                                <Grid item>
+                                  <a
+                                    className={classes.projectLink}
+                                    href={project.live}
+                                    aria-label="project live link"
+                                  >
+                                    <LinkIcon />
+                                    <Typography
+                                      className={classes.spacing}
+                                      variant="caption"
+                                    >
+                                      Live
+                                    </Typography>
+                                  </a>
+                                </Grid>
+                              )}
                               <Grid item>
                                 <a
                                   className={classes.projectLink}
-                                  href={project.live}
-                                  aria-label="project live link"
+                                  href={project.source}
+                                  aria-label="project source code link"
                                 >
-                                  <LinkIcon />
+                                  <SvgGithub
+                                    className={classes.icon}
+                                    size="2x"
+                                  />
                                   <Typography
                                     className={classes.spacing}
                                     variant="caption"
                                   >
-                                    Live
+                                    Source
                                   </Typography>
                                 </a>
                               </Grid>
-                            )}
-                            <Grid item>
-                              <a
-                                className={classes.projectLink}
-                                href={project.source}
-                                aria-label="project source code link"
-                              >
-                                <SvgGithub className={classes.icon} size="2x" />
-                                <Typography
-                                  className={classes.spacing}
-                                  variant="caption"
-                                >
-                                  Source
-                                </Typography>
-                              </a>
                             </Grid>
-                          </Grid>
-                        </CardActions>
+                          </CardActions>
+                        </CardContent>
                       </div>
                     </Card>
                   </Grid>
