@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
           name="description"
-          content="Hi, I'm Beau. I'm a web developer with a passion for creating delightful user experiences using the latest front-end and back-end technologies."
+          content="Hi, I'm Beau Reescano. I'm a Full Stack web developer using the latest front-end and back-end technologies with a focus on React JS, Next JS, and Node JS."
         />
       </Head>
       <ThemeProvider theme={theme}>
