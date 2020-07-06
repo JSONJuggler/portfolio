@@ -17,6 +17,7 @@ import Fade from "@material-ui/core/Fade";
 import LinkIcon from "@material-ui/icons/Link";
 import IconButton from "@material-ui/core/IconButton";
 import VisibilitySensor from "react-visibility-sensor";
+import Link from "next/link";
 import {
   SvgJavascript,
   SvgReact,
@@ -53,6 +54,25 @@ const useStyles = makeStyles((theme) => ({
       width: 450,
       height: 350,
     },
+  },
+  anchorTag: {
+    height: "100%",
+    width: "45%",
+  },
+  projectLink: {
+    display: "flex",
+    alignItems: "center",
+    color: "black",
+    textDecoration: "none",
+    "&:hover": {
+      background: "rgba(0, 0, 0, 0.1)",
+      borderRadius: theme.spacing(1),
+    },
+  },
+  linkableMedia: {
+    width: "100%",
+    height: "100%",
+    backgroundPosition: "left",
   },
   media: {
     width: "45%",
@@ -230,10 +250,20 @@ const Projects = ({ projects }) => {
                     md={6}
                   >
                     <Card className={classes.cardRoot}>
-                      <CardMedia
-                        className={classes.media}
-                        image={getImage(project.image)}
-                      />
+                      {project.live && (
+                        <a className={classes.anchorTag} href={project.live}>
+                          <CardMedia
+                            className={classes.linkableMedia}
+                            image={getImage(project.image)}
+                          />
+                        </a>
+                      )}
+                      {!project.live && (
+                        <CardMedia
+                          className={classes.media}
+                          image={getImage(project.image)}
+                        />
+                      )}
                       <div className={classes.details}>
                         <CardContent className={classes.content}>
                           <div className={classes.icons}>
@@ -263,12 +293,9 @@ const Projects = ({ projects }) => {
                           >
                             {project.live && (
                               <Grid item>
-                                <IconButton
-                                  size="small"
-                                  color="primary"
-                                  onClick={() =>
-                                    window.location.assign(project.live)
-                                  }
+                                <a
+                                  className={classes.projectLink}
+                                  href={project.live}
                                 >
                                   <LinkIcon />
                                   <Typography
@@ -277,16 +304,13 @@ const Projects = ({ projects }) => {
                                   >
                                     Live
                                   </Typography>
-                                </IconButton>
+                                </a>
                               </Grid>
                             )}
                             <Grid item>
-                              <IconButton
-                                size="small"
-                                color="primary"
-                                onClick={() =>
-                                  window.location.assign(project.source)
-                                }
+                              <a
+                                className={classes.projectLink}
+                                href={project.source}
                               >
                                 <SvgGithub className={classes.icon} size="2x" />
                                 <Typography
@@ -295,7 +319,7 @@ const Projects = ({ projects }) => {
                                 >
                                   Source
                                 </Typography>
-                              </IconButton>
+                              </a>
                             </Grid>
                           </Grid>
                         </CardActions>
