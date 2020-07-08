@@ -50,7 +50,7 @@ export async function getStaticProps() {
 
   const baseUrl = dev
     ? "http://localhost:3000"
-    : "https://jsonj-portfolio.herokuapp.com";
+    : "https://portfolio-ten-beta.vercel.app";
 
   const res = await axios.get(baseUrl + "/api/projectsStream");
 
