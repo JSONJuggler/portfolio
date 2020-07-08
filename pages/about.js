@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Fragment } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Fade from "@material-ui/core/Fade";
@@ -55,6 +56,13 @@ const about = () => {
     <Fade timeout={1000} in={true}>
       <Container maxWidth="lg">
         <div className={classes.root}>
+          <Head>
+            <title>Beau | about | developer</title>
+            <meta
+              name="description"
+              content="Check out my skills and see what I can do for you. Contact me with any questions you might have!"
+            />
+          </Head>
           <div className={classes.bodyText}>
             <Container disableGutters={true} maxWidth="md">
               <div className={classes.about}>

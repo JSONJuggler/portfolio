@@ -25,6 +25,11 @@ const Home = ({ data }) => {
   return (
     <div className={classes.root}>
       <Head>
+        <title>Beau | home | developer</title>
+        <meta
+          name="description"
+          content="Hi, I'm Beau Reescano, a Full Stack web developer. I create websites using the latest front-end and back-end technologies with a focus on React JS, Next JS, and Node JS."
+        />
         <meta
           name="google-site-verification"
           content="x0Muns5pK71I3AK6b3XmS8zvBwcMpuSodHaI4MJqr-A"
