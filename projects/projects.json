@@ -12,7 +12,7 @@
         "SvgNodejs",
         "SvgNextjs"
       ],
-      "description": "The very website you're browsing now! Rather than use plain HTML5 and CSS, I decided to use some of my favorite tools to build my own portfolio website from scratch."
+      "description": "The very website you're browsing now, built with some of my favorite tools to be responsive, performant, and SEO friendly. Each project is hosted on Heroku with a HAproxy layer to serve each app under a subdirectory of my domain, webdeveloperbeau.com"
     },
     {
       "image": "translator",
@@ -42,10 +42,10 @@
         "SvgMaterialui",
         "SvgNodejs",
         "SvgNextjs",
-        "SvgPostgresql",
+        "SvgMongodb",
         "SvgStrapi"
       ],
-      "description": "A straight forward recipe manager. A user can create an account and log in to manage their recipes and browse other user recipes."
+      "description": "A straight forward recipe manager with its content served from the backend using the headless CMS Strapi and authentication powered by Next-Auth. A user can create an account and log in to manage their recipes and browse other user recipes."
     },
     {
       "image": "anone",
