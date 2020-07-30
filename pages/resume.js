@@ -40,22 +40,6 @@ const Resume = ({ data }) => {
           name="description"
           content="Hi, I'm Beau Reescano, a Full Stack web developer and this is my resume. I create websites using the latest front-end and back-end technologies with a focus on React JS, Next JS, and Node JS."
         />
-        <meta property="og:title" content="Beau Reescano's Resume" />
-        <meta
-          property="og:description"
-          content="Hi, I'm Beau Reescano, a full stack web developer and this is my resume."
-        />
-        <meta property="og:url" content="https://webdeveloperbeau.com/resume" />
-        <meta
-          property="og:image"
-          content="https://webdeveloperbeau.com/resumepic.png"
-        />
-        <meta property="og:image" content="/resumepic.png" />
-        <meta property="og:site_name" content="webdeveloperbeau.com" />
-        <meta property="og:imageWidth" content="2458" />
-        <meta property="og:imageHeight" content="1566" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:creator" content="JSONJuggler" />
       </Head>
       <Typography variant="caption" align="center">
         <em>
