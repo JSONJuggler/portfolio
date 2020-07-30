@@ -244,6 +244,12 @@ const about = () => {
                   <Typography variant="body1">Rollbar</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">MATLAB</Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">Microsoft Office</Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">Unity</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
