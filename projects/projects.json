@@ -4,14 +4,7 @@
       "image": "portfolio",
       "source": "https://github.com/JSONJuggler/portfolio",
       "title": "Portfolio",
-      "icons": [
-        "SvgJavascript",
-        "SvgReact",
-        "SvgRedux",
-        "SvgMaterialui",
-        "SvgNodejs",
-        "SvgNextjs"
-      ],
+      "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs"],
       "description": "The very website you're browsing now, built with some of my favorite tools to be responsive, performant, and SEO friendly. Each project is hosted on Heroku with a HAproxy layer to serve each app under a subdirectory of my domain, webdeveloperbeau.com"
     },
     {
@@ -20,13 +13,12 @@
       "source": "https://github.com/JSONJuggler/myTranslator",
       "title": "Translator",
       "icons": [
-        "SvgJavascript",
         "SvgReact",
         "SvgRedux",
         "SvgMaterialui",
-        "SvgNodejs",
         "SvgNextjs",
-        "SvgMongodb"
+        "SvgMongodb",
+        "SvgStrapi"
       ],
       "description": "Powered by several IBM Cloud services, this translator achieves speedy translations of single words by generating and serving a static HTML page for the requested translation. Several languages are currently supported."
     },
@@ -36,11 +28,9 @@
       "source": "https://github.com/JSONJuggler/recipeManager",
       "title": "RecipeManager",
       "icons": [
-        "SvgJavascript",
         "SvgReact",
         "SvgRedux",
         "SvgMaterialui",
-        "SvgNodejs",
         "SvgNextjs",
         "SvgMongodb",
         "SvgStrapi"
@@ -53,11 +43,9 @@
       "source": "https://github.com/JSONJuggler/aNone",
       "title": "Anone",
       "icons": [
-        "SvgJavascript",
         "SvgReact",
         "SvgRedux",
         "SvgMaterialui",
-        "SvgNodejs",
         "SvgNextjs",
         "SvgFirebase"
       ],
@@ -76,7 +64,7 @@
       "source": "https://github.com/JSONJuggler/dataStructureImplementations",
       "title": "DataStructures",
       "icons": ["SvgJavascript"],
-      "description": "More akin to notes, these are datastructures I have implemented using javascript. Includes singly and doubly linked lists, stacks, queues, BSTs, heaps, hash tables, and graphs. Photo credit => https://dev.to/"
+      "description": "More akin to notes, these are datastructures I have implemented using javascript. Includes singly and doubly linked lists. Coming soon: stacks, queues, BSTs, heaps, hash tables, and graphs. Photo credit => https://dev.to/"
     }
   ]
 }
