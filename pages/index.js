@@ -38,7 +38,7 @@ const Home = ({ data }) => {
         <meta property="og:url" content="https://webdeveloperbeau.com" />
         <meta property="og:image" content="/portfoliopic.png" />
         <meta property="og:site_name" content="webdeveloperbeau.com" />
-        <meta property="og:imageWidth" content="2458" />
+        <meta property="og:imageWidth" content="2086" />
         <meta property="og:imageHeight" content="1538" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="JSONJuggler" />
