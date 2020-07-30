@@ -30,7 +30,18 @@ const Home = ({ data }) => {
           name="description"
           content="Hi, I'm Beau Reescano, a Full Stack web developer. I create websites using the latest front-end and back-end technologies with a focus on React JS, Next JS, and Node JS."
         />
+        <meta property="og:title" content="Beau Reescano's Portfolio" />
+        <meta
+          property="og:description"
+          content="Hi, I'm Beau Reescano, a full stack web developer"
+        />
+        <meta property="og:url" content="https://webdeveloperbeau.com" />
         <meta property="og:image" content="/portfoliopic.png" />
+        <meta property="og:site_name" content="webdeveloperbeau.com" />
+        <meta property="og:imageWidth" content="2458" />
+        <meta property="og:imageHeight" content="1538" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="JSONJuggler" />
         <meta
           name="google-site-verification"
           content="x0Muns5pK71I3AK6b3XmS8zvBwcMpuSodHaI4MJqr-A"
