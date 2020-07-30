@@ -40,6 +40,7 @@ const Resume = ({ data }) => {
           name="description"
           content="Hi, I'm Beau Reescano, a Full Stack web developer and this is my resume. I create websites using the latest front-end and back-end technologies with a focus on React JS, Next JS, and Node JS."
         />
+        <meta property="og:image" content="/resumepic.png" />
       </Head>
       <Typography variant="caption" align="center">
         <em>
