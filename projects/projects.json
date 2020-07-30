@@ -17,8 +17,7 @@
         "SvgRedux",
         "SvgMaterialui",
         "SvgNextjs",
-        "SvgMongodb",
-        "SvgStrapi"
+        "SvgMongodb"
       ],
       "description": "Powered by several IBM Cloud services, this translator achieves speedy translations of single words by generating and serving a static HTML page for the requested translation. Several languages are currently supported."
     },
