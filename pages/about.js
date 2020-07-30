@@ -6,11 +6,13 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Tooltip from "@material-ui/core/Tooltip";
+import Link from "next/link";
 import IconButton from "@material-ui/core/IconButton";
 
 import ContactMe from "../components/ContactMe";
 import Skills from "../components/Socials";
 import Contact from "../components/Contact";
+import CustomLink from "../components/CustomLink";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
   },
   gridContainer: {
     marginBottom: theme.spacing(3),
+  },
+  underline: {
+    textDecoration: "underline",
   },
 }));
 
@@ -259,6 +264,19 @@ const about = () => {
             </Grid>
           </div>
         </div>
+        <Grid container spacing={2} justify="space-around" alignItems="center">
+          <Grid item xs={true} className={classes.titleDesktop}>
+            <CustomLink href="/resume" title="To Resume">
+              <Typography
+                className={classes.underline}
+                variant="h4"
+                align="center"
+              >
+                Checkout my resume here!
+              </Typography>
+            </CustomLink>
+          </Grid>
+        </Grid>
         <ContactMe />
       </Container>
     </Fade>
