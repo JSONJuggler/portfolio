@@ -243,7 +243,7 @@ const about = () => {
                   <Typography variant="body1">Command Line</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
-                  <Typography variant="body1">Socket.IO</Typography>
+                  <Typography variant="body1">WebSockets</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">Rollbar</Typography>
