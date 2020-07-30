@@ -3,6 +3,7 @@ import { Fragment } from "react";
 
 import { makeStyles } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
 import Landing from "../components/Landing";
 import Qualifications from "../components/Qualifications";
 import Projects from "../components/Projects";
@@ -15,8 +16,12 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingTop: theme.spacing(11.5),
+    paddingTop: theme.spacing(7),
     width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: theme.spacing(10.5),
+      marginBottom: theme.spacing(-3),
+    },
   },
   iframe: {
     width: "90%",
@@ -36,6 +41,12 @@ const Resume = ({ data }) => {
           content="Hi, I'm Beau Reescano, a Full Stack web developer and this is my resume. I create websites using the latest front-end and back-end technologies with a focus on React JS, Next JS, and Node JS."
         />
       </Head>
+      <Typography variant="caption" align="center">
+        <em>
+          Powered by PDF.js. Document may not load if accessed from the Brave
+          mobile web browser
+        </em>
+      </Typography>
       <iframe
         className={classes.iframe}
         src="/resume/viewer.html"
