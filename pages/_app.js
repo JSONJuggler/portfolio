@@ -40,6 +40,21 @@ function MyApp({ Component, pageProps }) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta property="og:title" content="Beau Reescano's Portfolio" />
+        <meta
+          property="og:description"
+          content="Hi, I'm Beau Reescano, a full stack web developer"
+        />
+        <meta property="og:url" content="https://webdeveloperbeau.com" />
+        <meta
+          property="og:image"
+          content="https://webdeveloperbeau.com/portfoliopic.png"
+        />
+        <meta property="og:site_name" content="webdeveloperbeau.com" />
+        <meta property="og:imageWidth" content="2086" />
+        <meta property="og:imageHeight" content="1538" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="JSONJuggler" />
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

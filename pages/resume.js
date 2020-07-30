@@ -46,6 +46,10 @@ const Resume = ({ data }) => {
           content="Hi, I'm Beau Reescano, a full stack web developer and this is my resume."
         />
         <meta property="og:url" content="https://webdeveloperbeau.com/resume" />
+        <meta
+          property="og:image"
+          content="https://webdeveloperbeau.com/resumepic.png"
+        />
         <meta property="og:image" content="/resumepic.png" />
         <meta property="og:site_name" content="webdeveloperbeau.com" />
         <meta property="og:imageWidth" content="2458" />
