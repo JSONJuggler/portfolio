@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
         <meta
           prefix="og: http://ogp.me/ns#"
           property="og:description"
-          content="Hi, I'm Beau Reescano, a full stack web developer"
+          content="Hi, I'm a full stack web developer. I create websites and webapps using cutting edge web technologies."
         />
         <meta
           prefix="og: http://ogp.me/ns#"
