@@ -40,19 +40,46 @@ function MyApp({ Component, pageProps }) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta property="og:title" content="Beau Reescano's Portfolio" />
         <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:title"
+          content="Beau Reescano's Portfolio"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
           property="og:description"
           content="Hi, I'm Beau Reescano, a full stack web developer"
         />
-        <meta property="og:url" content="https://webdeveloperbeau.com" />
         <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:url"
+          content="https://webdeveloperbeau.com"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
           property="og:image"
           content="https://webdeveloperbeau.com/portfoliopic.png"
         />
-        <meta property="og:site_name" content="webdeveloperbeau.com" />
-        <meta property="og:imageWidth" content="2086" />
-        <meta property="og:imageHeight" content="1538" />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:site_name"
+          content="webdeveloperbeau.com"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image:width"
+          content="2086"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image:height"
+          content="1538"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:type"
+          content="website"
+        />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="JSONJuggler" />
       </Head>
