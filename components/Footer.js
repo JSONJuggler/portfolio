@@ -27,6 +27,9 @@ const Footer = () => {
       alignItems="center"
       direction="column"
     >
+      <Grid container justify="center" alignItems="center">
+        <Socials />
+      </Grid>
       <Grid item>
         <Copyright />
       </Grid>

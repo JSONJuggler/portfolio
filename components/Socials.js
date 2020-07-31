@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { SvgYoutube, SvgTwitter, SvgGithub } from "../icons/icons";
+import { SvgYoutube, SvgTwitter, SvgGithub, SvgLinkedin } from "../icons/icons";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core";
 import Tooltip from "@material-ui/core/Tooltip";
@@ -73,17 +73,17 @@ const Socials = () => {
       <Grid item>
         <Link href="https://github.com/jsonjuggler">
           <Tooltip title="My Github">
-            <IconButton aria-label="github" color="inherit">
-              <SvgGithub size="2x" />
+            <IconButton aria-label="github" color="secondary">
+              <SvgGithub size="1x" />
             </IconButton>
           </Tooltip>
         </Link>
       </Grid>
       <Grid item>
-        <Link href="https://www.youtube.com/channel/UCNg2cTudtitmukNp_-E5N5g">
-          <Tooltip title="My Youtube">
-            <IconButton aria-label="youtube" color="inherit">
-              <SvgYoutube size="2x" />
+        <Link href="https://www.linkedin.com/in/beau-reescano-68704811b/">
+          <Tooltip title="My Linkedin Page">
+            <IconButton aria-label="Linkedin" color="secondary">
+              <SvgLinkedin size="1x" />
             </IconButton>
           </Tooltip>
         </Link>
@@ -91,8 +91,8 @@ const Socials = () => {
       <Grid item>
         <Link href="https://twitter.com/JSONJuggler ">
           <Tooltip title="My Twitter">
-            <IconButton aria-label="twitter" color="inherit">
-              <SvgTwitter size="2x" />
+            <IconButton aria-label="twitter" color="secondary">
+              <SvgTwitter size="1x" />
             </IconButton>
           </Tooltip>
         </Link>
