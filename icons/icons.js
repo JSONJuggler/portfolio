@@ -8,6 +8,7 @@ import {
   faReact,
   faJs,
   faTwitter,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -150,6 +151,10 @@ export const SvgNodejs = (props) => {
 
 export const SvgReact = (props) => {
   return <FontAwesomeIcon icon={faReact} {...props} />;
+};
+
+export const SvgLinkedin = (props) => {
+  return <FontAwesomeIcon icon={faLinkedin} {...props} />;
 };
 
 export const SvgDownArrow = (props) => {
