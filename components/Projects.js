@@ -5,6 +5,7 @@ import portfolio from "../imgs/portfolio.png";
 import recipemanager from "../imgs/recipemanager.png";
 import anone from "../imgs/anone.png";
 import datastructres from "../imgs/datastructures.jpg";
+import jobbie from "../imgs/jobbie.png";
 import weather from "../imgs/weather.png";
 import Grid from "@material-ui/core/Grid";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -20,6 +21,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import Link from "next/link";
 import {
   SvgJavascript,
+  SvgTypescript,
   SvgReact,
   SvgRedux,
   SvgMaterialui,
@@ -124,6 +126,8 @@ const Projects = ({ projects }) => {
 
   const getImage = (imageName) => {
     switch (imageName) {
+      case "jobbie":
+        return jobbie;
       case "translator":
         return translator;
       case "portfolio":
@@ -155,6 +159,15 @@ const Projects = ({ projects }) => {
         return <SvgHtml5 key={iconName} className={classes.icon} size="2x" />;
       case "SvgCss":
         return <SvgCss key={iconName} className={classes.icon} size="2x" />;
+      case "SvgTypescript":
+        return (
+          <SvgTypescript
+            key={iconName}
+            className={classes.icon}
+            height="23px"
+            width="23px"
+          />
+        );
       case "SvgRedux":
         return (
           <SvgRedux
