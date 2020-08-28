@@ -8,6 +8,14 @@
       "description": "The very website you're browsing now, built with some of my favorite tools to be responsive, performant, and SEO friendly. Each project is hosted on Heroku with a HAproxy layer to serve each app under a subdirectory of my domain, webdeveloperbeau.com"
     },
     {
+      "image": "jobbie",
+      "live": "https://jsonj-jobbie.herokuapp.com/",
+      "source": "https://github.com/JSONJuggler/jobbie",
+      "title": "Jobbie",
+      "icons": ["SvgReact", "SvgNodejs", "SvgTypescript"],
+      "description": "My own implementation of a job search aggregator. Powered by the headless chrome node.js api Puppeteer, this single page application uses web automation and web scraping techniques to make the job search less of a headache. Be on the lookout for tracking features and analytics coming soon."
+    },
+    {
       "image": "translator",
       "live": "https://webdeveloperbeau.com/translator",
       "source": "https://github.com/JSONJuggler/myTranslator",
