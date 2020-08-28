@@ -138,6 +138,12 @@ const about = () => {
                   </Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">Web automation</Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">Web scraping</Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">Content Management</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
@@ -169,6 +175,9 @@ const about = () => {
               <Grid container item xs={8} md={9}>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">Javascript</Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">Typescript</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">HTML5</Typography>
@@ -241,6 +250,9 @@ const about = () => {
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">Command Line</Typography>
+                </Grid>
+                <Grid item className={classes.gridEntry} xs={6} md={4}>
+                  <Typography variant="body1">Puppeteer</Typography>
                 </Grid>
                 <Grid item className={classes.gridEntry} xs={6} md={4}>
                   <Typography variant="body1">WebSockets</Typography>
