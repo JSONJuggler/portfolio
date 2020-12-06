@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
@@ -33,6 +34,21 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 'auto',
     paddingLeft: theme.spacing(1),
     paddingRight: theme.spacing(1),
+  },
+  container: {
+    display: 'block',
+  },
+  imageContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    [theme.breakpoints.up('sm')]: {
+      float: 'right',
+    },
+    paddingLeft: theme.spacing(5),
+    paddingRight: theme.spacing(5),
+  },
+  image: {
+    borderRadius: '15%',
   },
   bodyDetails: {
     lineHeight: theme.spacing(0.3),
@@ -74,14 +90,19 @@ const about = () => {
                 <Typography variant="h4" gutterBottom>
                   <b>Hello again, I'm Beau</b>
                 </Typography>
-                <Typography className={classes.bodyDetails} variant="h5" paragraph gutterBottom>
-                  I’m sure you’ve already discovered that I am a web developer but that wasn’t always the case. I
-                  started out as a physicist, completing my Bachelor's of Science at Rice University in 2016. I was
-                  happy and excited being free to apply my critical thinking and learning abilities to come up with
-                  solutions for some tough problems during and after my studies. The further along I went though, the
-                  less intimate my solutions felt, almost as if they weren’t my own. For me, this was another problem to
-                  solve. Fast forward a bit and here I am today!
-                </Typography>
+                <div className={classes.container}>
+                  <div className={classes.imageContainer}>
+                    <Image className={classes.image} width={350} height={320} src="/me.png" />
+                  </div>
+                  <Typography className={classes.bodyDetails} variant="h5" paragraph gutterBottom>
+                    I’m sure you’ve already discovered that I am a web developer but that wasn’t always the case. I
+                    started out as a physicist, completing my Bachelor's of Science at Rice University in 2016. I was
+                    happy and excited being free to apply my critical thinking and learning abilities to come up with
+                    solutions for some tough problems during and after my studies. The further along I went though, the
+                    less intimate my solutions felt, almost as if they weren’t my own. For me, this was another problem
+                    to solve. Fast forward a bit and here I am today!
+                  </Typography>
+                </div>
                 <Typography className={classes.bodyDetails} variant="h5">
                   As a developer, I am in my element. I have the ultimate freedom to craft solutions to an absurd number
                   of unique problems by developing delightful user experiences! If you have a problem you'd like me to
