@@ -13,7 +13,6 @@ import ContactMe from '../components/ContactMe';
 import Skills from '../components/Socials';
 import Contact from '../components/Contact';
 import CustomLink from '../components/CustomLink';
-import me from '';
 
 const useStyles = makeStyles((theme) => ({
   root: {
