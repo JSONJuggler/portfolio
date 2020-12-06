@@ -1,24 +1,24 @@
-import { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import translator from "../imgs/translator.png";
-import portfolio from "../imgs/portfolio.png";
-import recipemanager from "../imgs/recipemanager.png";
-import anone from "../imgs/anone.png";
-import datastructres from "../imgs/datastructures.jpg";
-import jobbie from "../imgs/jobbie.png";
-import weather from "../imgs/weather.png";
-import Grid from "@material-ui/core/Grid";
-import CardMedia from "@material-ui/core/CardMedia";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import Fade from "@material-ui/core/Fade";
-import LinkIcon from "@material-ui/icons/Link";
-import IconButton from "@material-ui/core/IconButton";
-import VisibilitySensor from "react-visibility-sensor";
-import Link from "next/link";
+import { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import translator from '../imgs/translator.png';
+import portfolio from '../imgs/portfolio.png';
+import recipemanager from '../imgs/recipemanager.png';
+import anone from '../imgs/anone.png';
+import datastructres from '../imgs/datastructures.jpg';
+import jobbie from '../imgs/jobbie.png';
+import weather from '../imgs/weather.png';
+import Grid from '@material-ui/core/Grid';
+import CardMedia from '@material-ui/core/CardMedia';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Fade from '@material-ui/core/Fade';
+import LinkIcon from '@material-ui/icons/Link';
+import IconButton from '@material-ui/core/IconButton';
+import VisibilitySensor from 'react-visibility-sensor';
+import Link from 'next/link';
 import {
   SvgJavascript,
   SvgTypescript,
@@ -34,7 +34,7 @@ import {
   SvgFirebase,
   SvgPostgresql,
   SvgStrapi,
-} from "../icons/icons";
+} from '../icons/icons';
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -42,9 +42,9 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(4),
   },
   gridItem: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginBottom: theme.spacing(4),
   },
   root: {
@@ -54,63 +54,63 @@ const useStyles = makeStyles((theme) => ({
   cardRoot: {
     width: 340,
     height: 300,
-    display: "flex",
-    [theme.breakpoints.up("sm")]: {
+    display: 'flex',
+    [theme.breakpoints.up('sm')]: {
       width: 450,
       height: 350,
     },
   },
   anchorTag: {
-    height: "100%",
-    width: "45%",
+    height: '100%',
+    width: '45%',
   },
   projectLink: {
-    display: "flex",
-    alignItems: "center",
-    color: "black",
-    textDecoration: "none",
-    "&:hover": {
-      background: "rgba(0, 0, 0, 0.1)",
+    display: 'flex',
+    alignItems: 'center',
+    color: 'black',
+    textDecoration: 'none',
+    '&:hover': {
+      background: 'rgba(0, 0, 0, 0.1)',
       borderRadius: theme.spacing(1),
     },
   },
   linkableMedia: {
-    width: "100%",
-    height: "100%",
-    backgroundPosition: "left",
+    width: '100%',
+    height: '100%',
+    backgroundPosition: 'left',
   },
   media: {
-    width: "45%",
-    backgroundPosition: "left",
+    width: '45%',
+    backgroundPosition: 'left',
   },
   details: {
-    display: "flex",
-    flexDirection: "column",
-    width: "55%",
+    display: 'flex',
+    flexDirection: 'column',
+    width: '55%',
   },
   content: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
   },
   icon: {
     padding: theme.spacing(0.5),
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up('sm')]: {
       padding: 0,
       margin: theme.spacing(0.5),
     },
   },
   icons: {
-    display: "flex",
-    justifyContent: "center",
-    flexWrap: "wrap",
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
   },
   description: {
-    overflowY: "auto",
-    marginBottom: "auto",
+    overflowY: 'auto',
+    marginBottom: 'auto',
   },
   title: {
-    marginTop: "auto",
+    marginTop: 'auto',
   },
   spacing: {
     marginLeft: theme.spacing(1),
@@ -126,19 +126,19 @@ const Projects = ({ projects }) => {
 
   const getImage = (imageName) => {
     switch (imageName) {
-      case "jobbie":
+      case 'jobbie':
         return jobbie;
-      case "translator":
+      case 'translator':
         return translator;
-      case "portfolio":
+      case 'portfolio':
         return portfolio;
-      case "recipemanager":
+      case 'recipemanager':
         return recipemanager;
-      case "anone":
+      case 'anone':
         return anone;
-      case "datastructures":
+      case 'datastructures':
         return datastructres;
-      case "weather":
+      case 'weather':
         return weather;
       default:
         return;
@@ -147,90 +147,32 @@ const Projects = ({ projects }) => {
 
   const getIcon = (iconName) => {
     switch (iconName) {
-      case "SvgJavascript":
-        return (
-          <SvgJavascript key={iconName} className={classes.icon} size="2x" />
-        );
-      case "SvgReact":
+      case 'SvgJavascript':
+        return <SvgJavascript key={iconName} className={classes.icon} size="2x" />;
+      case 'SvgReact':
         return <SvgReact key={iconName} className={classes.icon} size="2x" />;
-      case "SvgNodejs":
+      case 'SvgNodejs':
         return <SvgNodejs key={iconName} className={classes.icon} size="2x" />;
-      case "SvgHtml5":
+      case 'SvgHtml5':
         return <SvgHtml5 key={iconName} className={classes.icon} size="2x" />;
-      case "SvgCss":
+      case 'SvgCss':
         return <SvgCss key={iconName} className={classes.icon} size="2x" />;
-      case "SvgTypescript":
-        return (
-          <SvgTypescript
-            key={iconName}
-            className={classes.icon}
-            height="23px"
-            width="23px"
-          />
-        );
-      case "SvgRedux":
-        return (
-          <SvgRedux
-            key={iconName}
-            className={classes.icon}
-            height="23px"
-            width="23px"
-          />
-        );
-      case "SvgMaterialui":
-        return (
-          <SvgMaterialui
-            key={iconName}
-            className={classes.icon}
-            height="23px"
-            width="23px"
-          />
-        );
-      case "SvgNextjs":
-        return (
-          <SvgNextjs
-            key={iconName}
-            className={classes.icon}
-            height="25px"
-            width="40px"
-          />
-        );
-      case "SvgMongodb":
-        return (
-          <SvgMongodb
-            key={iconName}
-            className={classes.icon}
-            height="20px"
-            width="60px"
-          />
-        );
-      case "SvgFirebase":
-        return (
-          <SvgFirebase
-            key={iconName}
-            className={classes.icon}
-            height="25px"
-            width="25px"
-          />
-        );
-      case "SvgPostgresql":
-        return (
-          <SvgPostgresql
-            key={iconName}
-            className={classes.icon}
-            height="25px"
-            width="25px"
-          />
-        );
-      case "SvgStrapi":
-        return (
-          <SvgStrapi
-            key={iconName}
-            className={classes.icon}
-            height="30px"
-            width="25px"
-          />
-        );
+      case 'SvgTypescript':
+        return <SvgTypescript key={iconName} className={classes.icon} height="23px" width="23px" />;
+      case 'SvgRedux':
+        return <SvgRedux key={iconName} className={classes.icon} height="23px" width="23px" />;
+      case 'SvgMaterialui':
+        return <SvgMaterialui key={iconName} className={classes.icon} height="23px" width="23px" />;
+      case 'SvgNextjs':
+        return <SvgNextjs key={iconName} className={classes.icon} height="25px" width="40px" />;
+      case 'SvgMongodb':
+        return <SvgMongodb key={iconName} className={classes.icon} height="20px" width="60px" />;
+      case 'SvgFirebase':
+        return <SvgFirebase key={iconName} className={classes.icon} height="25px" width="25px" />;
+      case 'SvgPostgresql':
+        return <SvgPostgresql key={iconName} className={classes.icon} height="25px" width="25px" />;
+      case 'SvgStrapi':
+        return <SvgStrapi key={iconName} className={classes.icon} height="30px" width="25px" />;
       default:
         return;
     }
@@ -248,69 +190,32 @@ const Projects = ({ projects }) => {
   }
 
   return (
-    <VisibilitySensor
-      offset={{ bottom: 200 }}
-      partialVisibility
-      onChange={onChange}
-    >
+    <VisibilitySensor offset={{ bottom: 200 }} partialVisibility onChange={onChange}>
       <Fade timeout={1000} in={componentIn}>
         <div className={classes.root}>
           <Container disableGutters={true} maxWidth="lg">
-            <Grid
-              container
-              className={classes.gridContainer}
-              spacing={2}
-              justify="center"
-            >
+            <Grid container className={classes.gridContainer} spacing={2} justify="center">
               <Grid item xs={12}>
-                <Typography
-                  className={classes.text}
-                  variant="h2"
-                  align="center"
-                >
+                <Typography className={classes.text} variant="h2" align="center">
                   Projects
                 </Typography>
-                <Typography
-                  className={classes.text}
-                  variant="body1"
-                  align="center"
-                >
-                  The following projects have been key in facilitating my growth
-                  as a web developer. Each project utilizes a combination of
-                  research, experimentation and applied techniques or concepts
-                  that are critical for developing any successful experience.
-                  Each of these projects are deployed using Heroku's basic tier
-                  so the app may need a moment to wake on initial request.
+                <Typography className={classes.text} variant="body1" align="center">
+                  The following projects have been key in facilitating my growth as a web developer. Each project
+                  utilizes a combination of research, experimentation and applied techniques or concepts that are
+                  critical for developing any successful experience. Each of these projects are deployed using Heroku's
+                  basic tier so the app may need a moment to wake on initial request.
                 </Typography>
               </Grid>
               {projects.map((project) => {
                 return (
-                  <Grid
-                    key={project.title}
-                    item
-                    className={classes.gridItem}
-                    xs={12}
-                    md={6}
-                  >
+                  <Grid key={project.title} item className={classes.gridItem} xs={12} md={6}>
                     <Card className={classes.cardRoot}>
                       {project.live && (
-                        <a
-                          className={classes.anchorTag}
-                          href={project.live}
-                          aria-label={project.title}
-                        >
-                          <CardMedia
-                            className={classes.linkableMedia}
-                            image={getImage(project.image)}
-                          />
+                        <a className={classes.anchorTag} href={project.live} aria-label={project.title}>
+                          <CardMedia className={classes.linkableMedia} image={getImage(project.image)} />
                         </a>
                       )}
-                      {!project.live && (
-                        <CardMedia
-                          className={classes.media}
-                          image={getImage(project.image)}
-                        />
-                      )}
+                      {!project.live && <CardMedia className={classes.media} image={getImage(project.image)} />}
                       <div className={classes.details}>
                         <CardContent className={classes.content}>
                           <div className={classes.icons}>
@@ -328,27 +233,13 @@ const Projects = ({ projects }) => {
                               {project.description}
                             </Typography>
                           </div>
-                          <CardActions
-                            className={classes.cardFooter}
-                            disableSpacing={true}
-                          >
-                            <Grid
-                              container
-                              justify="space-evenly"
-                              alignItems="center"
-                            >
+                          <CardActions className={classes.cardFooter} disableSpacing={true}>
+                            <Grid container justify="space-evenly" alignItems="center">
                               {project.live && (
                                 <Grid item>
-                                  <a
-                                    className={classes.projectLink}
-                                    href={project.live}
-                                    aria-label="project live link"
-                                  >
+                                  <a className={classes.projectLink} href={project.live} aria-label="project live link">
                                     <LinkIcon />
-                                    <Typography
-                                      className={classes.spacing}
-                                      variant="caption"
-                                    >
+                                    <Typography className={classes.spacing} variant="caption">
                                       Live
                                     </Typography>
                                   </a>
@@ -360,14 +251,8 @@ const Projects = ({ projects }) => {
                                   href={project.source}
                                   aria-label="project source code link"
                                 >
-                                  <SvgGithub
-                                    className={classes.icon}
-                                    size="2x"
-                                  />
-                                  <Typography
-                                    className={classes.spacing}
-                                    variant="caption"
-                                  >
+                                  <SvgGithub className={classes.icon} size="2x" />
+                                  <Typography className={classes.spacing} variant="caption">
                                     Source
                                   </Typography>
                                 </a>

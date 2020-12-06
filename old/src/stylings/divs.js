@@ -7,7 +7,7 @@ const Screenheight = styled.div`
 `;
 
 const Pageseperator = styled.div`
-  height: ${props => props.height};
+  height: ${(props) => props.height};
   background-color: #050505;
   margin-top: -4vh;
   margin-bottom: -8vh;
@@ -21,7 +21,7 @@ const Blackbg = styled.div`
 const Innerparallax = styled.div`
   height: 100vh;
   display: flex;
-  justify-content: ${props => props.position};
+  justify-content: ${(props) => props.position};
   align-items: center;
   color: #5e9bc9;
   padding: 20px;
@@ -29,7 +29,7 @@ const Innerparallax = styled.div`
 
 const Fadeonscroll = styled.div`
   /* uses scroll position to get scrollposition and adjust opacity */
-  ${props => {
+  ${(props) => {
     const [pos, setPos] = useState({});
 
     useScrollPosition(
@@ -44,7 +44,7 @@ const Fadeonscroll = styled.div`
     const percentage = Math.abs(pos.y) / 650;
     props.percentage = percentage;
   }};
-  opacity: ${props => {
+  opacity: ${(props) => {
     if (props.percentage < 0.38) {
       //   return "0";
       return "0";
@@ -58,7 +58,7 @@ const Secpagemain = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: ${props => props.position};
+  justify-content: ${(props) => props.position};
   align-items: center;
   color: #5e9bc9;
   padding: 20px;
@@ -82,5 +82,5 @@ export {
   Pageseperator,
   Blackbg,
   Secpagemain,
-  Fadeonscroll
+  Fadeonscroll,
 };

@@ -20,13 +20,7 @@
       "live": "https://webdeveloperbeau.com/translator",
       "source": "https://github.com/JSONJuggler/myTranslator",
       "title": "Translator",
-      "icons": [
-        "SvgReact",
-        "SvgRedux",
-        "SvgMaterialui",
-        "SvgNextjs",
-        "SvgMongodb"
-      ],
+      "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs", "SvgMongodb"],
       "description": "Powered by several IBM Cloud services, this translator achieves speedy translations of single words by generating and serving a static HTML page for the requested translation. Several languages are currently supported."
     },
     {
@@ -34,14 +28,7 @@
       "live": "https://webdeveloperbeau.com/recipemanager",
       "source": "https://github.com/JSONJuggler/recipeManager",
       "title": "RecipeManager",
-      "icons": [
-        "SvgReact",
-        "SvgRedux",
-        "SvgMaterialui",
-        "SvgNextjs",
-        "SvgMongodb",
-        "SvgStrapi"
-      ],
+      "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs", "SvgMongodb", "SvgStrapi"],
       "description": "A straight forward recipe manager with its content served from the backend using the headless CMS Strapi and authentication powered by Next-Auth. A user can create an account and log in to manage their recipes and browse other user recipes."
     },
     {
@@ -49,13 +36,7 @@
       "live": "https://webdeveloperbeau.com/anone",
       "source": "https://github.com/JSONJuggler/aNone",
       "title": "Anone",
-      "icons": [
-        "SvgReact",
-        "SvgRedux",
-        "SvgMaterialui",
-        "SvgNextjs",
-        "SvgFirebase"
-      ],
+      "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs", "SvgFirebase"],
       "description": "Similar to the late Yik Yak, a user can anonymously post a comment that would be visible to nearby users. Posts can also be viewed and sorted by state or simply all posts."
     },
     {

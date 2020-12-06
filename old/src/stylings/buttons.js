@@ -6,11 +6,11 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   padding: 7px 10px;
-  background: ${props => props.theme.basecolor};
-  ${props =>
+  background: ${(props) => props.theme.basecolor};
+  ${(props) =>
     props.kind &&
     css`
-      background: ${props => props.theme[props.kind]};
+      background: ${(props) => props.theme[props.kind]};
     `}
   color: #fff;
   &:hover {

@@ -1,40 +1,35 @@
-import { useState, useRef, Fragment, useEffect } from "react";
-import Backdrop from "@material-ui/core/Backdrop";
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
-import TextField from "@material-ui/core/TextField";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
+import { useState, useRef, Fragment, useEffect } from 'react';
+import Backdrop from '@material-ui/core/Backdrop';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+import TextField from '@material-ui/core/TextField';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
 
-import {
-  openContact,
-  closeContact,
-  updateContactInfo,
-  clearContactInfo,
-} from "../src/actions/contact";
+import { openContact, closeContact, updateContactInfo, clearContactInfo } from '../src/actions/contact';
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
-    color: "#fff",
+    color: '#fff',
   },
   gridItem: {
     padding: theme.spacing(2),
   },
   textField: {
-    background: "white",
+    background: 'white',
   },
   underline: {
-    textDecoration: "underline",
-    color: "white",
+    textDecoration: 'underline',
+    color: 'white',
   },
   hidden: {
-    visibility: "visible",
-    position: "absolute",
+    visibility: 'visible',
+    position: 'absolute',
     top: theme.spacing(-100),
   },
 }));
@@ -52,12 +47,12 @@ const ContactBackdrop = ({
 
   const handleSubmit = () => {
     window.location.assign(
-      "mailto:deleon.reescano@ricealumni.net?subject=Hello Beau!&body=Hey Beau, %0D%0A%0D%0A I am " +
+      'mailto:deleon.reescano@ricealumni.net?subject=Hello Beau!&body=Hey Beau, %0D%0A%0D%0A I am ' +
         encodeURIComponent(name) +
-        " and I can be reached at " +
+        ' and I can be reached at ' +
         encodeURIComponent(contact) +
-        ". %0D%0A%0D%0A " +
-        encodeURIComponent(message)
+        '. %0D%0A%0D%0A ' +
+        encodeURIComponent(message),
     );
     clearContactInfo();
     handleClose();
@@ -72,21 +67,21 @@ const ContactBackdrop = ({
 
   const handleClose = () => {
     closeContact();
-    email.current.type = "hidden";
+    email.current.type = 'hidden';
   };
 
   const handleCopy = () => {
-    if (email.current.type === "hidden") {
-      email.current.type = "text";
+    if (email.current.type === 'hidden') {
+      email.current.type = 'text';
       handleCopy();
     } else {
       email.current.select();
-      document.execCommand("copy");
+      document.execCommand('copy');
     }
   };
 
   const handleKeydown = (e) => {
-    if (e.code === "Escape") {
+    if (e.code === 'Escape') {
       if (contactOpen) {
         handleClose();
       }
@@ -94,9 +89,9 @@ const ContactBackdrop = ({
   };
 
   useEffect(() => {
-    window.addEventListener("keydown", handleKeydown);
+    window.addEventListener('keydown', handleKeydown);
     return () => {
-      window.removeEventListener("keydown", handleKeydown);
+      window.removeEventListener('keydown', handleKeydown);
     };
   });
 
@@ -112,8 +107,7 @@ const ContactBackdrop = ({
               <Fragment>
                 <IconButton onClick={handleCopy}>
                   <Typography className={classes.underline} align="center">
-                    Or click here to copy my email address:
-                    deleon.reescano@ricealumni.net
+                    Or click here to copy my email address: deleon.reescano@ricealumni.net
                   </Typography>
                 </IconButton>
                 <input
@@ -175,12 +169,7 @@ const ContactBackdrop = ({
               </Button>
             </Grid>
             <Grid item className={classes.gridItem} xs={6}>
-              <Button
-                variant="contained"
-                fullWidth
-                color="secondary"
-                onClick={handleClose}
-              >
+              <Button variant="contained" fullWidth color="secondary" onClick={handleClose}>
                 Cancel
               </Button>
             </Grid>

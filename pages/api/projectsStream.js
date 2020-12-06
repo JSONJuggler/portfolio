@@ -1,6 +1,6 @@
-import nextConnect from "next-connect";
+import nextConnect from 'next-connect';
 
-import projects from "../../projects/projects.json";
+import projects from '../../projects/projects.json';
 
 const handler = nextConnect();
 

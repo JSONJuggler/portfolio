@@ -4,11 +4,11 @@ import {
   Innerparallax,
   Screenheight,
   Pageseperator,
-  Blackbg
+  Blackbg,
 } from "../stylings/divs";
 import { Parallax } from "react-parallax";
 
-const Page = props => {
+const Page = (props) => {
   return (
     <Fragment>
       <Blackbg>

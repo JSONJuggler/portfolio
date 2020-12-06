@@ -21,7 +21,7 @@
   bottom: 0;
   overflow: hidden;
   opacity: 0.2;
-  line-height: 1.0;
+  line-height: 1;
 }
 
 .textLayer > span {
@@ -73,15 +73,14 @@
   z-index: -1;
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .textLayer .endOfContent.active {
   top: 0px;
 }
-
 
 .annotationLayer section {
   position: absolute;
@@ -168,7 +167,7 @@
 .annotationLayer .buttonWidgetAnnotation.checkBox input:checked:after,
 .annotationLayer .buttonWidgetAnnotation.radioButton input:checked:before {
   background-color: rgba(0, 0, 0, 1);
-  content: '';
+  content: "";
   display: block;
   position: absolute;
 }
@@ -215,8 +214,8 @@
 .annotationLayer .buttonWidgetAnnotation.checkBox input,
 .annotationLayer .buttonWidgetAnnotation.radioButton input {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0;
 }
 
@@ -290,7 +289,7 @@
   border: 9px solid transparent;
   background-clip: content-box;
   -o-border-image: url(images/shadow.png) 9 9 repeat;
-     border-image: url(images/shadow.png) 9 9 repeat;
+  border-image: url(images/shadow.png) 9 9 repeat;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -308,13 +307,16 @@
   border: none;
 }
 
-.pdfViewer.scrollHorizontal, .pdfViewer.scrollWrapped, .spread {
+.pdfViewer.scrollHorizontal,
+.pdfViewer.scrollWrapped,
+.spread {
   margin-left: 3.5px;
   margin-right: 3.5px;
   text-align: center;
 }
 
-.pdfViewer.scrollHorizontal, .spread {
+.pdfViewer.scrollHorizontal,
+.spread {
   white-space: nowrap;
 }
 
@@ -364,7 +366,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background: url('images/loading-icon.gif') center no-repeat;
+  background: url("images/loading-icon.gif") center no-repeat;
 }
 
 .pdfPresentationMode .pdfViewer {
@@ -444,9 +446,9 @@ select {
 
 .pdfViewer.enablePermissions .textLayer > span {
   -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-      -ms-user-select: none !important;
-          user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
   cursor: not-allowed;
 }
 
@@ -468,7 +470,7 @@ select {
   overflow: hidden;
   cursor: none;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 #viewerContainer.pdfPresentationMode:-moz-full-screen {
@@ -480,7 +482,7 @@ select {
   overflow: hidden;
   cursor: none;
   -moz-user-select: none;
-       user-select: none;
+  user-select: none;
 }
 
 #viewerContainer.pdfPresentationMode:-ms-fullscreen {
@@ -492,7 +494,7 @@ select {
   overflow: hidden;
   cursor: none;
   -ms-user-select: none;
-      user-select: none;
+  user-select: none;
 }
 
 #viewerContainer.pdfPresentationMode:fullscreen {
@@ -504,9 +506,9 @@ select {
   overflow: hidden;
   cursor: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .pdfPresentationMode:-webkit-full-screen a:not(.internalLink) {
@@ -566,12 +568,12 @@ select {
   transition-timing-function: ease;
   transition-timing-function: var(--sidebar-transition-timing-function);
 }
-html[dir='ltr'] #sidebarContainer {
+html[dir="ltr"] #sidebarContainer {
   transition-property: left;
   left: -200px;
   left: calc(0px - var(--sidebar-width));
 }
-html[dir='rtl'] #sidebarContainer {
+html[dir="rtl"] #sidebarContainer {
   transition-property: right;
   right: -200px;
   right: calc(0px - var(--sidebar-width));
@@ -586,19 +588,19 @@ html[dir='rtl'] #sidebarContainer {
   transition-duration: 0s;
   /* Prevent e.g. the thumbnails being selected when the sidebar is resized. */
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #outerContainer.sidebarMoving #sidebarContainer,
 #outerContainer.sidebarOpen #sidebarContainer {
   visibility: visible;
 }
-html[dir='ltr'] #outerContainer.sidebarOpen #sidebarContainer {
+html[dir="ltr"] #outerContainer.sidebarOpen #sidebarContainer {
   left: 0px;
 }
-html[dir='rtl'] #outerContainer.sidebarOpen #sidebarContainer {
+html[dir="rtl"] #outerContainer.sidebarOpen #sidebarContainer {
   right: 0px;
 }
 
@@ -620,11 +622,11 @@ html[dir='rtl'] #outerContainer.sidebarOpen #sidebarContainer {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
 }
-html[dir='ltr'] #sidebarContent {
+html[dir="ltr"] #sidebarContent {
   left: 0;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
 }
-html[dir='rtl'] #sidebarContent {
+html[dir="rtl"] #sidebarContent {
   right: 0;
   box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.25);
 }
@@ -645,10 +647,10 @@ html[dir='rtl'] #sidebarContent {
   transition-timing-function: ease;
   transition-timing-function: var(--sidebar-transition-timing-function);
 }
-html[dir='ltr'] #viewerContainer {
+html[dir="ltr"] #viewerContainer {
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.05);
 }
-html[dir='rtl'] #viewerContainer {
+html[dir="rtl"] #viewerContainer {
   box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.05);
 }
 
@@ -657,12 +659,16 @@ html[dir='rtl'] #viewerContainer {
   transition-duration: 0s;
 }
 
-html[dir='ltr'] #outerContainer.sidebarOpen #viewerContainer:not(.pdfPresentationMode) {
+html[dir="ltr"]
+  #outerContainer.sidebarOpen
+  #viewerContainer:not(.pdfPresentationMode) {
   transition-property: left;
   left: 200px;
   left: var(--sidebar-width);
 }
-html[dir='rtl'] #outerContainer.sidebarOpen #viewerContainer:not(.pdfPresentationMode) {
+html[dir="rtl"]
+  #outerContainer.sidebarOpen
+  #viewerContainer:not(.pdfPresentationMode) {
   transition-property: right;
   right: 200px;
   right: var(--sidebar-width);
@@ -685,19 +691,17 @@ html[dir='rtl'] #outerContainer.sidebarOpen #viewerContainer:not(.pdfPresentatio
   height: 32px;
   background-color: rgba(66, 66, 66, 1); /* fallback */
   background-image: url(images/texture.png),
-                    linear-gradient(rgba(77, 77, 77, 0.99), rgba(64, 64, 64, 0.95));
+    linear-gradient(rgba(77, 77, 77, 0.99), rgba(64, 64, 64, 0.95));
 }
-html[dir='ltr'] #toolbarSidebar {
+html[dir="ltr"] #toolbarSidebar {
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25),
-              inset 0 -1px 0 rgba(255, 255, 255, 0.05),
-              0 1px 0 rgba(0, 0, 0, 0.15),
-              0 0 1px rgba(0, 0, 0, 0.1);
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.1);
 }
-html[dir='rtl'] #toolbarSidebar {
+html[dir="rtl"] #toolbarSidebar {
   box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.25),
-              inset 0 1px 0 rgba(255, 255, 255, 0.05),
-              0 1px 0 rgba(0, 0, 0, 0.15),
-              0 0 1px rgba(0, 0, 0, 0.1);
+    inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 #sidebarResizer {
@@ -708,31 +712,35 @@ html[dir='rtl'] #toolbarSidebar {
   z-index: 200;
   cursor: ew-resize;
 }
-html[dir='ltr'] #sidebarResizer {
+html[dir="ltr"] #sidebarResizer {
   right: -6px;
 }
-html[dir='rtl'] #sidebarResizer {
+html[dir="rtl"] #sidebarResizer {
   left: -6px;
 }
 
-#toolbarContainer, .findbar, .secondaryToolbar {
+#toolbarContainer,
+.findbar,
+.secondaryToolbar {
   position: relative;
   height: 32px;
   background-color: rgba(71, 71, 71, 1); /* fallback */
   background-image: url(images/texture.png),
-                    linear-gradient(rgba(82, 82, 82, 0.99), rgba(69, 69, 69, 0.95));
+    linear-gradient(rgba(82, 82, 82, 0.99), rgba(69, 69, 69, 0.95));
 }
-html[dir='ltr'] #toolbarContainer, .findbar, .secondaryToolbar {
+html[dir="ltr"] #toolbarContainer,
+.findbar,
+.secondaryToolbar {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15),
-              inset 0 -1px 0 rgba(255, 255, 255, 0.05),
-              0 1px 0 rgba(0, 0, 0, 0.15),
-              0 1px 1px rgba(0, 0, 0, 0.1);
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.1);
 }
-html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
+html[dir="rtl"] #toolbarContainer,
+.findbar,
+.secondaryToolbar {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15),
-              inset 0 -1px 0 rgba(255, 255, 255, 0.05),
-              0 1px 0 rgba(0, 0, 0, 0.15),
-              0 1px 1px rgba(0, 0, 0, 0.1);
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 #toolbarViewer {
@@ -759,13 +767,21 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
 }
 
 @-webkit-keyframes progressIndeterminate {
-  0% { left: -142px; }
-  100% { left: 0; }
+  0% {
+    left: -142px;
+  }
+  100% {
+    left: 0;
+  }
 }
 
 @keyframes progressIndeterminate {
-  0% { left: -142px; }
-  100% { left: 0; }
+  0% {
+    left: -142px;
+  }
+  100% {
+    left: 0;
+  }
 }
 
 #loadingBar .progress.indeterminate {
@@ -779,15 +795,21 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
   left: 0;
   height: 100%;
   width: calc(100% + 150px);
-  background: repeating-linear-gradient(135deg,
-                                        rgba(187, 187, 187, 1) 0, rgba(153, 153, 153, 1) 5px,
-                                        rgba(153, 153, 153, 1) 45px, rgba(221, 221, 221, 1) 55px,
-                                        rgba(221, 221, 221, 1) 95px, rgba(187, 187, 187, 1) 100px);
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(187, 187, 187, 1) 0,
+    rgba(153, 153, 153, 1) 5px,
+    rgba(153, 153, 153, 1) 45px,
+    rgba(221, 221, 221, 1) 55px,
+    rgba(221, 221, 221, 1) 95px,
+    rgba(187, 187, 187, 1) 100px
+  );
   -webkit-animation: progressIndeterminate 950ms linear infinite;
-          animation: progressIndeterminate 950ms linear infinite;
+  animation: progressIndeterminate 950ms linear infinite;
 }
 
-.findbar, .secondaryToolbar {
+.findbar,
+.secondaryToolbar {
   top: 32px;
   position: absolute;
   z-index: 10000;
@@ -814,18 +836,18 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
 .findbar.wrapContainers > div#findbarMessageContainer {
   height: auto;
 }
-html[dir='ltr'] .findbar {
+html[dir="ltr"] .findbar {
   left: 68px;
 }
-html[dir='rtl'] .findbar {
+html[dir="rtl"] .findbar {
   right: 68px;
 }
 
 .findbar label {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #findInput {
@@ -851,7 +873,7 @@ html[dir='rtl'] .findbar {
   background-repeat: no-repeat;
   background-position: right;
 }
-html[dir='rtl'] #findInput[data-status="pending"] {
+html[dir="rtl"] #findInput[data-status="pending"] {
   background-position: left;
 }
 
@@ -860,10 +882,10 @@ html[dir='rtl'] #findInput[data-status="pending"] {
   height: auto;
   z-index: 30000;
 }
-html[dir='ltr'] .secondaryToolbar {
+html[dir="ltr"] .secondaryToolbar {
   right: 4px;
 }
-html[dir='rtl'] .secondaryToolbar {
+html[dir="rtl"] .secondaryToolbar {
   left: 4px;
 }
 
@@ -886,8 +908,10 @@ html[dir='rtl'] .secondaryToolbar {
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
-.doorHanger:after, .doorHanger:before,
-.doorHangerRight:after, .doorHangerRight:before {
+.doorHanger:after,
+.doorHanger:before,
+.doorHangerRight:after,
+.doorHangerRight:before {
   bottom: 100%;
   border: solid rgba(0, 0, 0, 0);
   content: " ";
@@ -907,26 +931,26 @@ html[dir='rtl'] .secondaryToolbar {
   border-width: 9px;
 }
 
-html[dir='ltr'] .doorHanger:after,
-html[dir='rtl'] .doorHangerRight:after {
+html[dir="ltr"] .doorHanger:after,
+html[dir="rtl"] .doorHangerRight:after {
   left: 13px;
   margin-left: -8px;
 }
 
-html[dir='ltr'] .doorHanger:before,
-html[dir='rtl'] .doorHangerRight:before {
+html[dir="ltr"] .doorHanger:before,
+html[dir="rtl"] .doorHangerRight:before {
   left: 13px;
   margin-left: -9px;
 }
 
-html[dir='rtl'] .doorHanger:after,
-html[dir='ltr'] .doorHangerRight:after {
+html[dir="rtl"] .doorHanger:after,
+html[dir="ltr"] .doorHangerRight:after {
   right: 13px;
   margin-right: -8px;
 }
 
-html[dir='rtl'] .doorHanger:before,
-html[dir='ltr'] .doorHangerRight:before {
+html[dir="rtl"] .doorHanger:before,
+html[dir="ltr"] .doorHangerRight:before {
   right: 13px;
   margin-right: -9px;
 }
@@ -956,42 +980,42 @@ html[dir='ltr'] .doorHangerRight:before {
   transform: translateX(-50%);
 }
 
-html[dir='ltr'] #toolbarViewerLeft,
-html[dir='rtl'] #toolbarViewerRight {
+html[dir="ltr"] #toolbarViewerLeft,
+html[dir="rtl"] #toolbarViewerRight {
   float: left;
 }
-html[dir='ltr'] #toolbarViewerRight,
-html[dir='rtl'] #toolbarViewerLeft {
+html[dir="ltr"] #toolbarViewerRight,
+html[dir="rtl"] #toolbarViewerLeft {
   float: right;
 }
-html[dir='ltr'] #toolbarViewerLeft > *,
-html[dir='ltr'] #toolbarViewerMiddle > *,
-html[dir='ltr'] #toolbarViewerRight > *,
-html[dir='ltr'] .findbar * {
+html[dir="ltr"] #toolbarViewerLeft > *,
+html[dir="ltr"] #toolbarViewerMiddle > *,
+html[dir="ltr"] #toolbarViewerRight > *,
+html[dir="ltr"] .findbar * {
   position: relative;
   float: left;
 }
-html[dir='rtl'] #toolbarViewerLeft > *,
-html[dir='rtl'] #toolbarViewerMiddle > *,
-html[dir='rtl'] #toolbarViewerRight > *,
-html[dir='rtl'] .findbar * {
+html[dir="rtl"] #toolbarViewerLeft > *,
+html[dir="rtl"] #toolbarViewerMiddle > *,
+html[dir="rtl"] #toolbarViewerRight > *,
+html[dir="rtl"] .findbar * {
   position: relative;
   float: right;
 }
 
-html[dir='ltr'] .splitToolbarButton {
+html[dir="ltr"] .splitToolbarButton {
   margin: 3px 2px 4px 0;
   display: inline-block;
 }
-html[dir='rtl'] .splitToolbarButton {
+html[dir="rtl"] .splitToolbarButton {
   margin: 3px 0 4px 2px;
   display: inline-block;
 }
-html[dir='ltr'] .splitToolbarButton > .toolbarButton {
+html[dir="ltr"] .splitToolbarButton > .toolbarButton {
   border-radius: 0;
   float: left;
 }
-html[dir='rtl'] .splitToolbarButton > .toolbarButton {
+html[dir="rtl"] .splitToolbarButton > .toolbarButton {
   border-radius: 0;
   float: right;
 }
@@ -1015,7 +1039,7 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton {
 .toolbarButton[disabled],
 .secondaryToolbarButton[disabled],
 .overlayButton[disabled] {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .splitToolbarButton.toggled .toolbarButton {
@@ -1027,13 +1051,15 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton {
 .splitToolbarButton.toggled > .toolbarButton,
 .toolbarButton.textButton {
   background-color: rgba(0, 0, 0, 0.12);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.35);
   border-color: rgba(0, 0, 0, 0.32) rgba(0, 0, 0, 0.38) rgba(0, 0, 0, 0.42);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
-              0 0 1px rgba(255, 255, 255, 0.15) inset,
-              0 1px 0 rgba(255, 255, 255, 0.05);
+    0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 .splitToolbarButton > .toolbarButton:hover,
 .splitToolbarButton > .toolbarButton:focus,
@@ -1042,10 +1068,9 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton {
 .overlayButton:focus,
 .toolbarButton.textButton:hover,
 .toolbarButton.textButton:focus {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
-              0 0 1px rgba(255, 255, 255, 0.15) inset,
-              0 0 1px rgba(0, 0, 0, 0.05);
+    0 0 1px rgba(255, 255, 255, 0.15) inset, 0 0 1px rgba(0, 0, 0, 0.05);
   z-index: 199;
 }
 .dropdownToolbarButton:hover {
@@ -1054,8 +1079,8 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton {
 .splitToolbarButton > .toolbarButton {
   position: relative;
 }
-html[dir='ltr'] .splitToolbarButton > .toolbarButton:first-child,
-html[dir='rtl'] .splitToolbarButton > .toolbarButton:last-child {
+html[dir="ltr"] .splitToolbarButton > .toolbarButton:first-child,
+html[dir="rtl"] .splitToolbarButton > .toolbarButton:last-child {
   position: relative;
   margin: 0;
   margin-right: -1px;
@@ -1063,8 +1088,8 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton:last-child {
   border-bottom-left-radius: 2px;
   border-right-color: rgba(0, 0, 0, 0);
 }
-html[dir='ltr'] .splitToolbarButton > .toolbarButton:last-child,
-html[dir='rtl'] .splitToolbarButton > .toolbarButton:first-child {
+html[dir="ltr"] .splitToolbarButton > .toolbarButton:last-child,
+html[dir="rtl"] .splitToolbarButton > .toolbarButton:first-child {
   position: relative;
   margin: 0;
   margin-left: -1px;
@@ -1081,10 +1106,10 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton:first-child {
   display: inline-block;
   margin: 5px 0;
 }
-html[dir='ltr'] .splitToolbarButtonSeparator {
+html[dir="ltr"] .splitToolbarButtonSeparator {
   float: left;
 }
-html[dir='rtl'] .splitToolbarButtonSeparator {
+html[dir="rtl"] .splitToolbarButtonSeparator {
   float: right;
 }
 .splitToolbarButton:hover > .splitToolbarButtonSeparator,
@@ -1106,21 +1131,21 @@ html[dir='rtl'] .splitToolbarButtonSeparator {
   font-size: 12px;
   line-height: 14px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   /* Opera does not support user-select, use <... unselectable="on"> instead */
   cursor: default;
 }
 
-html[dir='ltr'] .toolbarButton,
-html[dir='ltr'] .overlayButton,
-html[dir='ltr'] .dropdownToolbarButton {
+html[dir="ltr"] .toolbarButton,
+html[dir="ltr"] .overlayButton,
+html[dir="ltr"] .dropdownToolbarButton {
   margin: 3px 2px 4px 0;
 }
-html[dir='rtl'] .toolbarButton,
-html[dir='rtl'] .overlayButton,
-html[dir='rtl'] .dropdownToolbarButton {
+html[dir="rtl"] .toolbarButton,
+html[dir="rtl"] .overlayButton,
+html[dir="rtl"] .dropdownToolbarButton {
   margin: 3px 0 4px 2px;
 }
 
@@ -1131,13 +1156,15 @@ html[dir='rtl'] .dropdownToolbarButton {
 .secondaryToolbarButton:hover,
 .secondaryToolbarButton:focus {
   background-color: rgba(0, 0, 0, 0.12);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.35);
   border-color: rgba(0, 0, 0, 0.32) rgba(0, 0, 0, 0.38) rgba(0, 0, 0, 0.42);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
-              0 0 1px rgba(255, 255, 255, 0.15) inset,
-              0 1px 0 rgba(255, 255, 255, 0.05);
+    0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .toolbarButton:hover:active,
@@ -1145,22 +1172,26 @@ html[dir='rtl'] .dropdownToolbarButton {
 .dropdownToolbarButton:hover:active,
 .secondaryToolbarButton:hover:active {
   background-color: rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   border-color: rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.45);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset,
-              0 0 1px rgba(0, 0, 0, 0.2) inset,
-              0 1px 0 rgba(255, 255, 255, 0.05);
+    0 0 1px rgba(0, 0, 0, 0.2) inset, 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .toolbarButton.toggled,
 .splitToolbarButton.toggled > .toolbarButton.toggled,
 .secondaryToolbarButton.toggled {
   background-color: rgba(0, 0, 0, 0.3);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   border-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset,
-              0 0 1px rgba(0, 0, 0, 0.2) inset,
-              0 1px 0 rgba(255, 255, 255, 0.05);
+    0 0 1px rgba(0, 0, 0, 0.2) inset, 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .toolbarButton.toggled:hover:active,
@@ -1169,8 +1200,7 @@ html[dir='rtl'] .dropdownToolbarButton {
   background-color: rgba(0, 0, 0, 0.4);
   border-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.55);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset,
-              0 0 1px rgba(0, 0, 0, 0.3) inset,
-              0 1px 0 rgba(255, 255, 255, 0.05);
+    0 0 1px rgba(0, 0, 0, 0.3) inset, 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .dropdownToolbarButton {
@@ -1184,10 +1214,10 @@ html[dir='rtl'] .dropdownToolbarButton {
   top: 4px;
   content: url(images/toolbarButton-menuArrows.png);
 }
-html[dir='ltr'] .dropdownToolbarButton::after {
+html[dir="ltr"] .dropdownToolbarButton::after {
   right: 8px;
 }
-html[dir='rtl'] .dropdownToolbarButton::after {
+html[dir="rtl"] .dropdownToolbarButton::after {
   left: 8px;
 }
 
@@ -1199,7 +1229,12 @@ html[dir='rtl'] .dropdownToolbarButton::after {
   margin: 0;
   padding: 3px 2px 2px;
   border: none;
-  background: rgba(0,0,0,0); /* Opera does not support 'transparent' <select> background */
+  background: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* Opera does not support 'transparent' <select> background */
 }
 
 .dropdownToolbarButton > select > option {
@@ -1214,16 +1249,16 @@ html[dir='rtl'] .dropdownToolbarButton::after {
   border-bottom: 1px rgba(255, 255, 255, 0.5) solid;
 }
 
-html[dir='ltr'] .splitToolbarButton:first-child,
-html[dir='ltr'] .toolbarButton:first-child,
-html[dir='rtl'] .splitToolbarButton:last-child,
-html[dir='rtl'] .toolbarButton:last-child {
+html[dir="ltr"] .splitToolbarButton:first-child,
+html[dir="ltr"] .toolbarButton:first-child,
+html[dir="rtl"] .splitToolbarButton:last-child,
+html[dir="rtl"] .toolbarButton:last-child {
   margin-left: 4px;
 }
-html[dir='ltr'] .splitToolbarButton:last-child,
-html[dir='ltr'] .toolbarButton:last-child,
-html[dir='rtl'] .splitToolbarButton:first-child,
-html[dir='rtl'] .toolbarButton:first-child {
+html[dir="ltr"] .splitToolbarButton:last-child,
+html[dir="ltr"] .toolbarButton:last-child,
+html[dir="rtl"] .splitToolbarButton:first-child,
+html[dir="rtl"] .toolbarButton:first-child {
   margin-right: 4px;
 }
 
@@ -1233,17 +1268,17 @@ html[dir='rtl'] .toolbarButton:first-child {
   height: 1px;
 }
 
-html[dir='ltr'] #findPrevious {
+html[dir="ltr"] #findPrevious {
   margin-left: 3px;
 }
-html[dir='ltr'] #findNext {
+html[dir="ltr"] #findNext {
   margin-right: 3px;
 }
 
-html[dir='rtl'] #findPrevious {
+html[dir="rtl"] #findPrevious {
   margin-right: 3px;
 }
-html[dir='rtl'] #findNext {
+html[dir="rtl"] #findNext {
   margin-left: 3px;
 }
 
@@ -1267,42 +1302,42 @@ html[dir="rtl"] .secondaryToolbarButton::before {
 .toolbarButton#sidebarToggle::before {
   content: url(images/toolbarButton-sidebarToggle.png);
 }
-html[dir='rtl'] .toolbarButton#sidebarToggle::before {
+html[dir="rtl"] .toolbarButton#sidebarToggle::before {
   transform: scaleX(-1);
 }
 
 .toolbarButton#secondaryToolbarToggle::before {
   content: url(images/toolbarButton-secondaryToolbarToggle.png);
 }
-html[dir='rtl'] .toolbarButton#secondaryToolbarToggle::before {
+html[dir="rtl"] .toolbarButton#secondaryToolbarToggle::before {
   transform: scaleX(-1);
 }
 
 .toolbarButton.findPrevious::before {
   content: url(images/findbarButton-previous.png);
 }
-html[dir='rtl'] .toolbarButton.findPrevious::before {
+html[dir="rtl"] .toolbarButton.findPrevious::before {
   transform: scaleX(-1);
 }
 
 .toolbarButton.findNext::before {
   content: url(images/findbarButton-next.png);
 }
-html[dir='rtl'] .toolbarButton.findNext::before {
+html[dir="rtl"] .toolbarButton.findNext::before {
   transform: scaleX(-1);
 }
 
 .toolbarButton.pageUp::before {
   content: url(images/toolbarButton-pageUp.png);
 }
-html[dir='rtl'] .toolbarButton.pageUp::before {
+html[dir="rtl"] .toolbarButton.pageUp::before {
   transform: scaleX(-1);
 }
 
 .toolbarButton.pageDown::before {
   content: url(images/toolbarButton-pageDown.png);
 }
-html[dir='rtl'] .toolbarButton.pageDown::before {
+html[dir="rtl"] .toolbarButton.pageDown::before {
   transform: scaleX(-1);
 }
 
@@ -1345,8 +1380,8 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   padding-top: 5px;
 }
 
-.bookmark[href='#'] {
-  opacity: .5;
+.bookmark[href="#"] {
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -1379,16 +1414,16 @@ html[dir="rtl"] #viewOutline.toolbarButton::before {
   display: inline-block;
   top: 1px;
   /* Create a filled circle, with a diameter of 9 pixels, using only CSS: */
-  content: '';
+  content: "";
   background-color: rgba(112, 219, 85, 1);
   height: 9px;
   width: 9px;
   border-radius: 50%;
 }
-html[dir='ltr'] .toolbarButton.pdfSidebarNotification::after {
+html[dir="ltr"] .toolbarButton.pdfSidebarNotification::after {
   left: 17px;
 }
-html[dir='rtl'] .toolbarButton.pdfSidebarNotification::after {
+html[dir="rtl"] .toolbarButton.pdfSidebarNotification::after {
   right: 17px;
 }
 
@@ -1484,10 +1519,10 @@ html[dir="rtl"] .secondaryToolbarButton > span {
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
-html[dir='ltr'] .verticalToolbarSeparator {
+html[dir="ltr"] .verticalToolbarSeparator {
   margin-left: 2px;
 }
-html[dir='rtl'] .verticalToolbarSeparator {
+html[dir="rtl"] .verticalToolbarSeparator {
   margin-right: 2px;
 }
 
@@ -1505,20 +1540,23 @@ html[dir='rtl'] .verticalToolbarSeparator {
   margin: 4px 0 4px 0;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.09);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   background-clip: padding-box;
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.32) rgba(0, 0, 0, 0.38) rgba(0, 0, 0, 0.42);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) inset,
-              0 1px 0 rgba(255, 255, 255, 0.05);
+    0 1px 0 rgba(255, 255, 255, 0.05);
   color: rgba(242, 242, 242, 1);
   font-size: 12px;
   line-height: 14px;
   outline-style: none;
 }
 
-.toolbarField[type=checkbox] {
+.toolbarField[type="checkbox"] {
   display: inline-block;
   margin: 8px 0px;
 }
@@ -1538,8 +1576,8 @@ html[dir='rtl'] .verticalToolbarSeparator {
 
 .toolbarField.pageNumber::-webkit-inner-spin-button,
 .toolbarField.pageNumber::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .toolbarField:hover {
@@ -1549,7 +1587,8 @@ html[dir='rtl'] .verticalToolbarSeparator {
 
 .toolbarField:focus {
   background-color: rgba(255, 255, 255, 0.15);
-  border-color: rgba(77, 184, 255, 0.8) rgba(77, 184, 255, 0.85) rgba(77, 184, 255, 0.9);
+  border-color: rgba(77, 184, 255, 0.8) rgba(77, 184, 255, 0.85)
+    rgba(77, 184, 255, 0.9);
 }
 
 .toolbarLabel {
@@ -1563,9 +1602,9 @@ html[dir='rtl'] .verticalToolbarSeparator {
   line-height: 14px;
   text-align: left;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: default;
 }
 
@@ -1587,10 +1626,10 @@ html[dir='rtl'] .verticalToolbarSeparator {
 .thumbnail {
   margin: 0 10px 5px 10px;
 }
-html[dir='ltr'] .thumbnail {
+html[dir="ltr"] .thumbnail {
   float: left;
 }
-html[dir='rtl'] .thumbnail {
+html[dir="rtl"] .thumbnail {
   float: right;
 }
 
@@ -1623,17 +1662,19 @@ html[dir='rtl'] .thumbnail {
 
 a:focus > .thumbnail > .thumbnailSelectionRing > .thumbnailImage,
 .thumbnail:hover > .thumbnailSelectionRing > .thumbnailImage {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 a:focus > .thumbnail > .thumbnailSelectionRing,
 .thumbnail:hover > .thumbnailSelectionRing {
   background-color: rgba(255, 255, 255, 0.15);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   background-clip: padding-box;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
-              0 0 1px rgba(255, 255, 255, 0.2) inset,
-              0 0 1px rgba(0, 0, 0, 0.2);
+    0 0 1px rgba(255, 255, 255, 0.2) inset, 0 0 1px rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1644,12 +1685,14 @@ a:focus > .thumbnail > .thumbnailSelectionRing,
 
 .thumbnail.selected > .thumbnailSelectionRing {
   background-color: rgba(255, 255, 255, 0.3);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   background-clip: padding-box;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
-              0 0 1px rgba(255, 255, 255, 0.1) inset,
-              0 0 1px rgba(0, 0, 0, 0.2);
-  color: rgba(255, 255, 255,1);
+    0 0 1px rgba(255, 255, 255, 0.1) inset, 0 0 1px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 1);
 }
 
 #outlineView,
@@ -1661,9 +1704,9 @@ a:focus > .thumbnail > .thumbnailSelectionRing,
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #outlineView {
@@ -1673,13 +1716,13 @@ a:focus > .thumbnail > .thumbnailSelectionRing,
   padding: 3px 4px 0;
 }
 
-html[dir='ltr'] .outlineWithDeepNesting > .outlineItem,
-html[dir='ltr'] .outlineItem > .outlineItems {
+html[dir="ltr"] .outlineWithDeepNesting > .outlineItem,
+html[dir="ltr"] .outlineItem > .outlineItems {
   margin-left: 20px;
 }
 
-html[dir='rtl'] .outlineWithDeepNesting > .outlineItem,
-html[dir='rtl'] .outlineItem > .outlineItems {
+html[dir="rtl"] .outlineWithDeepNesting > .outlineItem,
+html[dir="rtl"] .outlineItem > .outlineItems {
   margin-right: 20px;
 }
 
@@ -1688,7 +1731,9 @@ html[dir='rtl'] .outlineItem > .outlineItems {
   text-decoration: none;
   display: inline-block;
   min-width: 95%;
-  min-width: calc(100% - 4px); /* Subtract the right padding (left, in RTL mode)
+  min-width: calc(
+    100% - 4px
+  ); /* Subtract the right padding (left, in RTL mode)
                                   of the container. */
   height: auto;
   margin-bottom: 1px;
@@ -1697,9 +1742,9 @@ html[dir='rtl'] .outlineItem > .outlineItems {
   font-size: 13px;
   line-height: 15px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   white-space: normal;
 }
 
@@ -1710,18 +1755,18 @@ html[dir='rtl'] .outlineItem > .outlineItems {
   width: 100%;
 }
 
-html[dir='ltr'] .outlineItem > a {
+html[dir="ltr"] .outlineItem > a {
   padding: 2px 0 5px 4px;
 }
-html[dir='ltr'] .attachmentsItem > button {
+html[dir="ltr"] .attachmentsItem > button {
   padding: 2px 0 3px 7px;
   text-align: left;
 }
 
-html[dir='rtl'] .outlineItem > a {
+html[dir="rtl"] .outlineItem > a {
   padding: 2px 4px 5px 0;
 }
-html[dir='rtl'] .attachmentsItem > button {
+html[dir="rtl"] .attachmentsItem > button {
   padding: 2px 7px 3px 0;
   text-align: right;
 }
@@ -1740,22 +1785,22 @@ html[dir='rtl'] .attachmentsItem > button {
 .outlineItemToggler.outlineItemsHidden::before {
   content: url(images/treeitem-collapsed.png);
 }
-html[dir='rtl'] .outlineItemToggler.outlineItemsHidden::before {
+html[dir="rtl"] .outlineItemToggler.outlineItemsHidden::before {
   transform: scaleX(-1);
 }
 .outlineItemToggler.outlineItemsHidden ~ .outlineItems {
   display: none;
 }
-html[dir='ltr'] .outlineItemToggler {
+html[dir="ltr"] .outlineItemToggler {
   float: left;
 }
-html[dir='rtl'] .outlineItemToggler {
+html[dir="rtl"] .outlineItemToggler {
   float: right;
 }
-html[dir='ltr'] .outlineItemToggler::before {
+html[dir="ltr"] .outlineItemToggler::before {
   right: 4px;
 }
-html[dir='rtl'] .outlineItemToggler::before {
+html[dir="rtl"] .outlineItemToggler::before {
   left: 4px;
 }
 
@@ -1765,22 +1810,26 @@ html[dir='rtl'] .outlineItemToggler::before {
 .outlineItem > a:hover,
 .attachmentsItem > button:hover {
   background-color: rgba(255, 255, 255, 0.02);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   background-clip: padding-box;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
-              0 0 1px rgba(255, 255, 255, 0.2) inset,
-              0 0 1px rgba(0, 0, 0, 0.2);
+    0 0 1px rgba(255, 255, 255, 0.2) inset, 0 0 1px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .outlineItem.selected {
   background-color: rgba(255, 255, 255, 0.08);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0)
+  );
   background-clip: padding-box;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
-              0 0 1px rgba(255, 255, 255, 0.1) inset,
-              0 0 1px rgba(0, 0, 0, 0.2);
+    0 0 1px rgba(255, 255, 255, 0.1) inset, 0 0 1px rgba(0, 0, 0, 0.2);
   color: rgba(255, 255, 255, 1);
 }
 
@@ -1865,7 +1914,7 @@ html[dir='rtl'] .outlineItemToggler::before {
   line-height: 14px;
   background-color: rgba(71, 71, 71, 1); /* fallback */
   background-image: url(images/texture.png),
-                    linear-gradient(rgba(82, 82, 82,0.99), rgba(69, 69, 69, 0.95));
+    linear-gradient(rgba(82, 82, 82, 0.99), rgba(69, 69, 69, 0.95));
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
@@ -1914,10 +1963,10 @@ html[dir='rtl'] .outlineItemToggler::before {
 #documentPropertiesOverlay .row > * {
   min-width: 100px;
 }
-html[dir='ltr'] #documentPropertiesOverlay .row > * {
+html[dir="ltr"] #documentPropertiesOverlay .row > * {
   text-align: left;
 }
-html[dir='rtl'] #documentPropertiesOverlay .row > * {
+html[dir="rtl"] #documentPropertiesOverlay .row > * {
   text-align: right;
 }
 #documentPropertiesOverlay .row > span {
@@ -1990,14 +2039,14 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   white-space: pre;
 }
 #PDFBug .stats .title {
-    font-weight: bold;
+  font-weight: bold;
 }
 #PDFBug table {
   font-size: 10px;
 }
 
 #viewer.textLayer-visible .textLayer {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 #viewer.textLayer-visible .canvasWrapper {
@@ -2030,7 +2079,8 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   cursor: -webkit-grab !important;
   cursor: grab !important;
 }
-.grab-to-pan-grab *:not(input):not(textarea):not(button):not(select):not(:link) {
+.grab-to-pan-grab
+  *:not(input):not(textarea):not(button):not(select):not(:link) {
   cursor: inherit !important;
 }
 .grab-to-pan-grab:active,
@@ -2057,7 +2107,8 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   display: none;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 1.1), screen and (min-resolution: 1.1dppx) {
+@media screen and (-webkit-min-device-pixel-ratio: 1.1),
+  screen and (min-resolution: 1.1dppx) {
   /* Rules for Retina screens */
   .toolbarButton::before {
     transform: scale(0.5);
@@ -2069,15 +2120,15 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
     top: -4px;
   }
 
-  html[dir='ltr'] .toolbarButton::before,
-  html[dir='rtl'] .toolbarButton::before {
+  html[dir="ltr"] .toolbarButton::before,
+  html[dir="rtl"] .toolbarButton::before {
     left: -1px;
   }
 
-  html[dir='ltr'] .secondaryToolbarButton::before {
+  html[dir="ltr"] .secondaryToolbarButton::before {
     left: -2px;
   }
-  html[dir='rtl'] .secondaryToolbarButton::before {
+  html[dir="rtl"] .secondaryToolbarButton::before {
     left: 186px;
   }
 
@@ -2092,52 +2143,52 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
     top: -5px;
     content: url(images/toolbarButton-menuArrows@2x.png);
   }
-  html[dir='ltr'] .dropdownToolbarButton::after {
+  html[dir="ltr"] .dropdownToolbarButton::after {
     right: 4px;
   }
-  html[dir='rtl'] .dropdownToolbarButton::after {
+  html[dir="rtl"] .dropdownToolbarButton::after {
     left: 4px;
   }
 
   .toolbarButton#sidebarToggle::before {
     content: url(images/toolbarButton-sidebarToggle@2x.png);
   }
-  html[dir='rtl'] .toolbarButton#sidebarToggle::before {
+  html[dir="rtl"] .toolbarButton#sidebarToggle::before {
     transform: scale(-0.5, 0.5);
   }
 
   .toolbarButton#secondaryToolbarToggle::before {
     content: url(images/toolbarButton-secondaryToolbarToggle@2x.png);
   }
-  html[dir='rtl'] .toolbarButton#secondaryToolbarToggle::before {
+  html[dir="rtl"] .toolbarButton#secondaryToolbarToggle::before {
     transform: scale(-0.5, 0.5);
   }
 
   .toolbarButton.findPrevious::before {
     content: url(images/findbarButton-previous@2x.png);
   }
-  html[dir='rtl'] .toolbarButton.findPrevious::before {
+  html[dir="rtl"] .toolbarButton.findPrevious::before {
     transform: scale(-0.5, 0.5);
   }
 
   .toolbarButton.findNext::before {
     content: url(images/findbarButton-next@2x.png);
   }
-  html[dir='rtl'] .toolbarButton.findNext::before {
+  html[dir="rtl"] .toolbarButton.findNext::before {
     transform: scale(-0.5, 0.5);
   }
 
   .toolbarButton.pageUp::before {
     content: url(images/toolbarButton-pageUp@2x.png);
   }
-  html[dir='rtl'] .toolbarButton.pageUp::before {
+  html[dir="rtl"] .toolbarButton.pageUp::before {
     transform: scale(-0.5, 0.5);
   }
 
   .toolbarButton.pageDown::before {
     content: url(images/toolbarButton-pageDown@2x.png);
   }
-  html[dir='rtl'] .toolbarButton.pageDown::before {
+  html[dir="rtl"] .toolbarButton.pageDown::before {
     transform: scale(-0.5, 0.5);
   }
 
@@ -2253,13 +2304,13 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   .outlineItemToggler.outlineItemsHidden::before {
     content: url(images/treeitem-collapsed@2x.png);
   }
-  html[dir='rtl'] .outlineItemToggler.outlineItemsHidden::before {
+  html[dir="rtl"] .outlineItemToggler.outlineItemsHidden::before {
     transform: scale(-0.5, 0.5);
   }
-  html[dir='ltr'] .outlineItemToggler::before {
+  html[dir="ltr"] .outlineItemToggler::before {
     right: 0;
   }
-  html[dir='rtl'] .outlineItemToggler::before {
+  html[dir="rtl"] .outlineItemToggler::before {
     left: 0;
   }
 }
@@ -2271,14 +2322,22 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   }
 
   /* Rules for browsers that don't support mozPrintCallback. */
-  #sidebarContainer, #secondaryToolbar, .toolbar, #loadingBox, #errorWrapper, .textLayer {
+  #sidebarContainer,
+  #secondaryToolbar,
+  .toolbar,
+  #loadingBox,
+  #errorWrapper,
+  .textLayer {
     display: none;
   }
   #viewerContainer {
     overflow: visible;
   }
 
-  #mainContainer, #viewerContainer, .page, .page canvas {
+  #mainContainer,
+  #viewerContainer,
+  .page,
+  .page canvas {
     position: static;
     padding: 0;
     margin: 0;
@@ -2349,10 +2408,10 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
     background-color: rgba(0, 0, 0, 0.7);
   }
 
-  html[dir='ltr'] #outerContainer.sidebarOpen #viewerContainer {
+  html[dir="ltr"] #outerContainer.sidebarOpen #viewerContainer {
     left: 0px !important;
   }
-  html[dir='rtl'] #outerContainer.sidebarOpen #viewerContainer {
+  html[dir="rtl"] #outerContainer.sidebarOpen #viewerContainer {
     right: 0px !important;
   }
 
@@ -2385,7 +2444,8 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
 }
 
 @media all and (max-width: 640px) {
-  .hiddenSmallView, .hiddenSmallView * {
+  .hiddenSmallView,
+  .hiddenSmallView * {
     display: none;
   }
   .visibleSmallView {
@@ -2394,10 +2454,10 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   .toolbarButtonSpacer {
     width: 0;
   }
-  html[dir='ltr'] .findbar {
+  html[dir="ltr"] .findbar {
     left: 38px;
   }
-  html[dir='rtl'] .findbar {
+  html[dir="rtl"] .findbar {
     right: 38px;
   }
 }

@@ -1,33 +1,33 @@
-import { Fragment, useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import { SvgYoutube, SvgTwitter, SvgGithub, SvgLinkedin } from "../icons/icons";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core";
-import Tooltip from "@material-ui/core/Tooltip";
-import IconButton from "@material-ui/core/IconButton";
+import { Fragment, useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { SvgYoutube, SvgTwitter, SvgGithub, SvgLinkedin } from '../icons/icons';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core';
+import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles((theme) => ({
   socialDesktop: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "flex",
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
       marginLeft: theme.spacing(2),
       marginRight: theme.spacing(2),
     },
   },
   socialMobile: {
-    display: "flex",
+    display: 'flex',
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      display: "none",
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
     },
   },
 }));
 
 function Link({ children, href }) {
   const style = {
-    color: "black",
+    color: 'black',
   };
 
   return (
@@ -43,28 +43,28 @@ const Socials = () => {
   const router = useRouter();
 
   const [routing, setRouting] = useState({
-    url: "",
+    url: '',
     starting: true,
     complete: false,
   });
 
   const handleRouteChangeStart = (url) => {
-    console.log("starting nav");
+    console.log('starting nav');
     setRouting((prev) => ({ ...prev, starting: true, complete: false, url }));
     window.scroll(0, 0);
   };
 
   const handleRouteChangeComplete = (url) => {
-    console.log("ending nav");
+    console.log('ending nav');
     setRouting((prev) => ({ ...prev, starting: false, complete: true }));
   };
 
   useEffect(() => {
-    router.events.on("routeChangeStart", handleRouteChangeStart);
-    router.events.on("routeChangeComplete", handleRouteChangeComplete);
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
     return () => {
-      router.events.off("routeChangeStart", handleRouteChangeStart);
-      router.events.off("routeChangeComplete", handleRouteChangeComplete);
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
     };
   }, []);
 

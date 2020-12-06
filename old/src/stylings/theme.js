@@ -1,7 +1,7 @@
 const theme = {
   prim: "red",
   secon: "green",
-  basecolor: "blue"
+  basecolor: "blue",
 };
 
 export default theme;

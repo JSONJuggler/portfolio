@@ -1,9 +1,4 @@
-import {
-  OPEN_CONTACT,
-  CLOSE_CONTACT,
-  UPDATE_CONTACT,
-  CLEAR_CONTACT,
-} from "./types";
+import { OPEN_CONTACT, CLOSE_CONTACT, UPDATE_CONTACT, CLEAR_CONTACT } from './types';
 
 export const clearContactInfo = () => (dispatch) => {
   try {

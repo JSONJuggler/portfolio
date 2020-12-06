@@ -1,15 +1,15 @@
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 const Copyright = () => {
   return (
     <Typography variant="caption" color="textSecondary">
-      {"Copyright © "}
+      {'Copyright © '}
       <Link color="inherit" href="https://github.com/jsonjuggler">
         Beau Reescano
-      </Link>{" "}
+      </Link>{' '}
       {new Date().getFullYear()}
-      {"."}
+      {'.'}
     </Typography>
   );
 };

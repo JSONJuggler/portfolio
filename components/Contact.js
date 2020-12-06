@@ -1,38 +1,27 @@
-import { makeStyles } from "@material-ui/core/styles";
-import Tooltip from "@material-ui/core/Tooltip";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import { makeStyles } from '@material-ui/core/styles';
+import Tooltip from '@material-ui/core/Tooltip';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    color: "black",
-    border: "none",
-    background: "none",
-    "&:hover": {
-      background: "rgba(0, 0, 0, 0.1)",
+    color: 'black',
+    border: 'none',
+    background: 'none',
+    '&:hover': {
+      background: 'rgba(0, 0, 0, 0.1)',
       borderRadius: theme.spacing(1),
     },
   },
 }));
 
-import { openContact, closeContact } from "../src/actions/contact";
+import { openContact, closeContact } from '../src/actions/contact';
 
-const Contact = ({
-  children,
-  contact: { contactOpen },
-  openContact,
-  closeContact,
-  ...props
-}) => {
+const Contact = ({ children, contact: { contactOpen }, openContact, closeContact, ...props }) => {
   const classes = useStyles();
 
   return (
-    <button
-      className={classes.button}
-      aria-label="contact"
-      onClick={openContact}
-      {...props}
-    >
+    <button className={classes.button} aria-label="contact" onClick={openContact} {...props}>
       <Tooltip title="contact">{children}</Tooltip>
     </button>
   );

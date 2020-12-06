@@ -6,13 +6,13 @@ import {
   Secpagemain,
   Screenheight,
   Pageseperator,
-  Blackbg
+  Blackbg,
 } from "../stylings/divs";
 import { Parallax } from "react-parallax";
 import styled, { css } from "styled-components";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
-const Secpage = props => {
+const Secpage = (props) => {
   return (
     <Fragment>
       <Parallax

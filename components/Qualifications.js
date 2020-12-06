@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
-import Hidden from "@material-ui/core/Hidden";
-import Fade from "@material-ui/core/Fade";
-import throttle from "lodash/throttle";
-import VisibilitySensor from "react-visibility-sensor";
+import { useState, useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import Hidden from '@material-ui/core/Hidden';
+import Fade from '@material-ui/core/Fade';
+import throttle from 'lodash/throttle';
+import VisibilitySensor from 'react-visibility-sensor';
 import {
   SvgJavascript,
   SvgNextjs,
@@ -20,30 +20,30 @@ import {
   SvgNpm,
   SvgGit,
   SvgHeroku,
-} from "../icons/icons";
+} from '../icons/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: "100vh",
-    minHeight: "calc(var(--vh, 1vh)*100)",
-    display: "flex",
-    flexDirection: "column",
-    width: "100%",
+    minHeight: '100vh',
+    minHeight: 'calc(var(--vh, 1vh)*100)',
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
   },
   gridContainer: {
-    margin: "auto",
+    margin: 'auto',
   },
   text: {
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
   },
   entry: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   icon: {
-    margin: "auto",
+    margin: 'auto',
   },
 }));
 
@@ -63,29 +63,17 @@ const Qualifications = () => {
       //alert(Math.abs(window.innerHeight - initialMobileVh) / initialMobileVh);
       if (
         //navigator.userAgent.indexOf("Safari") != -1 &&
-        navigator.userAgent.indexOf("Chrome") == -1 &&
+        navigator.userAgent.indexOf('Chrome') == -1 &&
         /iPad|iPhone|iPod/.test(navigator.userAgent) &&
         !window.MSStream
       ) {
-        if (
-          Math.abs(window.innerHeight - initialMobileVh) / initialMobileVh >
-          vhThreshhold
-        ) {
-          document.documentElement.style.setProperty(
-            "--vh",
-            `${window.innerHeight * 0.01}px`
-          );
+        if (Math.abs(window.innerHeight - initialMobileVh) / initialMobileVh > vhThreshhold) {
+          document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
         } else {
-          document.documentElement.style.setProperty(
-            "--vh",
-            `${initialMobileVh * 0.01}px`
-          );
+          document.documentElement.style.setProperty('--vh', `${initialMobileVh * 0.01}px`);
         }
       } else {
-        document.documentElement.style.setProperty(
-          "--vh",
-          `${window.innerHeight * 0.01}px`
-        );
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
       }
     }
   }, [vh]);
@@ -93,9 +81,9 @@ const Qualifications = () => {
   useEffect(() => {
     setVh((prev) => window.outerHeight);
     setInitialMobileVh((prev) => window.innerHeight);
-    window.addEventListener("resize", throttle(handleResize, 800));
+    window.addEventListener('resize', throttle(handleResize, 800));
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -111,34 +99,19 @@ const Qualifications = () => {
   }
 
   return (
-    <VisibilitySensor
-      offset={{ bottom: 200 }}
-      minTopValue={300}
-      partialVisibility
-      onChange={onChange}
-    >
+    <VisibilitySensor offset={{ bottom: 200 }} minTopValue={300} partialVisibility onChange={onChange}>
       <Fade timeout={1000} in={componentIn}>
         <div className={classes.root}>
           <Container className={classes.gridContainer} maxWidth="sm">
             <Grid container spacing={2} justify="center" alignItems="center">
               <Grid item xs={12}>
-                <Typography
-                  className={classes.text}
-                  variant="h2"
-                  align="center"
-                >
+                <Typography className={classes.text} variant="h2" align="center">
                   Tools of Choice
                 </Typography>
-                <Typography
-                  className={classes.text}
-                  variant="body1"
-                  align="center"
-                >
-                  Although the following set of tools are my goto for front-end
-                  and back-end developement, I'm always experimenting and
-                  challenging myself to try emerging tools and technologies to
-                  ensure that I can create engaging and most importantly,{" "}
-                  <em>delightful</em> experiences for the end user!
+                <Typography className={classes.text} variant="body1" align="center">
+                  Although the following set of tools are my goto for front-end and back-end developement, I'm always
+                  experimenting and challenging myself to try emerging tools and technologies to ensure that I can
+                  create engaging and most importantly, <em>delightful</em> experiences for the end user!
                 </Typography>
               </Grid>
               <Grid item xs={4}>
@@ -178,11 +151,7 @@ const Qualifications = () => {
                   <Typography variant="subtitle1" align="center">
                     Redux
                   </Typography>
-                  <SvgRedux
-                    className={classes.icon}
-                    height="55px"
-                    width="55px"
-                  />
+                  <SvgRedux className={classes.icon} height="55px" width="55px" />
                 </div>
               </Grid>
               <Grid item xs={4}>
@@ -190,11 +159,7 @@ const Qualifications = () => {
                   <Typography variant="subtitle1" align="center">
                     Material-UI
                   </Typography>
-                  <SvgMaterialui
-                    className={classes.icon}
-                    height="55px"
-                    width="55px"
-                  />
+                  <SvgMaterialui className={classes.icon} height="55px" width="55px" />
                 </div>
               </Grid>
               <Grid item xs={4}>
@@ -210,11 +175,7 @@ const Qualifications = () => {
                   <Typography variant="subtitle1" align="center">
                     NextJS
                   </Typography>
-                  <SvgNextjs
-                    className={classes.icon}
-                    height="50px"
-                    width="80px"
-                  />
+                  <SvgNextjs className={classes.icon} height="50px" width="80px" />
                 </div>
               </Grid>
               <Grid item xs={4}>
@@ -222,11 +183,7 @@ const Qualifications = () => {
                   <Typography variant="subtitle1" align="center">
                     MongoDB
                   </Typography>
-                  <SvgMongodb
-                    className={classes.icon}
-                    height="40px"
-                    width="80px"
-                  />
+                  <SvgMongodb className={classes.icon} height="40px" width="80px" />
                 </div>
               </Grid>
               <Grid item xs={4}>
@@ -250,11 +207,7 @@ const Qualifications = () => {
                   <Typography variant="subtitle1" align="center">
                     Heroku
                   </Typography>
-                  <SvgHeroku
-                    className={classes.icon}
-                    height="40px"
-                    width="80px"
-                  />
+                  <SvgHeroku className={classes.icon} height="40px" width="80px" />
                 </div>
               </Grid>
             </Grid>

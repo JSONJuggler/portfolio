@@ -5,11 +5,11 @@ import {
   Pageseperator,
   Blackbg,
   Fadeonscroll,
-  Secpagemain
+  Secpagemain,
 } from "../stylings/divs";
 import { Parallax } from "react-parallax";
 
-const Secondpage = props => {
+const Secondpage = (props) => {
   return (
     <Fragment>
       <Blackbg>

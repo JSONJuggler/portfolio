@@ -1,15 +1,10 @@
-import {
-  OPEN_CONTACT,
-  CLOSE_CONTACT,
-  UPDATE_CONTACT,
-  CLEAR_CONTACT,
-} from "../actions/types";
+import { OPEN_CONTACT, CLOSE_CONTACT, UPDATE_CONTACT, CLEAR_CONTACT } from '../actions/types';
 
 const initialState = {
   contactOpen: false,
-  name: "",
-  contact: "",
-  message: "",
+  name: '',
+  contact: '',
+  message: '',
 };
 
 export default function (state = initialState, action) {
@@ -23,7 +18,7 @@ export default function (state = initialState, action) {
       const { name, contact, message } = payload;
       return { ...state, name, contact, message };
     case CLEAR_CONTACT:
-      return { ...state, name: "", contact: "", message: "" };
+      return { ...state, name: '', contact: '', message: '' };
     default:
       return state;
   }

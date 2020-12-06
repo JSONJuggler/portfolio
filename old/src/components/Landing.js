@@ -8,7 +8,7 @@ import Contact from "./Contact";
 
 const styles = {
   fontFamily: "sans-serif",
-  textAlign: "left"
+  textAlign: "left",
 };
 
 const Landing = () => {
