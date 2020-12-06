@@ -12,8 +12,8 @@ import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    //minHeight: "100vh",
     display: 'flex',
+    flexGrow: 1,
     flexDirection: 'column',
     alignItems: 'center',
     paddingTop: theme.spacing(7),
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   iframe: {
     width: '90%',
-    height: '80vh',
+    flexGrow: 1,
   },
 }));
 
