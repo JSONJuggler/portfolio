@@ -99,7 +99,7 @@ const Qualifications = () => {
   }
 
   return (
-    <VisibilitySensor offset={{ bottom: 200 }} minTopValue={300} partialVisibility onChange={onChange}>
+    <VisibilitySensor offset={{ bottom: 200 }} partialVisibility onChange={onChange}>
       <Fade timeout={1000} in={componentIn}>
         <div className={classes.root}>
           <Container className={classes.gridContainer} maxWidth="sm">

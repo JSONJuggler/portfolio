@@ -190,86 +190,86 @@ const Projects = ({ projects }) => {
   }
 
   return (
-    <VisibilitySensor offset={{ bottom: 200 }} partialVisibility onChange={onChange}>
-      <Fade timeout={1000} in={componentIn}>
-        <div className={classes.root}>
-          <Container disableGutters={true} maxWidth="lg">
-            <Grid container className={classes.gridContainer} spacing={2} justify="center">
-              <Grid item xs={12}>
-                <Typography className={classes.text} variant="h2" align="center">
-                  Projects
-                </Typography>
-                <Typography className={classes.text} variant="body1" align="center">
-                  The following projects have been key in facilitating my growth as a web developer. Each project
-                  utilizes a combination of research, experimentation and applied techniques or concepts that are
-                  critical for developing any successful experience. Each of these projects are deployed using Heroku's
-                  basic tier so the app may need a moment to wake on initial request.
-                </Typography>
-              </Grid>
-              {projects.map((project) => {
-                return (
-                  <Grid key={project.title} item className={classes.gridItem} xs={12} md={6}>
-                    <Card className={classes.cardRoot}>
-                      {project.live && (
-                        <a className={classes.anchorTag} href={project.live} aria-label={project.title}>
-                          <CardMedia className={classes.linkableMedia} image={getImage(project.image)} />
-                        </a>
-                      )}
-                      {!project.live && <CardMedia className={classes.media} image={getImage(project.image)} />}
-                      <div className={classes.details}>
-                        <CardContent className={classes.content}>
-                          <div className={classes.icons}>
-                            {project.icons.map((icon) => {
-                              return getIcon(icon);
-                            })}
-                          </div>
-                          <div className={classes.title}>
-                            <Typography variant="h6" align="center">
-                              {project.title}
-                            </Typography>
-                          </div>
-                          <div className={classes.description}>
-                            <Typography variant="body2" align="center">
-                              {project.description}
-                            </Typography>
-                          </div>
-                          <CardActions className={classes.cardFooter} disableSpacing={true}>
-                            <Grid container justify="space-evenly" alignItems="center">
-                              {project.live && (
-                                <Grid item>
-                                  <a className={classes.projectLink} href={project.live} aria-label="project live link">
-                                    <LinkIcon />
-                                    <Typography className={classes.spacing} variant="caption">
-                                      Live
-                                    </Typography>
-                                  </a>
-                                </Grid>
-                              )}
-                              <Grid item>
-                                <a
-                                  className={classes.projectLink}
-                                  href={project.source}
-                                  aria-label="project source code link"
-                                >
-                                  <SvgGithub className={classes.icon} size="2x" />
-                                  <Typography className={classes.spacing} variant="caption">
-                                    Source
-                                  </Typography>
-                                </a>
-                              </Grid>
-                            </Grid>
-                          </CardActions>
-                        </CardContent>
+    // <VisibilitySensor offset={{ bottom: 200 }} partialVisibility onChange={onChange}>
+    // <Fade timeout={1000} in={componentIn}>
+    <div className={classes.root}>
+      <Container disableGutters={true} maxWidth="lg">
+        <Grid container className={classes.gridContainer} spacing={2} justify="center">
+          <Grid item xs={12}>
+            <Typography className={classes.text} variant="h2" align="center">
+              Projects
+            </Typography>
+            <Typography className={classes.text} variant="body1" align="center">
+              The following projects have been key in facilitating my growth as a web developer. Each project utilizes a
+              combination of research, experimentation and applied techniques or concepts that are critical for
+              developing any successful experience. Each of these projects are deployed using Heroku's basic tier so the
+              app may need a moment to wake on initial request.
+            </Typography>
+          </Grid>
+          {projects.map((project) => {
+            return (
+              <Grid key={project.title} item className={classes.gridItem} xs={12} md={6}>
+                <Card className={classes.cardRoot}>
+                  {project.live && (
+                    <a className={classes.anchorTag} href={project.live} aria-label={project.title}>
+                      <CardMedia className={classes.linkableMedia} image={getImage(project.image)} />
+                    </a>
+                  )}
+                  {!project.live && <CardMedia className={classes.media} image={getImage(project.image)} />}
+                  <div className={classes.details}>
+                    <CardContent className={classes.content}>
+                      <div className={classes.icons}>
+                        {project.icons.map((icon) => {
+                          return getIcon(icon);
+                        })}
                       </div>
-                    </Card>
-                  </Grid>
-                );
-              })}
-            </Grid>
-          </Container>
-        </div>
-      </Fade>
-    </VisibilitySensor>
+                      <div className={classes.title}>
+                        <Typography variant="h6" align="center">
+                          {project.title}
+                        </Typography>
+                      </div>
+                      <div className={classes.description}>
+                        <Typography variant="body2" align="center">
+                          {project.description}
+                        </Typography>
+                      </div>
+                      <CardActions className={classes.cardFooter} disableSpacing={true}>
+                        <Grid container justify="space-evenly" alignItems="center">
+                          {project.live && (
+                            <Grid item>
+                              <a className={classes.projectLink} href={project.live} aria-label="project live link">
+                                <LinkIcon />
+                                <Typography className={classes.spacing} variant="caption">
+                                  Live
+                                </Typography>
+                              </a>
+                            </Grid>
+                          )}
+                          <Grid item>
+                            <a
+                              className={classes.projectLink}
+                              href={project.source}
+                              aria-label="project source code link"
+                            >
+                              <SvgGithub className={classes.icon} size="2x" />
+                              <Typography className={classes.spacing} variant="caption">
+                                Source
+                              </Typography>
+                            </a>
+                          </Grid>
+                        </Grid>
+                      </CardActions>
+                    </CardContent>
+                  </div>
+                </Card>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Container>
+    </div>
+    //   </Fade>
+    // </VisibilitySensor>
   );
 };
 
