@@ -9,7 +9,7 @@
     },
     {
       "image": "jobbie",
-      "live": "https://jsonj-jobbie.herokuapp.com/",
+      "live": "http://jobbie.webdeveloperbo.com/",
       "source": "https://github.com/JSONJuggler/jobbie",
       "title": "Jobbie",
       "icons": ["SvgReact", "SvgNodejs", "SvgTypescript"],
