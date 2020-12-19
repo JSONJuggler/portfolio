@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Resume = ({ data }) => {
+const Resume = ({ }) => {
   const classes = useStyles();
 
   return (
@@ -50,16 +50,9 @@ const Resume = ({ data }) => {
 };
 
 export async function getStaticProps() {
-  const dev = process.env.NODE_ENV !== 'production';
-
-  const baseUrl = dev ? 'http://localhost:3000' : 'https://portfolio-ten-beta.vercel.app';
-
-  const res = await axios.get(baseUrl + '/api/projectsStream');
-
-  const data = res.data;
 
   return {
-    props: { data },
+    props: { },
   };
 }
 

@@ -121,7 +121,62 @@ const useStyles = makeStyles((theme) => ({
   footerIcons: {},
 }));
 
-const Projects = ({ projects }) => {
+const projects = [{
+  "image": "portfolio",
+  "source": "https://github.com/JSONJuggler/portfolio",
+  "title": "Portfolio",
+  "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs"],
+  "description": "The very website you're browsing now, built with some of my favorite tools to be responsive, performant, and SEO friendly. Each project is hosted on Heroku with a HAproxy layer to serve each app under a subdirectory of my domain, webdeveloperbeau.com"
+},
+{
+  "image": "jobbie",
+  "live": "http://jobbie.webdeveloperbo.com/",
+  "source": "https://github.com/JSONJuggler/jobbie",
+  "title": "Jobbie",
+  "icons": ["SvgReact", "SvgNodejs", "SvgTypescript"],
+  "description": "My own implementation of a job search aggregator. Powered by the headless chrome node.js api Puppeteer, this single page application uses web automation and web scraping techniques to make the job search less of a headache. Be on the lookout for tracking features and analytics coming soon."
+},
+{
+  "image": "translator",
+  "live": "https://webdeveloperbeau.com/translator",
+  "source": "https://github.com/JSONJuggler/myTranslator",
+  "title": "Translator",
+  "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs", "SvgMongodb"],
+  "description": "Powered by several IBM Cloud services, this translator achieves speedy translations of single words by generating and serving a static HTML page for the requested translation. Several languages are currently supported."
+},
+{
+  "image": "recipemanager",
+  "live": "https://webdeveloperbeau.com/recipemanager",
+  "source": "https://github.com/JSONJuggler/recipeManager",
+  "title": "RecipeManager",
+  "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs", "SvgMongodb", "SvgStrapi"],
+  "description": "A straight forward recipe manager with its content served from the backend using the headless CMS Strapi and authentication powered by Next-Auth. A user can create an account and log in to manage their recipes and browse other user recipes."
+},
+{
+  "image": "anone",
+  "live": "https://webdeveloperbeau.com/anone",
+  "source": "https://github.com/JSONJuggler/aNone",
+  "title": "Anone",
+  "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs", "SvgFirebase"],
+  "description": "Similar to the late Yik Yak, a user can anonymously post a comment that would be visible to nearby users. Posts can also be viewed and sorted by state or simply all posts."
+},
+{
+  "image": "weather",
+  "live": "https://webdeveloperbeau.com/weather",
+  "source": "https://github.com/JSONJuggler/weather-website",
+  "title": "Weather",
+  "icons": ["SvgJavascript", "SvgHtml5", "SvgCss", "SvgNodejs"],
+  "description": "Everybody's gotta have one of these right? It's my weather app! Stay tuned for its facelift, coming soon."
+},
+{
+  "image": "datastructures",
+  "source": "https://github.com/JSONJuggler/dataStructureImplementations",
+  "title": "DataStructures",
+  "icons": ["SvgJavascript"],
+  "description": "More akin to notes, these are datastructures I have implemented using javascript. Includes singly and doubly linked lists. Coming soon: stacks, queues, BSTs, heaps, hash tables, and graphs. Photo credit => https://dev.to/"
+}]
+
+const Projects = () => {
   const classes = useStyles();
 
   const getImage = (imageName) => {

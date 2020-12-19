@@ -38,7 +38,7 @@ const Home = ({ data }) => {
       <Landing />
       <Qualifications />
       <Container maxWidth="lg">
-        <Projects projects={data.projects} />
+        <Projects />
         <Grid container spacing={2} justify="space-around" alignItems="center">
           <Grid item xs={true} className={classes.titleDesktop}>
             <CustomLink href="/resume" title="To Resume">
@@ -55,16 +55,8 @@ const Home = ({ data }) => {
 };
 
 export async function getStaticProps() {
-  const dev = process.env.NODE_ENV !== 'production';
-
-  const baseUrl = dev ? 'http://localhost:3000' : 'https://portfolio-ten-beta.vercel.app';
-
-  const res = await axios.get(baseUrl + '/api/projectsStream');
-
-  const data = res.data;
-
   return {
-    props: { data },
+    props: {  },
   };
 }
 
