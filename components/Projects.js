@@ -130,7 +130,7 @@ const projects = [{
 },
 {
   "image": "jobbie",
-  "live": "http://jobbie.webdeveloperbo.com/",
+  "live": "http://webdeveloperbeau.com/jobbie",
   "source": "https://github.com/JSONJuggler/jobbie",
   "title": "Jobbie",
   "icons": ["SvgReact", "SvgNodejs", "SvgTypescript"],
