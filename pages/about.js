@@ -151,6 +151,9 @@ const about = () => {
                     <Typography variant="body1">Rapid prototyping</Typography>
                   </Grid>
                   <Grid item className={classes.gridEntry} xs={6} md={4}>
+                    <Typography variant="body1">Cloud Computing</Typography>
+                  </Grid>
+                  <Grid item className={classes.gridEntry} xs={6} md={4}>
                     <Typography variant="body1">Data consuption, manipulation, and visualization</Typography>
                   </Grid>
                   <Grid item className={classes.gridEntry} xs={6} md={4}>
@@ -231,7 +234,10 @@ const about = () => {
                     <Typography variant="body1">NodeJS</Typography>
                   </Grid>
                   <Grid item className={classes.gridEntry} xs={6} md={4}>
-                    <Typography variant="body1">Express</Typography>
+                    <Typography variant="body1">wwwExpress</Typography>
+                  </Grid>
+                  <Grid item className={classes.gridEntry} xs={6} md={4}>
+                    <Typography variant="body1">Dokku</Typography>
                   </Grid>
                   <Grid item className={classes.gridEntry} xs={6} md={4}>
                     <Typography variant="body1">MongoDB</Typography>
