@@ -117,7 +117,7 @@ const Qualifications = () => {
               <Grid item xs={4}>
                 <div className={classes.entry}>
                   <Typography variant="subtitle1" align="center">
-                    Typescript/Javascript
+                    Typescript
                   </Typography>
                   <SvgTypescript className={classes.icon} height="75px" width="55px" />
                 </div>
