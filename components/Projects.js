@@ -7,6 +7,7 @@ import anone from '../imgs/anone.png';
 import datastructres from '../imgs/datastructures.jpg';
 import jobbie from '../imgs/jobbie.png';
 import weather from '../imgs/weather.png';
+import mangaback from "../imgs/mangaback.png";
 import Grid from '@material-ui/core/Grid';
 import CardMedia from '@material-ui/core/CardMedia';
 import Card from '@material-ui/core/Card';
@@ -129,12 +130,12 @@ const projects = [{
   "description": "The very website you're browsing now, built with some of my favorite tools to be responsive, performant, and SEO friendly. Each project is hosted on Heroku with a HAproxy layer to serve each app under a subdirectory of my domain, webdeveloperbeau.com"
 },
 {
-  "image": "jobbie",
-  "live": "http://webdeveloperbeau.com/jobbie",
-  "source": "https://github.com/JSONJuggler/jobbie",
-  "title": "Jobbie",
-  "icons": ["SvgReact", "SvgNodejs", "SvgTypescript"],
-  "description": "My own implementation of a job search aggregator. Powered by the headless chrome node.js api Puppeteer, this single page application uses web automation and web scraping techniques to make the job search less of a headache. Be on the lookout for tracking features and analytics coming soon."
+  "image": "mangaback",
+  "live": "https://manga-back.webdeveloperbeau.com",
+  "source": "https://github.com/JSONJuggler/MyMangaBackend",
+  "title": "Mangareader API",
+  "icons": ["SvgHtml5", "SvgCss", "SvgNodejs", "SvgTypescript"],
+  "description": "This is a RESTful API that leverages the power of puppeteer to crawl and scrape mangareader.net providing any HTTP/HTTPS capable client the ability to filter manga searches and read/retrieve manga. Be sure to check out the api documentation at manga-back.webdeveloperbeau.com!"
 },
 {
   "image": "translator",
@@ -151,6 +152,14 @@ const projects = [{
   "title": "RecipeManager",
   "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs", "SvgMongodb", "SvgStrapi"],
   "description": "A straight forward recipe manager with its content served from the backend using the headless CMS Strapi and authentication powered by Next-Auth. A user can create an account and log in to manage their recipes and browse other user recipes."
+},
+{
+  "image": "jobbie",
+  "live": "http://webdeveloperbeau.com/jobbie",
+  "source": "https://github.com/JSONJuggler/jobbie",
+  "title": "Jobbie",
+  "icons": ["SvgReact", "SvgNodejs", "SvgTypescript"],
+  "description": "My own implementation of a job search aggregator. Powered by the headless chrome node.js api Puppeteer, this single page application uses web automation and web scraping techniques to make the job search less of a headache. Be on the lookout for tracking features and analytics coming soon."
 },
 {
   "image": "anone",
@@ -195,6 +204,8 @@ const Projects = () => {
         return datastructres;
       case 'weather':
         return weather;
+      case 'mangaback':
+        return mangaback;
       default:
         return;
     }
