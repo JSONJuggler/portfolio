@@ -8,7 +8,7 @@ import Fade from '@material-ui/core/Fade';
 import throttle from 'lodash/throttle';
 import VisibilitySensor from 'react-visibility-sensor';
 import {
-  SvgJavascript,
+  SvgTypescript,
   SvgNextjs,
   SvgRedux,
   SvgMaterialui,
@@ -117,9 +117,9 @@ const Qualifications = () => {
               <Grid item xs={4}>
                 <div className={classes.entry}>
                   <Typography variant="subtitle1" align="center">
-                    Javascript
+                    Typescript/Javascript
                   </Typography>
-                  <SvgJavascript className={classes.icon} size="5x" />
+                  <SvgTypescript className={classes.icon} height="75px" width="55px" />
                 </div>
               </Grid>
               <Grid item xs={4}>
