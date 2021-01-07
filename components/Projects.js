@@ -127,7 +127,7 @@ const projects = [{
   "source": "https://github.com/JSONJuggler/portfolio",
   "title": "Portfolio",
   "icons": ["SvgReact", "SvgRedux", "SvgMaterialui", "SvgNextjs"],
-  "description": "The very website you're browsing now, built with some of my favorite tools to be responsive, performant, and SEO friendly. Each project is hosted on Heroku with a HAproxy layer to serve each app under a subdirectory of my domain, webdeveloperbeau.com"
+  "description": "The very website you're browsing now, built with some of my favorite tools to be responsive, performant, and SEO friendly."
 },
 {
   "image": "mangaback",
@@ -268,8 +268,7 @@ const Projects = () => {
             <Typography className={classes.text} variant="body1" align="center">
               The following projects have been key in facilitating my growth as a web developer. Each project utilizes a
               combination of research, experimentation and applied techniques or concepts that are critical for
-              developing any successful experience. Each of these projects are deployed using Heroku's basic tier so the
-              app may need a moment to wake on initial request.
+              developing any successful experience.
             </Typography>
           </Grid>
           {projects.map((project) => {
